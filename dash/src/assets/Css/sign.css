@@ -3,65 +3,58 @@
     Copyright 2023 Community
         1.- Full color
         2.- Screen 
-        3.- Responsive Login
+        3.- Responsive sign
 */
 /* -----------Full color--------- */
-.banner__login {
+.banner__sign {
     display: flex;
   }
-  .full__login {
+  .full__sign {
     background-color: #ffb727;
     clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,663 L0.00,663 L0,0 Z");
     width: 50%;
-    height: 100vh;
     position: relative;
   }
-  .content__login {
+  .content__sign {
+    margin: 1rem;
     text-align: center;
   }
   h1 {
-    margin: 3rem;
     font-size: 3rem;
     color: #ffff;
   }
   img {
-    margin: 3rem;
+    margin: 2rem;
     width: 50%;
     text-align: center;
   }
-  .circle__icon {
+  .circle__icon__sign {
     font-size: 3.5rem;
     color: #ffff;
   }
   /* -----------END of Full color--------- */
   /* ----------- Screen --------- */
-  .screen__login {
+  .screen__sign {
     width: 50%;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
-    margin: 4rem;
   }
-  .form_login {
-    margin: 1rem;
-  }
-  .form_login i {
+  .form_sign i {
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #ffb727;
   }
-  .form_login p {
-    margin: 1rem;
+  .form_sign p {
     font-size: 1rem;
     color: #000000;
   }
-  .form_login input {
+  .form_sign input {
     width: 80%;
     height: 25px;
     background-color: #b0bac3;
@@ -71,7 +64,8 @@
   p {
     margin: 1rem;
   }
-  .button__login {
+  .button__sign {
+    margin: 1rem;
     width: 150px;
     height: 50px;
     color: #ffff;
@@ -81,17 +75,17 @@
     background-color: #ffb727;
   }
   /* -----------END of Screen--------- */
-  /* ----------- Responsive Login --------- */
+  /* ----------- Responsive sign --------- */
   @media screen and (max-width: 1200px) {
-    .banner__login {
+    .banner__sign {
       display: flex;
     }
-    .full__login {
+    .full__sign {
       width: 50%;
       clip-path: none;
     }
     img {
-      margin: 6rem;
+      margin: 0rem;
       width: 50%;
       text-align: center;
     }
@@ -101,13 +95,13 @@
     }
   }
   @media screen and (max-width: 850px) {
-    .banner__login {
+    .banner__sign {
       display: flex;
       background-color: #ffb727;
       height: 100vh;
       flex-direction: column;
     }
-    .full__login {
+    .full__sign {
       width: 100%;
       height: 10vh;
       background-color: transparent;
@@ -120,10 +114,10 @@
     img {
       display: none;
     }
-    .circle__icon {
+    .circle__icon__sign {
       display: none;
     }
-    .screen__login {
+    .screen__sign {
       width: 100%;
       justify-content: end;
       flex-direction: column;
@@ -132,21 +126,21 @@
       font-size: 3rem;
       color: #ffff;
     }
-    .form_login {
+    .form_sign {
       text-align: center;
     }
-    .form_login {
+    .form_sign {
       margin: 2rem 2rem 0rem 4rem;
     }
-    .form_login i {
+    .form_sign i {
       font-size: 3rem;
       color: #ffff;
     }
-    .form_login p {
+    .form_sign p {
       font-size: 2rem;
       color: #ffff;
     }
-    .form_login input {
+    .form_sign input {
       width: 80%;
       height: 50px;
       font-size: 1.5rem;
@@ -156,7 +150,7 @@
     p {
       font-size: 1.5rem;
     }
-    .button__login {
+    .button__sign {
       width: 50%;
       color: #ffb727;
       font-size: 1.5rem;
@@ -174,25 +168,25 @@
       margin: 2rem;
       font-size: 1rem;
     }
-    .form_login {
+    .form_sign {
       margin: 1rem 1rem 0rem 2rem;
     }
-    .form_login i {
+    .form_sign i {
       font-size: 2rem;
     }
-    .form_login p {
+    .form_sign p {
       font-size: 1rem;
     }
-    .form_login input {
+    .form_sign input {
       height: 25px;
       font-size: 1rem;
     }
     p {
       font-size: 1rem;
     }
-    .button__login {
+    .button__sign {
       width: 25%;
       font-size: 1rem;
     }
   }
-  /* -----------END of Responsive Login --------- */
+  /* -----------END of Responsive sign --------- */

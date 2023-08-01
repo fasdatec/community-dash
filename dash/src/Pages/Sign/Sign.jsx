@@ -3,55 +3,59 @@ import { BsFillCircleFill } from "react-icons/Bs";
 import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
-import "../../assets/CSS/Login.css";
+import "../../assets/Css/sign.css";
 import img from "../../assets/Images/Login/login.svg";
 
-const Login = () => {
+const Register = () => {
   return (
     <React.Fragment>
-      <section className="banner__login">
-        <div className="full__login">
-          <i className="circle__icon">
+      <section className="banner__sign">
+        <div className="full__sign">
+          <i className="circle__icon__sign">
             <BsFillCircleFill />
           </i>
-          <div className="content__login">
-            <h1>¡Bienvenidos!</h1>
+          <div className="content__sign">
+            <h1>¡Inicia una Nueva Experiencia!</h1>
             <img src={img} alt="" />
           </div>
-          <i className="circle__icon">
+          <i className="circle__icon__sign">
             <BsFillCircleFill />
           </i>
         </div>
-        <div className="screen__login">
+        <div className="screen__sign">
           <form>
-            <h2>Inicio de Sesion</h2>
-            <div className="form_login">
+            <h2>Crear Cuenta</h2>
+            <div className="form_sign">
               <i className="icons">
                 <FaUserAlt />
                 <p>Usuario</p>
               </i>
               <input type="text" placeholder="Usuario" />
             </div>
-            <div className="form_login">
+            <div className="form_sign">
               <i className="icons">
                 <MdOutlineEmail />
                 <p>Correo Electronico</p>
               </i>
               <input type="email" placeholder="Email" />
             </div>
-            <div className="form_login">
+            <div className="form_sign">
               <i className="icons">
                 <RiLockPasswordFill />
                 <p>Contraseña</p>
               </i>
               <input type="password" placeholder="Contraseña" />
             </div>
+            <div className="form_sign">
+              <i className="icons">
+                <RiLockPasswordFill />
+                <p>Confirmar Contraseña</p>
+              </i>
+              <input type="password" placeholder="Confirmar Contraseña" />
+            </div>
+            <button className="button__sign">Crear cuenta</button>
             <p>
-              ¿Olvidaste contraseña? <a href="#">Recuperarla aqui</a>
-            </p>
-            <button className="button__login">Iniciar Sesion</button>
-            <p>
-              No tienes cuenta <a href="/sign">Ingresar aqui</a>
+              ¿Ya tienes Cuenta? <a href="/">Iniciar Sesion</a>
             </p>
           </form>
         </div>
@@ -60,4 +64,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
