@@ -6,187 +6,235 @@
         3.- Responsive sign
 */
 /* -----------Full color--------- */
-.banner__sign {
-    display: flex;
-  }
-  .full__sign {
-    background-color: #ffb727;
-    clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,663 L0.00,663 L0,0 Z");
+.sign__banner__community {
+  display: flex;
+  height: 39rem;
+}
+.sign__full__community {
+  background-color: #ffb727;
+  clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,670 L0.00,670 L0,0 Z");
+  width: 50%;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.sign__content__community{
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  color: #ffff;
+}
+img {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+.sign__icon__community {
+  font-size: 4rem;
+  color: #ffff;
+}
+/* -----------END of Full color--------- */
+/* ----------- Screen --------- */
+.sign__screen__community {
+  width: 50%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+.sign__form__community {
+  margin: 1rem;
+  text-align: center;
+}
+.sign__form__community i {
+  display: flex;
+  font-size: 2rem;
+  color: #ffb727;
+}
+.sign__form__community p {
+  font-size: 1rem;
+  color: #000000;
+}
+.sign__form__community input {
+  width: 80%;
+  height: 50%;
+  border-color: #ffb727;
+  border-radius: 10px;
+}
+.sign__container__community{
+  text-align: center;
+}
+.sign__container__community p{
+  font-size: 1rem;
+}
+.sign__button__community {
+  width: 50%;
+  height: 3rem;
+  color: #ffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  border-color: #ffb727;
+  background-color: #ffb727;
+  justify-content:center;
+}
+/* -----------END of Screen--------- */
+/* ----------- Responsive sign --------- */
+@media screen and (min-width: 2560px){
+  .sign__full__community{
     width: 50%;
-    position: relative;
-  }
-  .content__sign {
-    margin: 1rem;
-    text-align: center;
+    clip-path: path("M1266,0 C1009,360 1500,500 1129,875 L0.00,875 L0,0 Z");
   }
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ffff;
   }
   img {
+    margin: 0;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .sign__form__community i {
+    font-size: 3.5rem;
+  }
+  .sign__form__community p {
+    font-size: 2rem;
+  }
+  .sign__form__community input {
+    width: 80%;
+    height: 50%;
+    font-size: 2rem;
+    border-color: #ffb727;
+    border-radius: 10px;
+  }
+  .sign__text__community{
     margin: 2rem;
-    width: 50%;
+  }
+  .sign__text__community p{
+    font-size: 1.5rem;
+  }
+  .sign__button__community {
+    height: 50%;
+    font-size: 2rem;
+    border-radius: 2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sign__banner__community {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  .sign__full__community{
+    clip-path: none;
+  }
+  .sign__content__community img{
+    margin-top: 0;
+    height: 100%;
     text-align: center;
   }
-  .circle__icon__sign {
-    font-size: 3.5rem;
+  h1 {
+    padding: 1rem;
+    font-size: 1.5rem;
     color: #ffff;
   }
-  /* -----------END of Full color--------- */
-  /* ----------- Screen --------- */
-  .screen__sign {
-    width: 50%;
-    position: relative;
-    text-align: center;
-    display: flex;
+  .sign__icon__community {
+    font-size: 3rem;
+  }
+  .sign__screen__community {
+
     flex-direction: column;
   }
   h2 {
     font-size: 1.5rem;
-    font-weight: 100;
   }
-  .form_sign i {
-    display: flex;
-    font-size: 1.5rem;
+  .sign__form__community i {
+    font-size: 1rem;
+  }
+  .sign__form__community p {
+    font-size: 1rem;
+  }
+  .sign__form__community input {
+    width: 80%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .sign__banner__community {
+    background-color: #2f2e41;
+    flex-direction: column;
+  }
+  .sign__full__community{
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: 2rem;
     color: #ffb727;
   }
-  .form_sign p {
+  img {
+    display: none;
+  }
+  .sign__icon__community {
+    display: none;
+  }
+  .sign__screen__community {
+    width: 100%;
+    justify-content: end;
+    flex-direction: column;
+  }
+  h2 {
+    margin: 0;
     font-size: 1rem;
-    color: #000000;
+    color: #ffb727;
   }
-  .form_sign input {
-    width: 80%;
-    height: 25px;
-    background-color: #b0bac3;
-    border-color: transparent;
-    border-radius: 10px;
+  .sign__form__community {
+    text-align: center;
   }
-  p {
-    margin: 1rem;
+  .sign__form__community {
+    margin: 2rem 2rem 0rem 4rem;
   }
-  .button__sign {
-    margin: 1rem;
-    width: 150px;
-    height: 50px;
+  .sign__form__community i {
+    font-size: 2rem;
     color: #ffff;
+  }
+  .sign__form__community p {
     font-size: 1rem;
-    border-radius: 1rem;
+    color: #ffb727;
+  }
+  .sign__form__community input {
+    height: 2rem;
+    font-size: 1rem;
+    color: #ffff;
+    background-color: transparent;
     border-color: #ffb727;
-    background-color: #ffb727;
   }
-  /* -----------END of Screen--------- */
-  /* ----------- Responsive sign --------- */
-  @media screen and (max-width: 1200px) {
-    .banner__sign {
-      display: flex;
-    }
-    .full__sign {
-      width: 50%;
-      clip-path: none;
-    }
-    img {
-      margin: 0rem;
-      width: 50%;
-      text-align: center;
-    }
-    .circle__icon {
-      font-size: 4rem;
-      color: #ffff;
-    }
+  .sign__container__community p{
+    margin: 1rem;
+    font-size: 1rem;
+    color: #fff;
   }
-  @media screen and (max-width: 850px) {
-    .banner__sign {
-      display: flex;
-      background-color: #ffb727;
-      height: 100vh;
-      flex-direction: column;
-    }
-    .full__sign {
-      width: 100%;
-      height: 10vh;
-      background-color: transparent;
-    }
-    h1 {
-      margin: 4rem;
-      font-size: 4rem;
-      color: #ffff;
-    }
-    img {
-      display: none;
-    }
-    .circle__icon__sign {
-      display: none;
-    }
-    .screen__sign {
-      width: 100%;
-      justify-content: end;
-      flex-direction: column;
-    }
-    h2 {
-      font-size: 3rem;
-      color: #ffff;
-    }
-    .form_sign {
-      text-align: center;
-    }
-    .form_sign {
-      margin: 2rem 2rem 0rem 4rem;
-    }
-    .form_sign i {
-      font-size: 3rem;
-      color: #ffff;
-    }
-    .form_sign p {
-      font-size: 2rem;
-      color: #ffff;
-    }
-    .form_sign input {
-      width: 80%;
-      height: 50px;
-      font-size: 1.5rem;
-      background-color: #b0bac3;
-      border-color: transparent;
-    }
-    p {
-      font-size: 1.5rem;
-    }
-    .button__sign {
-      width: 50%;
-      color: #ffb727;
-      font-size: 1.5rem;
-  
-      border-color: #ffff;
-      background-color: #ffff;
-    }
+  .sign__container__community a{
+    color: #ffb727;
+    font-weight: 600;
+    list-style: none;
   }
-  @media screen and (max-width: 750px) {
-    h1 {
-      margin: 1rem;
-      font-size: 2rem;
-    }
-    h2 {
-      margin: 2rem;
-      font-size: 1rem;
-    }
-    .form_sign {
-      margin: 1rem 1rem 0rem 2rem;
-    }
-    .form_sign i {
-      font-size: 2rem;
-    }
-    .form_sign p {
-      font-size: 1rem;
-    }
-    .form_sign input {
-      height: 25px;
-      font-size: 1rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-    .button__sign {
-      width: 25%;
-      font-size: 1rem;
-    }
+  .sign__button__community {
+    margin: 1rem;
+    width: 25rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
-  /* -----------END of Responsive sign --------- */
+}
+/* -----------END of Responsive sign --------- */
