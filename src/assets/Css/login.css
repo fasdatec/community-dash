@@ -5,55 +5,55 @@
         2.- Screen 
         3.- Responsive Login
 */
-/* -----------Full color--------- */
-.login__banner__community {
+/* -----------Full color --------- */
+.login__banner__community{
   display: flex;
-  height: 39.9rem;
-}
-.login__full__community {
+}.login__full__community {
   background-color: #ffb727;
-  clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,670 L0.00,670 L0,0 Z");
-  width: 50rem;
-  position: relative;
-  justify-content: space-between;
+  height: 100vh;
+  width: 50%;
   display: flex;
+  position: relative;
+  justify-content: space-around;
   flex-direction: column;
 }
 .login__content__community{
+  margin: 2rem;
   text-align: center;
 }
-h1 {
-  margin: 0;
-  font-size: 3rem;
+.login__content__community h1 {
+  margin: 1rem;
+  font-size: 3.5rem;
+  font-weight: 800;
   color: #ffff;
 }
-img {
-  margin: 0rem;
-  width: 50rem;
-  height: 40rem;
+.login__content__community img {
+  width: 50%;
+  height: 100%;
   text-align: center;
 }
 .login__icon__community {
-  font-size: 4rem;
+  font-size:3rem;
   color: #ffff;
 }
 /* -----------END of Full color--------- */
 /* ----------- Screen --------- */
 .login__screen__community {
-  width: 50rem;
+  margin: 1rem;
+  width: 50%;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
-h2 {
+.login__screen__community h2{
   font-size: 2rem;
-  margin: 3rem;
   color: #000000;
 }
 .login__form__community {
-  margin: 1rem;
   text-align: center;
+  margin: 0;
 }
 .login__form__community i {
   display: flex;
@@ -63,11 +63,12 @@ h2 {
 .login__form__community p {
   margin: 1rem;
   font-size: 1rem;
-  color: #000000;
 }
 .login__form__community input {
-  width: 40rem;
-  height: 2rem;
+  margin: 0.5rem;
+  width: 90%;
+  height: 30%;
+  font-size: 1rem;
   border-color: #ffb727;
   border-radius: 10px;
 }
@@ -76,100 +77,96 @@ h2 {
   text-align: center;
 }
 .login__text__community p{
+  margin: 1rem;
   font-size: 1rem;
 }
 .login__button__community {
-  width: 25rem;
-  height: 3rem;
+  width: 50%;
+  height: 50%;
   color: #ffff;
   font-size: 1.5rem;
   font-weight: 600;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border-color: #ffb727;
   background-color: #ffb727;
 }
 /* -----------END of Screen--------- */
-/* ----------- Responsive Login --------- */
-@media screen and (min-width: 2560px){
-  .login__full__community{
+/* ---------------Responsive 2560px -------*/
+@media screen and (min-width:2560px){
+  .login__banner__community{
+    display: flex;
+  }
+  .login__full__community {
     width: 50%;
-    clip-path: path("M1266,0 C1009,360 1500,500 1129,875 L0.00,875 L0,0 Z");
+    display: flex;
   }
-  h1 {
-    font-size: 4rem;
-    color: #ffff;
-  }
-  img {
-    margin: 0;
-  }
-  h2 {
-    font-size: 4rem;
-  }
-  .login__form__community i {
-    font-size: 3.5rem;
-  }
-  .login__form__community p {
-    font-size: 2rem;
-  }
-  .login__form__community input {
-    width: 80%;
-    height: 50%;
-    font-size: 2rem;
-    border-color: #ffb727;
-    border-radius: 10px;
-  }
-  .login__text__community{
+  .login__content__community{
     margin: 2rem;
   }
-  .login__text__community p{
-    font-size: 1.5rem;
+  .login__content__community h1 {
+    margin: 3rem;
+    font-size: 10rem;
   }
-  .login__button__community {
-    height: 50%;
-    font-size: 2rem;
-    border-radius: 2rem;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .login__banner__community {
-    margin: 0;
-    padding: 0;
-    height: 44rem;
-  }
-  .login__full__community{
-    clip-path: none;
-  }
-  .login__content__community img{
-    margin-top: 0;
-    height: 25rem;
-    text-align: center;
-  }
-  h1 {
-    padding: 1rem;
-    font-size: 2rem;
-    color: #ffff;
+  .login__content__community img {
+    margin: 3rem;
   }
   .login__icon__community {
-    font-size: 3rem;
+    font-size:10rem;
   }
-  .login__screen__community {
-
-    flex-direction: column;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .login__form__community i {
-    font-size: 1.5rem;
-  }
-  .login__form__community p {
-    font-size: 1rem;
-  }
-  .login__form__community input {
-    width: 25rem;
-    margin: 0;
-  }
+/* ----------- Screen --------- */
+.login__screen__community {
+  width: 50%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+.login__screen__community h2{
+  margin: 2rem;
+  font-size: 4rem;
+  color: #000000;
+}
+.login__form__community {
+  text-align: center;
+  margin: 3rem;
+}
+.login__form__community i {
+  display: flex;
+  font-size: 3.5rem;
+  color: #ffb727;
+}
+.login__form__community p {
+  margin: 1rem;
+  font-size: 2rem;
+  color: #000000;
+}
+.login__form__community input {
+  width: 90%;
+  height: 50%;
+  font-size: 2rem;
+  border-color: #ffb727;
+  border-radius: 10px;
+}
+.login__text__community{
+  margin: 1rem;
+  text-align: center;
+}
+.login__text__community p{
+  margin: 2rem;
+  font-size: 2rem;
+}
+.login__button__community {
+  width: 50%;
+  height: 50%;
+  color: #ffff;
+  font-size: 3rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  border-color: #ffb727;
+  background-color: #ffb727;
+}
+}
+
 @media screen and (max-width: 850px) {
   .login__banner__community {
     background-color: #2f2e41;
@@ -177,14 +174,11 @@ h2 {
   }
   .login__full__community{
     margin: 0;
+    height: 3rem;
     width: 100%;
     background-color: transparent;
   }
-  h1 {
-    font-size: 1rem;
-    color: #ffb727;
-  }
-  img {
+  .login__content__community img {
     display: none;
   }
   .login__icon__community {
@@ -194,16 +188,15 @@ h2 {
     width: 100%;
     justify-content: end;
     flex-direction: column;
+    margin: 0;
   }
-  h2 {
+  .login__screen__community h2 {
     font-size: 1.5rem;
     color: #ffb727;
   }
   .login__form__community {
     text-align: center;
-  }
-  .login__form__community {
-    margin: 1rem 1rem 0rem 4rem;
+    margin: 0;
   }
   .login__form__community i {
     font-size: 1.5rem;
@@ -214,7 +207,7 @@ h2 {
     color: #ffb727;
   }
   .login__form__community input {
-    height: 2rem;
+    height: 50%;
     font-size: 1rem;
     color: #ffff;
     background-color: transparent;
@@ -230,20 +223,15 @@ h2 {
   }
   .login__button__community {
     margin: 1rem;
-    width: 25rem;
-    height: 3rem;
+    width: 50%;
+    color: #2f2e41;
     font-size: 1.5rem;
     font-weight: 600;
   }
 }
-@media screen and (max-width: 750px) {
-  h1 {
-    margin: 1rem;
+@media screen and (max-width: 375px) {
+  .login__content__community h1 {
     font-size: 2rem;
-  }
-  h2 {
-    margin: 2rem;
-    font-size: 1rem;
   }
   .login__form__community {
     margin: 1rem 1rem 0rem 2rem;
@@ -254,16 +242,12 @@ h2 {
   .login__form__community p {
     font-size: 1rem;
   }
-  .login__form__community input {
-    height: 3rem;
-    font-size: 1rem;
-  }
   p {
     font-size: 1rem;
   }
   .login__button__community {
-    width: 25rem;
+    width: 80%;
     font-size: 1.5rem;
   }
-} 
-/* -----------END of Responsive Login --------- */
+}  
+/* -----------END of Responsive sign --------- */

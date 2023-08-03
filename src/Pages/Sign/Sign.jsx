@@ -3,8 +3,8 @@ import { BsFillCircleFill } from "react-icons/Bs";
 import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
-import "../../../assets/css/sign.css";
-import imag from "../../../assets/Images/Sign/sign.svg";
+import "../../assets/css/sign.css";
+import imag from "../../assets/Images/sign/sign.svg";
 
 const Register = () => {
   return (
@@ -13,7 +13,7 @@ const Register = () => {
           <i className="sign__icon__community"><BsFillCircleFill /></i>
           <div className="sign__content__community">
             <h1>¡Inicia una Nueva Experiencia!</h1>
-            <img src={imag} loading="lazy" alt="Sign" title="Sign Community" width={100} height={100}/>
+            <img src={imag} alt="Sign" loading="lazy" title="Sign Community" width={100} height={100}/>
           </div>
           <i className="sign__icon__community"><BsFillCircleFill /></i>
         </article>

@@ -8,51 +8,52 @@
 /* -----------Full color--------- */
 .sign__banner__community {
   display: flex;
-  height: 39rem;
 }
 .sign__full__community {
   background-color: #ffb727;
-  clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,670 L0.00,670 L0,0 Z");
+  height: 100%;
   width: 50%;
-  position: relative;
-  justify-content: space-between;
   display: flex;
+  position: relative;
+  justify-content: space-around;
   flex-direction: column;
 }
 .sign__content__community{
+  margin: 2rem;
   text-align: center;
 }
-h1 {
-  margin: 0;
-  font-size: 3.5rem;
+.sign__content__community h1 {
+  font-size: 3rem;
+  font-weight: 800;
   color: #ffff;
 }
-img {
-  margin: 0;
+.sign__content__community img {
   width: 50%;
-  height: 50%;
+  height: 100%;
   text-align: center;
 }
 .sign__icon__community {
-  font-size: 4rem;
+  font-size: 3.4rem;
   color: #ffff;
 }
 /* -----------END of Full color--------- */
 /* ----------- Screen --------- */
 .sign__screen__community {
+  margin: 1rem;
   width: 50%;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
-h2 {
+.sign__screen__community h2 {
   font-size: 2rem;
   color: #000000;
 }
 .sign__form__community {
-  margin: 1rem;
   text-align: center;
+  margin: 0;
 }
 .sign__form__community i {
   display: flex;
@@ -60,181 +61,190 @@ h2 {
   color: #ffb727;
 }
 .sign__form__community p {
+  margin: 1rem;
   font-size: 1rem;
-  color: #000000;
 }
 .sign__form__community input {
-  width: 80%;
-  height: 50%;
+  margin: 0.5rem;
+  width: 90%;
+  height: 30%;
+  font-size: 1rem;
   border-color: #ffb727;
   border-radius: 10px;
 }
 .sign__container__community{
+  margin: 1rem;
   text-align: center;
 }
 .sign__container__community p{
+  margin: 1rem;
   font-size: 1rem;
 }
 .sign__button__community {
   width: 50%;
-  height: 3rem;
+  height: 50%;
   color: #ffff;
   font-size: 1.5rem;
-  font-weight: 400;
-  border-radius: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
   border-color: #ffb727;
   background-color: #ffb727;
-  justify-content:center;
 }
 /* -----------END of Screen--------- */
 /* ----------- Responsive sign --------- */
 @media screen and (min-width: 2560px){
+  .sign__banner__community{
+    display: flex;
+    height: 100vh;
+  }
   .sign__full__community{
+    width: 50%;  
+    display: flex;
+  }
+  .sign__content__community{
+    margin: 2rem;
+  }
+  .sign__content__community h1 {
+    margin: 1rem;
+    font-size: 6rem;
+  }
+  .sign__content__community img {
+    margin: 3rem;
+  }
+  .sign__icon__community{
+    font-size: 10rem;
+  }
+  .sign__screen__community{
     width: 50%;
-    clip-path: path("M1266,0 C1009,360 1500,500 1129,875 L0.00,875 L0,0 Z");
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
-  h1 {
+  .sign__screen__community h2 {
     font-size: 4rem;
-    color: #ffff;
   }
-  img {
-    margin: 0;
-  }
-  h2 {
-    font-size: 4rem;
+  .sign__form__community{
+    text-align: center;
+    margin: 3rem;
   }
   .sign__form__community i {
+    display: flex;
     font-size: 3.5rem;
+    color: #ffb727;
   }
   .sign__form__community p {
+    margin: 1rem;
     font-size: 2rem;
+    color: #ffb727;
   }
   .sign__form__community input {
-    width: 80%;
+    width: 90%;
     height: 50%;
     font-size: 2rem;
     border-color: #ffb727;
     border-radius: 10px;
   }
   .sign__text__community{
-    margin: 2rem;
-  }
-  .sign__text__community p{
-    font-size: 1.5rem;
-  }
-  .sign__button__community {
-    height: 50%;
-    font-size: 2rem;
-    border-radius: 2rem;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .sign__banner__community {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-  }
-  .sign__full__community{
-    clip-path: none;
-  }
-  .sign__content__community img{
-    margin-top: 0;
-    height: 100%;
+    margin: 1rem;
     text-align: center;
   }
-  h1 {
-    padding: 1rem;
-    font-size: 1.5rem;
+  .sign__text__community p{
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  .sign__button__community {
+    width: 50%;
+    height: 50%;
     color: #ffff;
-  }
-  .sign__icon__community {
     font-size: 3rem;
-  }
-  .sign__screen__community {
-
-    flex-direction: column;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .sign__form__community i {
-    font-size: 1rem;
-  }
-  .sign__form__community p {
-    font-size: 1rem;
-  }
-  .sign__form__community input {
-    width: 80%;
-    margin: 0;
+    font-weight: 600;
+    border-radius: 2rem;
+    border-color: #ffb727;
+    background-color: #ffb727;
   }
 }
-@media screen and (max-width: 850px) {
-  .sign__banner__community {
+@media screen and (max-width: 850px){
+  .sign__banner__community{
     background-color: #2f2e41;
     flex-direction: column;
   }
   .sign__full__community{
     margin: 0;
+    height: 3rem;
     width: 100%;
     background-color: transparent;
   }
-  h1 {
-    font-size: 2rem;
-    color: #ffb727;
-  }
-  img {
+  .sign__content__community img{
     display: none;
   }
-  .sign__icon__community {
+  .sign__icon__community{
     display: none;
   }
-  .sign__screen__community {
+  .sign__screen__community{
     width: 100%;
     justify-content: end;
     flex-direction: column;
-  }
-  h2 {
     margin: 0;
-    font-size: 1rem;
+  }
+  .sign__screen__community h2{
+    margin: 1rem;
+    font-size: 1.5rem;
     color: #ffb727;
   }
-  .sign__form__community {
+  .sign__form__community{
     text-align: center;
   }
-  .sign__form__community {
-    margin: 2rem 2rem 0rem 4rem;
+  .sign__form__community i{
+    font-size: 1.5rem;
+    color: #fff;
   }
-  .sign__form__community i {
-    font-size: 2rem;
-    color: #ffff;
-  }
-  .sign__form__community p {
+  .sign__form__community p{
     font-size: 1rem;
     color: #ffb727;
   }
-  .sign__form__community input {
-    height: 2rem;
+  p{
+    font-size: 1rem;
+    color: #ffff;
+  }
+  a{
+    font-weight: 600;
+    color: #ffb727;
+  }
+  .sign__form__community input{
+    height: 50%;
     font-size: 1rem;
     color: #ffff;
     background-color: transparent;
     border-color: #ffb727;
   }
-  .sign__container__community p{
+  .sign__button__community{
     margin: 1rem;
-    font-size: 1rem;
-    color: #fff;
-  }
-  .sign__container__community a{
-    color: #ffb727;
-    font-weight: 600;
-    list-style: none;
-  }
-  .sign__button__community {
-    margin: 1rem;
-    width: 25rem;
-    height: 3rem;
+    width: 50%;
+    color: #2f2e41;
     font-size: 1.5rem;
     font-weight: 600;
+  }
+}
+@media screen and (max-width: 375px){
+  .sign__content__community h1{
+    font-size: 2rem;
+  }
+  .sign__form__community{
+    margin: 1rem 1rem 0rem 2rem;
+  }
+  .sign__form__community i{
+    font-size: 2rem;
+  }
+  .sign__form__community p{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  .sign__button__community{
+    width: 80%;
+    font-size: 1.5rem;
   }
 }
 /* -----------END of Responsive sign --------- */
