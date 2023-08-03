@@ -63,6 +63,8 @@
 .sign__form__community p {
   margin: 1rem;
   font-size: 1rem;
+  color: #000000;
+  font-weight: 800;
 }
 .sign__form__community input {
   margin: 0.5rem;
@@ -79,6 +81,8 @@
 .sign__container__community p{
   margin: 1rem;
   font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
 }
 .sign__button__community {
   width: 50%;
@@ -186,10 +190,12 @@
     justify-content: end;
     flex-direction: column;
     margin: 0;
+  }.sign__screen__community h1{
+    font-size: 3rem;
   }
   .sign__screen__community h2{
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #ffb727;
   }
   .sign__form__community{
@@ -226,9 +232,10 @@
     font-weight: 600;
   }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 680px){
   .sign__content__community h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 2rem;
   }
   .sign__form__community{
     margin: 1rem 1rem 0rem 2rem;
@@ -238,9 +245,14 @@
   }
   .sign__form__community p{
     font-size: 1rem;
+    color: #fff;
+  }
+  .sign__container__community p {
+    color: #fff;
   }
   p{
     font-size: 1rem;
+    color: #fff;
   }
   .sign__button__community{
     width: 80%;
