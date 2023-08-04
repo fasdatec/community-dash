@@ -4,7 +4,6 @@ import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
 import "../../assets/css/sign.css";
-import imag from "../../assets/Images/sign/sign.svg";
 
 const Register = () => {
   return (

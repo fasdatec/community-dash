@@ -4,7 +4,6 @@ import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
 import "../../assets/css/login.css";
-import img from "../../assets/Images/login/login.svg";
 
 const Login = () => {
   return (
