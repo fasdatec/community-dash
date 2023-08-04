@@ -4,15 +4,15 @@ import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
 import "../../assets/css/login.css";
-
+import imgLogin from '../../assets/images/login.svg';
 const Login = () => {
   return (
       <section className="login__banner__community">
         <article className="login__full__community">
           <i className="login__icon__community"><BsFillCircleFill /></i>
           <div className="login__content__community">
-            <h1>¡Bienvenidos!</h1>
-            <img src={img}  alt="Login" loading="lazy" title="Login Community" width={100} height={100}/>
+            <h1>Bienvenidos</h1>
+            <img src={imgLogin}  alt="Login" loading="lazy" title="Login Community" width={100} height={100}/>
           </div>
           <i className="login__icon__community"><BsFillCircleFill /></i>
         </article>

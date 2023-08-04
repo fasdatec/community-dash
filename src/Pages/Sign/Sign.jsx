@@ -4,6 +4,7 @@ import { FaUserAlt } from "react-icons/Fa";
 import { MdOutlineEmail } from "react-icons/Md";
 import { RiLockPasswordFill } from "react-icons/Ri";
 import "../../assets/css/sign.css";
+import imgSing from '../../assets/images/sign.svg';
 
 const Register = () => {
   return (
@@ -11,8 +12,8 @@ const Register = () => {
         <article className="sign__full__community">
           <i className="sign__icon__community"><BsFillCircleFill /></i>
           <div className="sign__content__community">
-            <h1>¡Inicia una Nueva Experiencia!</h1>
-            <img src={imag} alt="Sign" loading="lazy" title="Sign Community" width={100} height={100}/>
+            <h1>Inicia una Nueva Experiencia</h1>
+            <img src={imgSing} alt="Sign" loading="lazy" title="Sign Community" width={100} height={100}/>
           </div>
           <i className="sign__icon__community"><BsFillCircleFill /></i>
         </article>
