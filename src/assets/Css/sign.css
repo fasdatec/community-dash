@@ -1,262 +1,195 @@
-/*  
+/*
     Community CSS version 1.0.0
     Copyright 2023 Community
         1.- Full color
-        2.- Screen 
+        2.- Screen
         3.- Responsive sign
 */
 /* -----------Full color--------- */
-.sign__banner__community {
-  display: flex;
+.sign__banner__community{
+  display:flex;
+  height:66rem;
 }
-.sign__full__community {
-  background-color: #ffb727;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  flex-direction: column;
+.sign__full__community{
+  background-color:#ffb727;
+  width:50%;
+  display:flex;
+  position:relative;
+  justify-content:space-around;
+  flex-direction:column;
 }
 .sign__content__community{
-  margin: 2rem;
-  text-align: center;
+  margin:2rem;
+  text-align:center;
 }
-.sign__content__community h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #ffff;
+.sign__content__community h1{
+  font-size:6rem;
+  font-weight:800;
+  color:#ffff;
 }
-.sign__content__community img {
-  width: 50%;
-  height: 100%;
-  text-align: center;
+.sign__content__community img{
+  width:50%;
+  height:auto;
+  text-align:center;
 }
-.sign__icon__community {
-  font-size: 3.4rem;
-  color: #ffff;
+.sign__icon__community{
+  font-size:7rem;
+  color:#ffff;
 }
 /* -----------END of Full color--------- */
 /* ----------- Screen --------- */
-.sign__screen__community {
-  margin: 1rem;
-  width: 50%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.sign__screen__community{
+  margin:1rem;
+  width:50%;
+  position:relative;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
 }
-.sign__screen__community h2 {
-  font-size: 2rem;
-  color: #000000;
+.sign__screen__community h2{
+  font-size:4rem;
+  color:#000000;
 }
-.sign__form__community {
-  text-align: center;
-  margin: 0;
+.sign__form__community{
+  text-align:center;
 }
-.sign__form__community i {
-  display: flex;
-  font-size: 2rem;
-  color: #ffb727;
+.sign__form__community p{
+  display:flex;
+  margin:2rem;
+  font-size:2.5rem;
+  font-weight:800;
+  color:#ffb727;
 }
-.sign__form__community p {
-  margin: 1rem;
-  font-size: 1rem;
-  color: #000000;
-  font-weight: 800;
-}
-.sign__form__community input {
-  margin: 0.5rem;
-  width: 90%;
-  height: 30%;
-  font-size: 1rem;
-  border-color: #ffb727;
-  border-radius: 10px;
+.sign__form__community input{
+  width:90%;
+  font-size:2rem;
+  border-color:#ffb727;
+  border-radius:10px;
 }
 .sign__container__community{
-  margin: 1rem;
-  text-align: center;
+  padding:2rem;
+  justify-content:center;
 }
 .sign__container__community p{
-  margin: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
+  margin:1rem;
+  font-size:2rem;
+  font-weight:600;
+  color:#000000;
+  text-align:center;
 }
-.sign__button__community {
-  width: 50%;
-  height: 50%;
-  color: #ffff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 2rem;
-  border-color: #ffb727;
-  background-color: #ffb727;
+button{
+  padding:1rem;
+  width:50%;
+  color:#ffff;
+  font-size:2.5rem;
+  font-weight:600;
+  border-radius:2rem;
+  border-color:#ffb727;
+  background-color:#ffb727;
 }
 /* -----------END of Screen--------- */
 /* ----------- Responsive sign --------- */
-@media screen and (min-width: 2560px){
+@media screen and (max-width:1500px){
   .sign__banner__community{
-    display: flex;
-    height: 100vh;
+    height:38rem;
   }
-  .sign__full__community{
-    width: 50%;  
-    display: flex;
-  }
-  .sign__content__community{
-    margin: 2rem;
-  }
-  .sign__content__community h1 {
-    margin: 1rem;
-    font-size: 6rem;
-  }
-  .sign__content__community img {
-    margin: 3rem;
+  .sign__content__community h1{
+    font-size:2.5rem;
   }
   .sign__icon__community{
-    font-size: 10rem;
+    font-size:3rem;
   }
-  .sign__screen__community{
-    width: 50%;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  .sign__screen__community h2{
+    font-size:2rem;
   }
-  .sign__screen__community h2 {
-    font-size: 4rem;
+  .sign__form__community p{
+    margin:1rem;
+    font-size:1.5rem;
   }
-  .sign__form__community{
-    text-align: center;
-    margin: 3rem;
+  .sign__form__community input{
+    height:auto;
+    font-size:1.5rem;
   }
-  .sign__form__community i {
-    display: flex;
-    font-size: 3.5rem;
-    color: #ffb727;
+  .sign__container__community{
+    padding:1rem;
   }
-  .sign__form__community p {
-    margin: 1rem;
-    font-size: 2rem;
-    color: #ffb727;
+  button{
+    padding:1rem;
+    width:50%;
+    color:#ffff;
+    font-size:1.5rem;
+    font-weight:600;
+    border-radius:2rem;
+    border-color:#ffb727;
+    background-color:#ffb727;
   }
-  .sign__form__community input {
-    width: 90%;
-    height: 50%;
-    font-size: 2rem;
-    border-color: #ffb727;
-    border-radius: 10px;
+  .sign__container__community p{
+    font-size:1rem;
   }
-  .sign__text__community{
-    margin: 1rem;
-    text-align: center;
-  }
-  .sign__text__community p{
-    margin: 2rem;
-    font-size: 2rem;
-  }
-  .sign__button__community {
-    width: 50%;
-    height: 50%;
-    color: #ffff;
-    font-size: 3rem;
-    font-weight: 600;
-    border-radius: 2rem;
-    border-color: #ffb727;
-    background-color: #ffb727;
-  }
+  .sign__container__community a{
+    margin:1rem;
+    font-size:1rem;
+  }  
 }
 @media screen and (max-width: 850px){
   .sign__banner__community{
-    background-color: #2f2e41;
-    flex-direction: column;
+    background-color:#2f2e41;
+    flex-direction:column;
+    height:42rem;
   }
   .sign__full__community{
-    margin: 0;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
+    margin:0;
+    width:100%;
+    background-color:transparent;
   }
   .sign__content__community img{
-    display: none;
+    display:none;
   }
   .sign__icon__community{
-    display: none;
+    display:none;
   }
   .sign__screen__community{
-    width: 100%;
-    justify-content: end;
-    flex-direction: column;
-    margin: 0;
-  }.sign__screen__community h1{
-    font-size: 3rem;
+    width:100%;
+    justify-content:end;
+    flex-direction:column;
+    margin:0;
   }
   .sign__screen__community h2{
-    margin: 1rem;
-    font-size: 1rem;
-    color: #ffb727;
+    font-size:1rem;
+    color:#ffb727;
   }
   .sign__form__community{
-    text-align: center;
+    text-align:center;
   }
   .sign__form__community i{
-    font-size: 1.5rem;
-    color: #fff;
+    font-size:1.5rem;
+    color:#fff;
   }
   .sign__form__community p{
-    font-size: 1rem;
-    color: #ffb727;
+    font-size:1rem;
+    color:#ffb727;
   }
-  p{
-    font-size: 1rem;
-    color: #ffff;
+  .sign__container__community p{
+    font-size:1rem;
+    color:#ffff;
   }
-  a{
-    font-weight: 600;
-    color: #ffb727;
+  .sign__container__community a{
+    font-weight:600;
+    color:#ffb727;
   }
   .sign__form__community input{
-    height: 50%;
-    font-size: 1rem;
-    color: #ffff;
-    background-color: transparent;
-    border-color: #ffb727;
+    height:50%;
+    font-size:1rem;
+    color:#ffff;
+    background-color:transparent;
+    border-color:#ffb727;
   }
-  .sign__button__community{
-    margin: 1rem;
-    width: 50%;
-    color: #2f2e41;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-}
-@media screen and (max-width: 680px){
-  .sign__content__community h1{
-    font-size: 2.5rem;
-    margin: 2rem;
-  }
-  .sign__form__community{
-    margin: 1rem 1rem 0rem 2rem;
-  }
-  .sign__form__community i{
-    font-size: 2rem;
-  }
-  .sign__form__community p{
-    font-size: 1rem;
-    color: #fff;
-  }
-  .sign__container__community p {
-    color: #fff;
-  }
-  p{
-    font-size: 1rem;
-    color: #fff;
-  }
-  .sign__button__community{
-    width: 80%;
-    font-size: 1.5rem;
+  button{
+    margin:1rem;
+    width:50%;
+    color:#2f2e41;
+    font-size:1.5rem;
+    font-weight:600;
   }
 }
 /* -----------END of Responsive sign --------- */
