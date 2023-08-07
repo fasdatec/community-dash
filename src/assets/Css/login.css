@@ -8,7 +8,7 @@
 /* -----------Full color --------- */
 .login__banner__community{
   display:flex;
-  height:66rem;
+  height:76.5rem;
 }
 .login__full__community{
   background-color:#ffb727;
@@ -143,6 +143,10 @@ button{
     margin:0;
     width:100%;
     background-color:transparent;
+  }
+  .login__content__community h1{
+    margin: 0;
+    font-size:2.5rem;
   }
   .login__content__community img{
     display:none;
