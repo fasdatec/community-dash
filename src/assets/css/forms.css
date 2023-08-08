@@ -5,7 +5,7 @@
     background: rgb(47, 46, 65);
 }
 .commu__form__wave{
-    background-image: url(../images/wer.svg);
+    background-image: url(../images/wave.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
@@ -147,8 +147,47 @@ h1{
 .commu__container__form__forget{
     display: flex;
     flex-direction: column;
-    background-image: url(../images/blob-scene-haikei.svg);
+    background-image: url(../images/forgetet.svg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+}
+/*All responsive desing*/
+@media screen and (max-width:1000px) {
+    .commu__container__form,.commu__container__form__forget{
+        flex-direction:column;
+        background: rgb(47, 46, 65);
+    }
+    .commu__form__wave{
+       display: none;
+    }
+    .commu__form__steps{
+        height: 100vh;
+    }
+    .commu__form__group{
+        padding: 1rem;
+    }
+    .commu__desing__input{
+        width: 90%;
+    }
+    .commu__span__text{
+        text-align: center;
+    }
+    .commu__form__steps h2{
+        margin-top: 3rem;
+    }
+    .commu__form__steps p{
+        padding: 1rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    .commu__form__desing{
+        padding: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .commu__span__text__resp {
+        text-align: justify;
+        padding: 0.5rem;
+    }
 }

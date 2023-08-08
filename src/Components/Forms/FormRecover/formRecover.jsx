@@ -22,7 +22,7 @@ const formRecover = () => {
                         <input type="text" className='commu__desing__input' name="" id="mail" placeholder='Ingresa tu Correo' />
                     </div>
                     <div className="commu__form__group commu__bottom">
-                        <span className='commu__span__text'>¿Solo querias ver el Diseño? 
+                        <span className='commu__span__text commu__span__text__resp'>¿Solo querias ver el Diseño? 
                         <a href="/" className='commu__link__text'> Da un clic aqui para hacer login</a></span>
                     </div>
                     <button className='commu__btn'>Mandar Código</button>

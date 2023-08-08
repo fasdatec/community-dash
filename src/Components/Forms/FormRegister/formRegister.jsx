@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../assets/css/forms.css';
-import imgRegister from '../../../assets/images/forget.svg';
+import imgRegister from '../../../assets/images/register.svg';
 const formRegister = () => {
   return (
     <>
