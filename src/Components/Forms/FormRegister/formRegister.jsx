@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../assets/css/forms.css';
 import imgRegister from '../../../assets/images/register.svg';
-const FormRegister = () => {
+const formRegister = () => {
   return (
     <>
         <section className="commu__container__form">
@@ -66,4 +66,4 @@ const FormRegister = () => {
   )
 }
 
-export default FormRegister
+export default formRegister
