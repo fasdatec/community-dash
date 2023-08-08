@@ -17,7 +17,7 @@ const formRegister = () => {
                     <div className="commu__form__group">
                         <div className="commu__form__desing">
                             <svg width="35" height="35" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_17_253)">
+                                <g clipPath="url(#clip0_17_253)">
                                     <rect width="60" height="60" rx="30" fill="#2f2e41"/>
                                     <rect x="18" y="10" width="24" height="24" rx="12" fill="#FFCB14"/>
                                     <rect x="-15" y="40" width="90" height="90" rx="45" fill="#FFCB14"/>

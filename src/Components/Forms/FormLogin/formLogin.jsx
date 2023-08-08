@@ -18,7 +18,7 @@ const formLogin = () => {
                 <div className="commu__form__group">
                     <div className="commu__form__desing">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_17_253)">
+                            <g clipPath="url(#clip0_17_253)">
                                 <rect width="60" height="60" rx="30" fill="#2f2e41"/>
                                 <rect x="18" y="10" width="24" height="24" rx="12" fill="#FFCB14"/>
                                 <rect x="-15" y="40" width="90" height="90" rx="45" fill="#FFCB14"/>
@@ -44,12 +44,12 @@ const formLogin = () => {
                 </div>
                 <div className="commu__form__group commu__bottom">
                     <span className='commu__span__text'>¿No tienes cuenta? 
-                    <a href="/registro" className='commu__link__text'> Ingresa aqui</a></span>
+                    <a href="/Registro" className='commu__link__text'> Ingresa aqui</a></span>
                 </div>
                 <button className='commu__btn'>Ingresar</button>
                 <div className="commu__form__group commu__center commu__top">
                     <span className='commu__span__text'>¿Olvidaste tu Contraseña?
-                    <a href="/recuperar" className='commu__link__text'> Da un clic aqui</a></span>
+                    <a href="/Recuperar" className='commu__link__text'> Da un clic aqui</a></span>
                 </div>
             </form>
         </article>
