@@ -31,7 +31,7 @@ const Login = () => {
             <div className="login__tex__community">
               <article className="login__text__community">
                 <p> ¿Olvidaste contraseña?</p>
-                <a href="#">Recuperarla aqui</a>
+                <a href="/recover">Recuperarla aqui</a>
               </article>
               <button>Iniciar Sesion</button>
               <article className="login__text__community">
