@@ -1,0 +1,193 @@
+.commu__container__form{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background: rgb(47, 46, 65);
+}
+.commu__form__wave{
+    background-image: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+}
+.commu__img__form{
+    position: absolute;
+    z-index: 1;
+}
+.commu__img__form img{
+    width: 500px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(35%, 80%);
+    z-index: 2;
+}
+.commu__img__register img{
+    width: 500px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(20%, 50%);
+    z-index: 2;
+}
+h1{
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 400; 
+    position: absolute;
+    top: 10rem;
+    left: 6rem;
+    transform: translate(90%, 50%);
+    z-index: 2;
+}
+.commu__img__register h1{
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 400; 
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+    transform: translate(50%, 50%);
+    z-index: 2;
+}
+@media screen and (max-width:1500px) {
+    .commu__img__form img{
+        width: 400px;
+        transform: translate(20%, 50%);
+    }
+    .commu__img__register img{
+        width: 300px;
+        transform: translate(35%, 70%);
+    }
+    h1{
+        top: 1rem;
+        left: 2.5rem;
+        transform: translate(50%, 80%);
+    }
+    .commu__img__register h1{
+        top: 5rem;
+        transform: translate(20%, 50%);
+    }
+}
+/*Design of the forms an the props to post data*/
+.commu__form__steps{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.commu__form__steps h2{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.commu__form__steps p{
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.commu__form__group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.commu__form__desing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.commu__label__form{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+.commu__desing__input{
+    border: 2px solid rgb(255, 183, 39);
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none !important;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    caret-color: rgb(255, 183, 39);
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+.commu__span__text{
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+}
+.commu__link__text{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+}
+.commu__btn{
+    border: none;
+    border-radius: 10px;
+    background: rgb(255, 183, 39);
+    padding: 0.8em;
+    font-weight: 800;
+    width: 80%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+/*Design  of the page call Forget*/
+.commu__container__form__forget{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/forgetet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+/*All responsive desing*/
+@media screen and (max-width:1000px) {
+    .commu__container__form,.commu__container__form__forget{
+        flex-direction:column;
+        background: rgb(47, 46, 65);
+    }
+    .commu__form__wave{
+       display: none;
+    }
+    .commu__form__steps{
+        height: 100vh;
+    }
+    .commu__form__group{
+        padding: 1rem;
+    }
+    .commu__desing__input{
+        width: 90%;
+    }
+    .commu__span__text{
+        text-align: center;
+    }
+    .commu__form__steps h2{
+        margin-top: 3rem;
+    }
+    .commu__form__steps p{
+        padding: 1rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    .commu__form__desing{
+        padding: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .commu__span__text__resp {
+        text-align: justify;
+        padding: 0.5rem;
+    }
+}
