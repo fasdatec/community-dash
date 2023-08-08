@@ -1,0 +1,13 @@
+body {
+  background: rgb(47, 46, 65);
+}
+.commu__container__logo {
+  display: flex;
+  justify-content: center;
+  line-height: 25rem;
+}
+.commu__container__logo h1 {
+  color: rgb(255, 183, 39);
+  font-size: 3rem;
+
+}
