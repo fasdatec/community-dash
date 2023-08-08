@@ -1,9 +1,9 @@
 import React from 'react'
-import FormForget from '../Components/Forms/FormRecover/FormRecover'
+import FormRecover from '../Components/Forms/FormRecover/formRecover'
 const Forget = () => {
   return (
     <main>
-        <FormForget />
+        <FormRecover />
     </main>
   )
 }

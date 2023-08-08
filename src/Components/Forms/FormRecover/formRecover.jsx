@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../assets/css/forms.css';
-const FormRecover = () => {
+const formRecover = () => {
   return (
     <>
         <section className="commu__container__form__forget">
@@ -32,4 +32,4 @@ const FormRecover = () => {
     </>
   )
 }
-export default FormRecover
+export default formRecover

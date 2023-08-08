@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../assets/css/forms.css';
 import imgLogin from '../../../assets/images/login.svg';
 
-const FormLogin = () => {
+const formLogin = () => {
   return (
     <>
       <section className="commu__container__form">
@@ -57,4 +57,4 @@ const FormLogin = () => {
     </>
   );
 }
-export default FormLogin
+export default formLogin
