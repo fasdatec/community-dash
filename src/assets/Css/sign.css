@@ -1,192 +1,203 @@
-/*  
+/*
     Community CSS version 1.0.0
     Copyright 2023 Community
         1.- Full color
-        2.- Screen 
+        2.- Screen
         3.- Responsive sign
 */
 /* -----------Full color--------- */
-.banner__sign {
-    display: flex;
+.sign__banner__community{
+  display:flex;
+  height:76.5rem;
+}
+.sign__full__community{
+  background-color:#ffb727;
+  width:50%;
+  display:flex;
+  position:relative;
+  justify-content:space-around;
+  flex-direction:column;
+}
+.sign__content__community{
+  margin:0;
+  text-align:center;
+}
+.sign__content__community h1{
+  font-size:6rem;
+  font-weight:800;
+  color:#ffff;
+}
+.sign__content__community img{
+  width:50%;
+  height: 100%;
+  text-align:center;
+}
+.sign__icon__community{
+  font-size:7rem;
+  color:#ffff;
+}
+/* -----------END of Full color--------- */
+/* ----------- Screen --------- */
+.sign__screen__community{
+  margin:1rem;
+  width:50%;
+  position:relative;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+}
+.sign__screen__community h2{
+  font-size:4rem;
+  color:#000000;
+}
+.sign__form__community{
+  text-align:center;
+}
+.sign__form__community p{
+  display:flex;
+  margin:2rem;
+  font-size:2.5rem;
+  font-weight:800;
+  color:#ffb727;
+}
+.sign__form__community input{
+  width:90%;
+  font-size:2rem;
+  border-color:#ffb727;
+  border-radius:10px;
+}
+.sign__container__community{
+  padding:2rem;
+  justify-content:center;
+}
+.sign__container__community p{
+  margin:1rem;
+  font-size:2rem;
+  font-weight:600;
+  color:#000000;
+  text-align:center;
+}
+button{
+  padding:1rem;
+  width:50%;
+  color:#ffff;
+  font-size:2.5rem;
+  font-weight:600;
+  border-radius:2rem;
+  border-color:#ffb727;
+  background-color:#ffb727;
+}
+/* -----------END of Screen--------- */
+/* ----------- Responsive sign --------- */
+@media screen and (max-width:1500px){
+  .sign__banner__community{
+    height:40.5rem;
   }
-  .full__sign {
-    background-color: #ffb727;
-    clip-path: path("M616.00,0 C465.00,355.00 694.00,153.00 594.0,663 L0.00,663 L0,0 Z");
-    width: 50%;
-    position: relative;
+  .sign__content__community h1{
+    font-size:3.5rem;
   }
-  .content__sign {
-    margin: 1rem;
-    text-align: center;
+  .sign__content__community img{
+    width:50%;
+    height:auto;
+    text-align:center;
   }
-  h1 {
-    font-size: 3rem;
-    color: #ffff;
+  .sign__icon__community{
+    font-size:4.5rem;
   }
-  img {
-    margin: 2rem;
-    width: 50%;
-    text-align: center;
+  .sign__screen__community h2{
+    font-size:2rem;
   }
-  .circle__icon__sign {
-    font-size: 3.5rem;
-    color: #ffff;
+  .sign__form__community p{
+    margin:1rem;
+    font-size:1.5rem;
   }
-  /* -----------END of Full color--------- */
-  /* ----------- Screen --------- */
-  .screen__sign {
-    width: 50%;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  .sign__form__community input{
+    height:auto;
+    font-size:1.5rem;
   }
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
+  .sign__container__community{
+    padding:1rem;
   }
-  .form_sign i {
-    display: flex;
-    font-size: 1.5rem;
-    color: #ffb727;
+  button{
+    padding:1rem;
+    width:50%;
+    color:#ffff;
+    font-size:1.5rem;
+    font-weight:600;
+    border-radius:2rem;
+    border-color:#ffb727;
+    background-color:#ffb727;
   }
-  .form_sign p {
-    font-size: 1rem;
-    color: #000000;
+  .sign__container__community p{
+    font-size:1rem;
   }
-  .form_sign input {
-    width: 80%;
-    height: 25px;
-    background-color: #b0bac3;
-    border-color: transparent;
-    border-radius: 10px;
+  .sign__container__community a{
+    margin:1rem;
+    font-size:1rem;
+  }  
+}
+@media screen and (max-width: 850px){
+  .sign__banner__community{
+    background-color:#2f2e41;
+    flex-direction:column;
+    height:42rem;
   }
-  p {
-    margin: 1rem;
+  .sign__full__community{
+    margin:0;
+    width:100%;
+    background-color:transparent;
   }
-  .button__sign {
-    margin: 1rem;
-    width: 150px;
-    height: 50px;
-    color: #ffff;
-    font-size: 1rem;
-    border-radius: 1rem;
-    border-color: #ffb727;
-    background-color: #ffb727;
+  .sign__content__community h1{
+    font-size:2.5rem;
   }
-  /* -----------END of Screen--------- */
-  /* ----------- Responsive sign --------- */
-  @media screen and (max-width: 1200px) {
-    .banner__sign {
-      display: flex;
-    }
-    .full__sign {
-      width: 50%;
-      clip-path: none;
-    }
-    img {
-      margin: 0rem;
-      width: 50%;
-      text-align: center;
-    }
-    .circle__icon {
-      font-size: 4rem;
-      color: #ffff;
-    }
+  .sign__content__community img{
+    display:none;
   }
-  @media screen and (max-width: 850px) {
-    .banner__sign {
-      display: flex;
-      background-color: #ffb727;
-      height: 100vh;
-      flex-direction: column;
-    }
-    .full__sign {
-      width: 100%;
-      height: 10vh;
-      background-color: transparent;
-    }
-    h1 {
-      margin: 4rem;
-      font-size: 4rem;
-      color: #ffff;
-    }
-    img {
-      display: none;
-    }
-    .circle__icon__sign {
-      display: none;
-    }
-    .screen__sign {
-      width: 100%;
-      justify-content: end;
-      flex-direction: column;
-    }
-    h2 {
-      font-size: 3rem;
-      color: #ffff;
-    }
-    .form_sign {
-      text-align: center;
-    }
-    .form_sign {
-      margin: 2rem 2rem 0rem 4rem;
-    }
-    .form_sign i {
-      font-size: 3rem;
-      color: #ffff;
-    }
-    .form_sign p {
-      font-size: 2rem;
-      color: #ffff;
-    }
-    .form_sign input {
-      width: 80%;
-      height: 50px;
-      font-size: 1.5rem;
-      background-color: #b0bac3;
-      border-color: transparent;
-    }
-    p {
-      font-size: 1.5rem;
-    }
-    .button__sign {
-      width: 50%;
-      color: #ffb727;
-      font-size: 1.5rem;
-  
-      border-color: #ffff;
-      background-color: #ffff;
-    }
+  .sign__icon__community{
+    display:none;
   }
-  @media screen and (max-width: 750px) {
-    h1 {
-      margin: 1rem;
-      font-size: 2rem;
-    }
-    h2 {
-      margin: 2rem;
-      font-size: 1rem;
-    }
-    .form_sign {
-      margin: 1rem 1rem 0rem 2rem;
-    }
-    .form_sign i {
-      font-size: 2rem;
-    }
-    .form_sign p {
-      font-size: 1rem;
-    }
-    .form_sign input {
-      height: 25px;
-      font-size: 1rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-    .button__sign {
-      width: 25%;
-      font-size: 1rem;
-    }
+  .sign__screen__community{
+    width:100%;
+    justify-content:end;
+    flex-direction:column;
+    margin:0;
   }
-  /* -----------END of Responsive sign --------- */
+  .sign__screen__community h2{
+    font-size:1rem;
+    color:#ffb727;
+  }
+  .sign__form__community{
+    text-align:center;
+  }
+  .sign__form__community i{
+    font-size:1.5rem;
+    color:#fff;
+  }
+  .sign__form__community p{
+    font-size:1rem;
+    color:#ffb727;
+  }
+  .sign__container__community p{
+    font-size:1rem;
+    color:#ffff;
+  }
+  .sign__container__community a{
+    font-weight:600;
+    color:#ffb727;
+  }
+  .sign__form__community input{
+    height:50%;
+    font-size:1rem;
+    color:#ffff;
+    background-color:transparent;
+    border-color:#ffb727;
+  }
+  button{
+    margin:1rem;
+    width:50%;
+    color:#2f2e41;
+    font-size:1rem;
+    font-weight:600;
+  }
+}
+/* -----------END of Responsive sign --------- */
