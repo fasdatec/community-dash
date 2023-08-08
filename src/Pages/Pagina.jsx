@@ -1,6 +1,6 @@
 import React from 'react'
 import James from '../Components/Lol/James'
-const pagina = () => {
+const Pagina = () => {
   return (
     <>
         <James />
@@ -8,4 +8,4 @@ const pagina = () => {
   )
 }
 
-export default pagina
+export default Pagina
