@@ -1,5 +1,5 @@
 import React from 'react'
-import FormForget from '../Components/Forms/FormRecover/formRecover'
+import FormForget from '../Components/Forms/FormRecover/FormRecover'
 const Forget = () => {
   return (
     <main>
