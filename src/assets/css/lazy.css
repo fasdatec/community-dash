@@ -1,9 +1,13 @@
-.commu__container__lazy{
+.commu__container__lazy {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  line-height: 35rem;
+  align-items: center;
+  height: 100vh;
+  background: rgb(47, 46, 65);
 }
-.commu__text__lazy{
+.commu__text__lazy {
   color: rgb(255, 183, 39);
   font-size: 3rem;
+  font-weight: 800;
 }
