@@ -1,9 +1,9 @@
-.commu__container__logo {
+.commu__container__lazy{
   display: flex;
   justify-content: center;
-  line-height: 25rem;
+  line-height: 35rem;
 }
-.commu__container__logo h1 {
+.commu__text__lazy{
   color: rgb(255, 183, 39);
   font-size: 3rem;
 }

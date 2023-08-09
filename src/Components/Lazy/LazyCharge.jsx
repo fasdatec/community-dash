@@ -2,9 +2,9 @@ import React from 'react'
 import '../../assets/css/lazy.css'
 const LazyCharge = () => {
   return (
-    <div className='commu__container__logo'>
-      <span>ComuFasda</span>
-    </div>
+    <section className='commu__container__lazy'>
+      <span className='commu__text__lazy'>ComuFasda</span>
+    </section>
   )
 }
 export default LazyCharge
