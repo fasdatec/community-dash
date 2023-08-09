@@ -3,7 +3,7 @@ import FormRecover from '../Components/Forms/RecoverForm/recoverform'
 const Forget = () => {
   return (
     <main>
-        <FormRecover />
+      <FormRecover />
     </main>
   )
 }
