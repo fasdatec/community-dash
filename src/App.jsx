@@ -1,8 +1,9 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom'
-import Login from './Pages/Login'
-import Register from './Pages/Register'
-import Forget from './Pages/Forget'
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Forget from './Pages/Forget';
+import Home from './Pages/Home';
 const App = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const App = () => {
         <Route exact path="/" element={<Login />} />
         <Route exact path="/Registro" element={<Register />}/>
         <Route exact path="/Recuperar" element={<Forget />} />
+        <Route exact path="/Dashboard" element={<Home />} />
       </Routes>
     </>
   )

@@ -1,0 +1,85 @@
+//variables generales para todo el proyecto
+/*******
+Para poner dos atributos a una clase CSS
+    {`${fasdatec.sidebar__parr} ${fasdatec.sidebar__weight}`}
+Para poner un atributo a una clase CSS
+    {fasdatec.sidebar__parr}
+*********/
+//variables para colores de fondo o color normal
+$colorBlueDarkBackground: #2f2e41;
+$colorYellowBackground: #ffb727;
+:export {
+    colorBlueDarkBackground: $colorBlueDarkBackground;
+    colorYellowBackground: $colorYellowBackground;
+}
+//variables para colores de tag tipo <a><li><p><strong><span><h1><h2>...
+$colorWhite: #fff;
+$colorBlueDark: #2f2e41;
+:export {
+    colorWhite: $colorWhite;
+    colorBlueDark: $colorBlueDark;
+} 
+//variables para el tamaño de cualquier letras
+$sizeMedium: 1rem; //16px
+$sizeMediumX1: 1.1rem; //17.6px
+$sizeMediumX2: 1.2rem; //19.2px
+$sizeMediumX3: 1.5rem; //24px
+$sizeMediumX4: 1.7rem; //27.2px
+$sizeMediumX5: 1.8rem; //28.8px
+$sizeMediumLarge: 2rem; //32px
+$sizeMediumLargeX1: 2.1rem; //33.6px
+$sizeMediumLargeX2: 2.2rem; //35.2px
+$sizeMediumLargeX3: 2.5rem; //40px
+$sizeMediumLargeX4: 2.7rem; //43.2px
+$sizeMediumLargeX5: 2.8rem; //44.8px
+$sixeLarge: 3rem; //48px
+:export {
+    sizeMedium: $sizeMedium;
+    sizeMediumX1: $sizeMediumX1;
+    sizeMediumX2: $sizeMediumX2;
+    sizeMediumX3: $sizeMediumX3;
+    sizeMediumX4: $sizeMediumX4;
+    sizeMediumX5: $sizeMediumX5;
+    sizeMediumLarge: $sizeMediumLarge;
+    sizeMediumLargeX1: $sizeMediumLargeX1;
+    sizeMediumLargeX2: $sizeMediumLargeX2;
+    sizeMediumLargeX3: $sizeMediumLargeX3;
+    sizeMediumLargeX4: $sizeMediumLargeX4;
+    sizeMediumLargeX5: $sizeMediumLargeX5;
+    sixeLarge: $sixeLarge;
+}
+//variables para el grosor de las letras
+$weight100: 100;
+$weight200: 200;
+$weight300: 300;
+$weight400: 400;
+$weight500: 500;
+$weight600: 600;
+$weight700: 700;
+$weight800: 800;
+$weight900: 900;
+$weight900: 900;
+$weightBold: bold;
+$weightLighter: lighter;
+$weightInherit: inherit;
+$weightNormal: normal;
+:export {
+    weight100: $weight100;
+    weight200: $weight200;
+    weight300: $weight300;
+    weight400: $weight400;
+    weight500: $weight500;
+    weight600: $weight600;
+    weight700: $weight700;
+    weight800: $weight800;
+    weight900: $weight900;
+    weightBold: $weightBold;
+    weightLighter: $weightLighter;
+    weightInherit: $weightInherit;
+    weightNormal: $weightNormal;
+}
+//variables para el padding
+$paddingMedium : 1rem; //16px
+:export {
+    paddingMedium: $paddingMedium;
+}

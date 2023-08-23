@@ -1,0 +1,10 @@
+@import "../../../assets/sass/variables.scss";
+.sidebar__general {
+    background-color: $colorBlueDarkBackground;
+    width: 100%;
+    .sidebar__parr{
+        color: $colorWhite;
+        font-size: $sizeMedium;
+        padding: $paddingMedium;
+    }
+}

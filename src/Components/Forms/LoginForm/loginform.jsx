@@ -46,7 +46,8 @@ const loginform = () => {
                     <span className='commu__span__text'>¿No tienes cuenta? 
                     <a href="/Registro" className='commu__link__text'> Ingresa aqui</a></span>
                 </div>
-                <button className='commu__btn'>Ingresar</button>
+                {/**<button className='commu__btn'>Ingresar</button> */}
+                <a href="/Dashboard" className='commu__btn'>Ingresar</a>
                 <div className="commu__form__group commu__center commu__top">
                     <span className='commu__span__text'>¿Olvidaste tu Contraseña?
                     <a href="/Recuperar" className='commu__link__text'> Da un clic aqui</a></span>
