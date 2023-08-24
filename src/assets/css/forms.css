@@ -1,29 +1,3 @@
-.commu__container__form{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    background: rgb(47, 46, 65);
-}
-.commu__form__wave{
-    background-image: url(../images/wave.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    height: 100vh;
-}
-.commu__img__form{
-    position: absolute;
-    z-index: 1;
-}
-.commu__img__form img{
-    width: 500px;
-    border-radius: 10px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translate(35%, 80%);
-    z-index: 2;
-}
 .commu__img__register img{
     width: 500px;
     border-radius: 10px;
@@ -32,18 +6,7 @@
     left: 0%;
     transform: translate(20%, 50%);
     z-index: 2;
-}
-h1{
-    background: transparent;
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-    font-weight: 400; 
-    position: absolute;
-    top: 10rem;
-    left: 6rem;
-    transform: translate(90%, 50%);
-    z-index: 2;
-}
+}  
 .commu__img__register h1{
     background: transparent;
     color: rgb(255, 255, 255);
@@ -56,18 +19,9 @@ h1{
     z-index: 2;
 }
 @media screen and (max-width:1500px) {
-    .commu__img__form img{
-        width: 400px;
-        transform: translate(20%, 50%);
-    }
     .commu__img__register img{
         width: 300px;
         transform: translate(35%, 70%);
-    }
-    h1{
-        top: 1rem;
-        left: 2.5rem;
-        transform: translate(50%, 80%);
     }
     .commu__img__register h1{
         top: 5rem;
@@ -154,12 +108,9 @@ h1{
 }
 /*All responsive desing*/
 @media screen and (max-width:1000px) {
-    .commu__container__form,.commu__container__form__forget{
+    .commu__container__form__forget{
         flex-direction:column;
         background: rgb(47, 46, 65);
-    }
-    .commu__form__wave{
-       display: none;
     }
     .commu__form__steps{
         height: 100vh;

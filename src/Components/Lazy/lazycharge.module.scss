@@ -1,0 +1,14 @@
+@import "../../assets/sass/variables.scss";
+.commu__container__lazy{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: $sizeTypeViewHeight100;
+    background: $colorBlueDarkBackground;
+    .commu__text__lazy {
+        color: $colorYellow;
+        font-size: $sizeLarge;
+        font-weight: $weight800;
+    }
+}

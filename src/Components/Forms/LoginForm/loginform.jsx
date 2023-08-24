@@ -1,18 +1,19 @@
 import React from 'react';
+import fasdatec from './login.module.scss';
 import '../../../assets/css/forms.css';
 import imgLogin from '../../../assets/images/login.svg';
 
 const loginform = () => {
   return (
     <>
-      <section className="commu__container__form">
-        <article className="commu__form__wave">
-            <div className="commu__img__form">
-                <h1>¡Bienvenido!</h1>
-                <img src={imgLogin} loading="lazy" alt="Comunity Manager de FasdaTec" title="Comunity Manager de FasdaTec" />
+      <section className={fasdatec.commu__container__form}>
+        <article className={fasdatec.commu__form__wave}>
+            <div className={fasdatec.commu__img__form}>
+                <h1 className={fasdatec.commu__title__head}>¡Bienvenido!</h1>
+                <img src={imgLogin} className={fasdatec.img__commu} loading="lazy" alt="Comunity Manager de FasdaTec" title="Comunity Manager de FasdaTec" />
             </div>
         </article>
-        <article className="commu__form__steps">
+        <article className="commu__form__steps">{/*Aqui me qeude*/}
           <h2>Inicio de Sesión al ComuFasda</h2>
             <form className='commu__form__general'>
                 <div className="commu__form__group">

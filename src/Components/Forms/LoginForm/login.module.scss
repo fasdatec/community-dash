@@ -1,0 +1,59 @@
+@import "../../../assets/sass/variables.scss";
+.commu__container__form{
+    display: flex;
+    flex-direction: row;
+    gap: $sizeTypeRem2;
+    background: $colorBlueDarkBackground;
+    .commu__form__wave{
+        background-image: url(../../../assets/images/wave.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: $sizeTypePercentage50;
+        height: $sizeTypeViewHeight100;
+        .commu__img__form{
+            position: absolute;
+            z-index: 1;
+        }
+        .commu__title__head{
+            background: transparent;
+            color: $colorBlueDark;
+            font-size: $sizeLarge;
+            font-weight: $weight400; 
+            position: absolute;
+            top: $sizeTypeRem4 + $sizeTypeRem4;
+            left: $sizeTypeRem4 + $sizeTypeRem1;
+            transform: translate($sizeTypePercentage90, $sizeTypePercentage50);
+            z-index: 2;
+        }
+        .img__commu{
+            width: $sizeTypeAll500;
+            border-radius: $borderMedium;
+            position: absolute;
+            top: $sizeTypePercentage0;
+            left: $sizeTypePercentage0;
+            transform: translate($sizeTypePercentage35, $sizeTypePercentage80);
+            z-index: 2;
+        }
+    }
+    @media screen and (max-width:$responisveNormal1500) {
+        .commu__img__form{
+            .commu__title__head{
+                top: $sizeTypeRem1;
+                left: 2.5rem;
+                transform: translate($sizeTypePercentage50, $sizeTypePercentage80);
+            }
+            .img__commu{
+                width: $sizeTypeAll400;
+                transform: translate($sizeTypePercentage20, $sizeTypePercentage50);
+            }
+        }
+    }
+    @media screen and (max-width:$responsiveNormal) {
+        .commu__container__form{
+            flex-direction: column;
+        }
+        .commu__form__wave{
+            display: none;
+        }
+    }
+}
