@@ -233,12 +233,29 @@ $borderMedium5: 50px;
 }
 //tamnaños para el responsive desing
 $responisveNormal1500:1500px;
-$responsiveNormal:1000px;
+$responsiveNormal:1080px;
 $responsiveMedium:800px;
-$responsiveLittle:400px;
+$responsiveLittle:425px;
 :export {
     responisveNormal1500: $responisveNormal1500;
     responsiveNormal: $responsiveNormal;
     responsiveMedium: $responsiveMedium;
     responsiveLittle: $responsiveLittle;
+}
+// propiedades de z-index
+$sizeZindex0:0;
+$sizeZindex1:1;
+$sizeZindex2:2;
+$sizeZindex3:3;
+$sizeZindex4:10;
+$sizeZindex5:50;
+$sizeZindex6:100;
+:export {
+    sizeZindex0: $sizeZindex0;
+    sizeZindex1: $sizeZindex1;
+    sizeZindex2: $sizeZindex2;
+    sizeZindex3: $sizeZindex3;
+    sizeZindex4: $sizeZindex4;
+    sizeZindex5: $sizeZindex5;
+    sizeZindex6: $sizeZindex6;
 }

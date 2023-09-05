@@ -10,7 +10,7 @@
         background-size: cover;
         width: $sizeTypePercentage50;
         height: $sizeTypeViewHeight100;
-        .commu__img__form{
+        .commu__img__register{
             position: absolute;
             z-index: $sizeZindex1;
         }
@@ -36,15 +36,15 @@
         }
     }
     @media screen and (max-width:$responisveNormal1500) {
-        .commu__img__form{
+        .commu__img__register{
             .commu__title__head{
                 top: $sizeTypeRem1;
                 left: 2.5rem;
-                transform: translate($sizeTypePercentage50, $sizeTypePercentage80);
+                transform: translate($sizeTypePercentage30, $sizeTypePercentage40);
             }
             .img__commu{
                 width: $sizeTypeAll400;
-                transform: translate($sizeTypePercentage20, $sizeTypePercentage50);
+                transform: translate($sizeTypePercentage20, $sizeTypePercentage40);
             }
         }
     }
@@ -77,7 +77,7 @@
                 margin-top: $sizeTypeRem1;
                 margin-bottom: $sizeTypeRem1;
                 .commu__label__form{
-                    font-size: $sizeMedium;
+                    font-size: $sizeTypeRem1;
                     color: $colorWhite;
                 }
             }
@@ -107,7 +107,7 @@
         .commu__btn{
             border: none;
             border-radius: 10px;
-            background: $colorYellow;
+            background: rgb(255, 183, 39);
             padding: 0.8em;
             font-weight: $weight800;
             width: $sizeTypePercentage80;
@@ -116,11 +116,6 @@
             cursor: pointer;
             text-transform: uppercase;
             margin-bottom: $sizeTypeRem1;
-        }
-        .commu__center{
-            display: block;
-            margin: auto;
-            text-align: center;
         }
         .commu__bottom{
             margin-bottom: 1.5rem;
