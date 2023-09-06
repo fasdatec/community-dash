@@ -8,17 +8,3 @@
 ::placeholder{
   color: rgba(176, 186, 195, 0.4);
 }
-.commu__center{
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-.commu__top{
-  margin-top: 1.5rem;
-}
-.commu__bottom{
-  margin-bottom: 1.5rem;
-}
-.commu__width__one{
-  width: 100% !important;
-}

@@ -1,9 +1,9 @@
 import React from 'react'
-import '../../assets/css/lazy.css'
+import fasdatec from './lazycharge.module.scss'
 const LazyCharge = () => {
   return (
-    <section className='commu__container__lazy'>
-      <span className='commu__text__lazy'>ComuFasda</span>
+    <section className={fasdatec.commu__container__lazy}>
+      <span className={fasdatec.commu__text__lazy}>ComuFasda</span>
     </section>
   )
 }

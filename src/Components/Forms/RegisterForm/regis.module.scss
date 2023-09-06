@@ -1,0 +1,140 @@
+@import "../../../assets/sass/variables.scss";
+.commu__container__form{
+    display: flex;
+    flex-direction: row;
+    gap: $sizeTypeRem2;
+    background: $colorBlueDarkBackground;
+    .commu__form__wave{
+        background-image: url(../../../assets/images/wave.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: $sizeTypePercentage50;
+        height: $sizeTypeViewHeight100;
+        .commu__img__register{
+            position: absolute;
+            z-index: $sizeZindex1;
+        }
+        .commu__title__head{
+            background: transparent;
+            color: $colorBlueDark;
+            font-size: $sizeLarge;
+            font-weight: $weight400; 
+            position: absolute;
+            top: $sizeTypeRem4 + $sizeTypeRem4;
+            left: $sizeTypeRem4 + $sizeTypeRem1;
+            transform: translate($sizeTypePercentage90, $sizeTypePercentage50);
+            z-index: $sizeZindex2;
+        }
+        .img__commu{
+            width: $sizeTypeAll500;
+            border-radius: $borderMedium;
+            position: absolute;
+            top: $sizeTypePercentage0;
+            left: $sizeTypePercentage0;
+            transform: translate($sizeTypePercentage35, $sizeTypePercentage80);
+            z-index: $sizeZindex2;
+        }
+    }
+    @media screen and (max-width:$responisveNormal1500) {
+        .commu__img__register{
+            .commu__title__head{
+                top: $sizeTypeRem1;
+                left: 2.5rem;
+                transform: translate($sizeTypePercentage30, $sizeTypePercentage40);
+            }
+            .img__commu{
+                width: $sizeTypeAll400;
+                transform: translate($sizeTypePercentage20, $sizeTypePercentage40);
+            }
+        }
+    }
+    @media screen and (max-width:$responsiveNormal) {
+        .commu__container__form{
+            flex-direction: column;
+        }
+        .commu__form__wave{
+            display: none;
+        }
+    }
+    .commu__form__steps{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        .commu__title__head__form{
+            font-size: $sizeMediumLarge;
+            text-align: center;
+            color: $colorWhite;
+        }
+        .commu__form__group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: $sizeTypeRem1;
+            .commu__form__desing{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: $sizeTypeRem1;
+                margin-top: $sizeTypeRem1;
+                margin-bottom: $sizeTypeRem1;
+                .commu__label__form{
+                    font-size: $sizeTypeRem1;
+                    color: $colorWhite;
+                }
+            }
+            .commu__desing__input{
+                border: 2px solid $colorYellow;
+                padding: 0.5rem;
+                border-radius: 5px;
+                outline: none !important;
+                background: transparent;
+                color: $colorWhite;
+                caret-color: $colorYellow;
+                display: block;
+                margin: auto;
+                width: $sizeTypePercentage100;
+            }
+            .commu__span__text{
+                color: $colorWhite;
+                font-weight: $weight100;
+            }
+            .commu__link__text{
+                color: $colorWhite;
+                font-weight: $weight600;
+                font-style: italic;
+                text-decoration: none;
+            }
+        }
+        .commu__btn{
+            border: none;
+            border-radius: 10px;
+            background: rgb(255, 183, 39);
+            padding: 0.8em;
+            font-weight: $weight800;
+            width: $sizeTypePercentage80;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: $sizeTypeRem1;
+        }
+        .commu__bottom{
+            margin-bottom: 1.5rem;
+        }
+    }
+    @media screen and (max-width:$responsiveNormal) {
+        .commu__form__steps{
+            height: $sizeTypeViewHeight100;
+            .commu__title__head__form{
+                margin-top: $sizeTypeRem3;
+                margin-bottom: $sizeTypeRem3;
+            }
+            .commu__form__group{
+               padding: $sizeTypeRem1;
+               margin-bottom: $sizeTypeRem0;
+                .commu__desing__input{
+                    width: $sizeTypePercentage90;
+                }
+            }
+        }
+    }
+}

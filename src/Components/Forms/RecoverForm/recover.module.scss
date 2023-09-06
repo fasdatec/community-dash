@@ -1,0 +1,109 @@
+@import '../../../assets/sass/variables.scss';
+.commu__container__form__forget{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../assets/images/forgetet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: $sizeTypeViewHeight100;
+    .commu__form__steps{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        .commu__title__head__pass{
+            color: $colorWhite;
+            font-size: $sizeTypeRem2;
+            text-align: center;
+        }
+        .commu__title__parra__pass{
+            color: $colorWhite;
+            font-size: $sizeTypeRem1;
+            margin-top: $sizeTypeRem2;
+            margin-bottom: $sizeTypeRem2;
+            text-align: center;
+        }
+        .commu__form__group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: $sizeTypeRem1;
+            .commu__form__desing{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: $sizeTypeRem1;
+                margin-top: $sizeTypeRem1;
+                margin-bottom: $sizeTypeRem1;
+                .commu__label__form{
+                    font-size: $sizeTypeRem1;
+                    color: $colorWhite;
+                }
+            }
+            .commu__desing__input{
+                border: 2px solid $colorYellow;
+                padding: 0.5rem;
+                border-radius: 5px;
+                outline: none !important;
+                background: transparent;
+                color: $colorWhite;
+                caret-color: $colorYellow;
+                display: block;
+                margin: auto;
+                width: $sizeTypePercentage100;
+            }
+            .commu__span__text{
+                color: $colorWhite;
+                font-weight: $weight100;
+            }
+            .commu__link__text{
+                color: $colorWhite;
+                font-weight: $weight600;
+                font-style: italic;
+                text-decoration: none;
+            }
+        }
+        .commu__bottom{
+            margin-bottom: 1.5rem;
+        }
+        .commu__btn{
+            border: none;
+            border-radius: 10px;
+            background: $colorYellow;
+            padding: 0.8em;
+            font-weight: $weight800;
+            width: $sizeTypePercentage80;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: $sizeTypeRem1;
+        }
+    } 
+    @media screen and (max-width:$responsiveNormal) {
+        .commu__form__steps{
+            .commu__title__parra__pass{
+                padding: $sizeTypeRem1;
+                text-align: center;
+            }
+            .commu__title__head__form{
+                margin-top: $sizeTypeRem3;
+                margin-bottom: $sizeTypeRem3;
+            }
+            .commu__form__group{
+               padding: $sizeTypeRem1;
+               margin-bottom: $sizeTypeRem0;
+                .commu__desing__input{
+                    width: $sizeTypePercentage90;
+                }
+                .commu__span__text__resp {
+                    text-align: justify;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:$responsiveNormal) {
+    .commu__container__form__forget{
+        background:  $colorBlueDarkBackground;
+    }
+}
