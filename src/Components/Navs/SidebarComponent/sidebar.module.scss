@@ -1,10 +1,35 @@
 @import "../../../assets/sass/variables.scss";
-.sidebar__general {
-    background-color: $colorBlueDarkBackground;
-    width:$sizeTypePercentage100;
-    .sidebar__parr{
-        color: $colorWhite;
-        font-size: $sizeMedium;
-        padding: $paddingMedium;
+.commu__sidebar__general{
+    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
+    height: $sizeTypeViewHeight100;
+    background-color: $colorBlueDarkSNavBackground;
+    .commu__sidebar__parr{
+        padding: $paddingMedium2;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: $sizeTypeRem3;
+        }
+        li{
+            list-style-type: none;
+            cursor: pointer;
+            color: $colorYellow;
+        }
+        a{
+            text-decoration: none;
+            color: $colorYellow;
+        }
+        a:hover{
+            color: $colorYellowBackground;
+        }
+        .commu__sidebar__button{
+            color: $colorWhite;
+        }
     }
 }
+@media screen and (max-width:$responsiveMedium){
+    .commu__sidebar__general{
+        display: none; 
+    }
+}
+

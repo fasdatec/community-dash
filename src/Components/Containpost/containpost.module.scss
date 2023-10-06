@@ -1,0 +1,20 @@
+@import "../../assets/sass/variables.scss";
+.contain__post__card{
+    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem1;
+    background: $colorWhiteBackground;
+    .contain__post__img__preview{
+        width: $sizeTypePercentage100;
+        height: $sizeTypeRem4 + $sizeTypeRem1;
+    }
+    .contain__post__text{
+        padding: $sizeTypeRem1;
+    }
+}
+@media screen and (max-width:$responsiveMedium){
+    .contain__post__card{
+        width: $sizeTypePercentage100;
+        .contain__post__img__preview{
+            height: $sizeTypeRem4 + $sizeTypeRem4;
+        }
+    }
+}

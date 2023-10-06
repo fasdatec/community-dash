@@ -1,0 +1,15 @@
+@import "../../assets/sass/variables.scss";
+.commu__button__yellow {
+    padding: $paddingLittle;
+    background-color: $colorYellowBackground;
+    cursor: pointer;
+    border-radius: $borderMedium;
+    margin: $sizeTypeRem1;
+}
+@media screen and (max-width:$responsiveMedium) {
+    .commu__button__yellow{
+        position:relative;
+        top: $sizeTypeRem1;
+        padding: $paddingLittle;
+    }
+}
