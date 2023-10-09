@@ -7,5 +7,10 @@
     .commu__post{
         display: flex;
         background-color: $colorBlueDarkSNavBackground;
+        h1{
+            color: $colorWhite;
+            padding: $paddingMedium;
+            text-transform: capitalize;
+        }
     }
 }

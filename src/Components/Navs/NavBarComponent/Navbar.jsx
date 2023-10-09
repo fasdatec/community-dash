@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <div className={fasdatec.commu__navbar__general}>
-        <a href='' className={fasdatec.commu__navbar__logo}>CommuFasda</a>
+        <a href='/Dashboard' className={fasdatec.commu__navbar__logo}>CommuFasda</a>
       <div className={fasdatec.commu__navbar__parr}>
         <ul>
           <li><a className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu/></a></li>

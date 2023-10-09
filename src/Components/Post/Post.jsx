@@ -18,22 +18,7 @@ const Post = () => {
         <div className={fasdatec.commu__section__content__post}>
           <Containpost 
             imagenPost={Apple}
-            textPost='Ejemplo'/>
-          <Containpost 
-            imagenPost={Apple}
-            textPost='Ejemplo'/>
-          <Containpost 
-            imagenPost={Apple}
-            textPost='Ejemplo'/>
-          <Containpost 
-            imagenPost={Apple}
-            textPost='Ejemplo'/>
-          <Containpost 
-            imagenPost={Apple}
-            textPost='Ejemplo'/>
-          <Containpost 
-            imagenPost={Apple}
-            textPost='Ejemplo'/>          
+            textPost='Ejemplo'/>        
         </div>
       </section>
     </>
