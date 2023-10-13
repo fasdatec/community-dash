@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Navs/NavBarComponent/Navbar'
 import Sidebar from '../Navs/SidebarComponent/Sidebar'
 import fasdatec from '../Dashboard/dashboard.module.scss';
+import Calendar from '../CalendarFullcalendar/CalendarMain';
 
 const CalendarGeneral = () => {
   return (
@@ -12,7 +13,10 @@ const CalendarGeneral = () => {
         </div>
         <div className={fasdatec.commu__post}>
             <Sidebar />
+            <div className={fasdatec.commu__calendar}>
             <h1>Calendario</h1>
+              <Calendar />
+            </div>
         </div>
     </section>
     </>
