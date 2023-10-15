@@ -13,9 +13,13 @@ Para poder hacer calculos de variables, es decir:
 //variables para colores de fondo o color normal
 $colorBlueDarkBackground: #2f2e41;
 $colorYellowBackground: #ffb727;
+$colorBlueDarkSNavBackground: #201F2F;
+$colorWhiteBackground: #fff;
 :export {
     colorBlueDarkBackground: $colorBlueDarkBackground;
     colorYellowBackground: $colorYellowBackground;
+    colorBlueDarkSNavBackground: $colorBlueDarkSNavBackground;
+    colorWhiteBackground: $colorWhiteBackground;
 }
 //variables para colores de tag tipo <a><li><p><strong><span><h1><h2>...
 $colorWhite: #fff;

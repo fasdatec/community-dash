@@ -1,4 +1,20 @@
-.section__navigation{
-    display: flex;
-    flex-direction: row;
+@import "../../assets/sass/variables.scss";
+.commu__section__post{
+    .commu__section__navigation{
+        display: flex;
+        flex-direction: row;
+    }
+    .commu__post{
+        display: flex;
+        background-color: $colorBlueDarkSNavBackground;
+        h1{
+            color: $colorWhite;
+            padding: $paddingMedium;
+            text-transform: capitalize;
+        }
+    }
+}
+.commu__calendar{
+    width: $sizeTypePercentage100;
+    padding: $sizeTypeRem3;
 }

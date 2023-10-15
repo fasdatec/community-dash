@@ -1,0 +1,40 @@
+@import "../../assets/sass/variables.scss";
+.commu__section__content{
+  padding: $sizeTypeRem2;
+  width: $sizeTypePercentage100;
+  .commu__title__button{
+    display: flex;
+    flex-direction: row;
+    width: $sizeTypePercentage100;
+    .commu__section__title__post{
+      color: $colorYellow;
+    }
+    a{
+      text-decoration: none;
+      color: $colorBlueDark;
+    }
+  }
+  .commu__section__content__post{
+    margin-top: $sizeTypeRem2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    gap: $sizeTypeRem2;
+  }
+  @media screen and (max-width:$responsiveMedium){
+    .commu__section__content__post{
+      grid-template-columns: 1fr; 
+      gap: $sizeTypeRem2;
+    }
+    .commu__title__button{
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width:$responsiveMedium){
+  .commu__section__content{
+    padding: $sizeTypeRem3;
+  }
+}

@@ -1,7 +1,53 @@
 @import "../../../assets/sass/variables.scss";
-h1{
-    color: $colorBlueDark;
-}
-.navbar__parr{
-    color: $colorYellowBackground;
+.commu__navbar__general {
+    background-color: $colorBlueDarkBackground;
+    width:$sizeTypePercentage100;
+    .commu__navbar__logo {
+        text-decoration: none;
+        color: $colorYellow;
+        position: absolute;
+        top: $sizeTypeRem2;
+        left: $sizeTypeRem2;
+    }
+    .commu__navbar__parr{
+        padding: $paddingMedium2;
+        font-size: $sizeMedium;
+        ul{
+            gap: $sizeTypeRem2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .commu__hamburguer__menu__button{
+                display: none;
+            }
+        }
+        li{
+            list-style-type: none;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: $colorWhite;
+        }
+        a:hover{
+            color: $colorYellowBackground;
+        }
+    }
+    @media screen and (max-width:$responsiveMedium){
+        .commu__navbar__logo{
+            display:none;
+        }
+        .commu__navbar__parr{
+            ul{
+                justify-content: left;
+                .commu__hamburguer__menu__button{
+                    display: block;
+                    color: $colorWhite;
+                    &:hover{
+                        color: $colorYellow;
+                    }
+                }
+            }
+        }
+    }
 }
