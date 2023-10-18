@@ -25,10 +25,12 @@ $colorWhiteBackground: #fff;
 $colorWhite: #fff;
 $colorBlueDark: #2f2e41;
 $colorYellow: #ffb727;
+$colorBlack: #000;
 :export {
     colorWhite: $colorWhite;
     colorBlueDark: $colorBlueDark;
     colorYellow: $colorYellow;
+    colorBlack: $colorBlack;
 } 
 //variables para el tamaño de cualquier letras
 $sizeMedium: 1rem; //16px

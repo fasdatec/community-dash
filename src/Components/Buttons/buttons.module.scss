@@ -6,6 +6,15 @@
     border-radius: $borderMedium;
     margin: $sizeTypeRem1;
 }
+.commu__button__yellow__transparent{
+    padding: $paddingLittle;
+    background-color: none;
+    cursor: pointer;
+    border: 1px solid $colorYellow;
+    border-radius: $borderMedium;
+    margin: $sizeTypeRem1;
+    color: $colorWhite;
+}
 @media screen and (max-width:$responsiveMedium) {
     .commu__button__yellow{
         position:relative;

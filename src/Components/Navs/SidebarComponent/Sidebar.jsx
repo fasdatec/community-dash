@@ -15,6 +15,7 @@ const Sidebar = () => {
         <ul>
           <li><IoCreateOutline/> <a href='/Create'>Crear Post</a> </li>
           <li><LuCalendarDays /> <a href='/Calendar'>Calendario</a></li>
+          <li><AiOutlineFileText /> <a href='/Publicaciones'>Mis publicaciones</a></li>
           <li><AiOutlineFileText /> <a href='#'>Borradores</a></li>
           <li><TbWorld /> <a href='/Channels'>Canales</a></li>
           <li><MdNotificationsActive /> <a href='#'>Notificaciones</a></li>

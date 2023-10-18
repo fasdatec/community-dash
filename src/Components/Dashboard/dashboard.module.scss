@@ -6,6 +6,7 @@
     }
     .commu__post{
         display: flex;
+        width: $sizeTypePercentage100;
         background-color: $colorBlueDarkSNavBackground;
         h1{
             color: $colorWhite;
@@ -17,4 +18,13 @@
 .commu__calendar{
     width: $sizeTypePercentage100;
     padding: $sizeTypeRem3;
+}
+.commu__post__container{
+    width: $sizeTypePercentage100;
+}
+.commu__mis__publicaciones{
+    width: $sizeTypePercentage100;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }

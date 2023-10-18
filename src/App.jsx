@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Create from "./Pages/Create";
 import Calendar from "./Pages/Calendar";
 import Channels from "./Pages/Channels";
+import Publicaciones from "./Pages/Publicaciones";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/Dashboard" element={<Home />} />
         <Route exact path="/Create" element={<Create />} />
         <Route exact path="/Calendar" element={<Calendar />} />
+        <Route exact path="/Publicaciones" element={<Publicaciones />} />
         <Route exact path="/Channels" element={<Channels />} />
       </Routes>
     </>
