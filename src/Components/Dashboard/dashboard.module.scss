@@ -13,6 +13,17 @@
             padding: $paddingMedium;
             text-transform: capitalize;
         }
+        .commu__section__create__post{
+            display: flex;
+            flex-direction: column;
+            width: $sizeTypePercentage100;
+            .commu__post__social{
+                padding-left: $paddingLarge + $paddingLarge;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: $sizeTypeRem2;
+            }
+        }
     }
 }
 .commu__calendar{

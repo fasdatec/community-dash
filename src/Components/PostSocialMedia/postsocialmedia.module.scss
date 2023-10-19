@@ -1,14 +1,22 @@
 @import "../../assets/sass/variables.scss";
 .commu__card__social__media{
-    margin: $sizeTypeRem1;
-    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem2;
-    height: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
+    padding: $sizeTypeRem1;
+    padding-top: $sizeTypeRem2;
+    width: $sizeTypeRem4 + $sizeTypeRem4;
+    height: $sizeTypeRem4 + $sizeTypeRem4 +$sizeTypeRem2;
     border-radius: $borderMedium;
     text-align: center;
     box-shadow: 0px 0px 20px $colorBlack;
     color: $colorWhite;
     .commu__img__sm{
-        height: $sizeTypePercentage80;
+        height: $sizeTypePercentage70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .commu__img__logo__sm{
+            width: $sizeType4rem;
+            margin-bottom: $sizeTypeRem1;
+        }
     }
     .commu__button__card{
         width: $sizeTypePercentage100;

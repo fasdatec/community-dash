@@ -112,6 +112,7 @@ $sizeTypeRem1:1rem;
 $sizeTypeRem2:2rem;
 $sizeTypeRem3:3rem;
 $sizeTypeRem4:5rem;
+$sizeType4rem: 4rem;
 :export{
     sizeTypeAll0: $sizeTypeAll0;
     sizeTypeAll100: $sizeTypeAll100;
@@ -159,6 +160,7 @@ $sizeTypeRem4:5rem;
     sizeTypeRem2:$sizeTypeRem2;
     sizeTypeRem3:$sizeTypeRem3;
     sizeTypeRem4:$sizeTypeRem4;
+    sizeType4rem: $sizeType4rem;
 }
 //variables para el grosor de las letras
 $weight100: 100;

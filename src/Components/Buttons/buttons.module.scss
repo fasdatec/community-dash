@@ -3,8 +3,18 @@
     padding: $paddingLittle;
     background-color: $colorYellowBackground;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: $colorBlack;
+}
+.commu__button__yellow__round{
+    padding: $paddingLittle;
+    background-color: $colorYellowBackground;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
     border-radius: $borderMedium;
-    margin: $sizeTypeRem1;
+    color: $colorBlack;
 }
 .commu__button__yellow__transparent{
     padding: $paddingLittle;
@@ -12,8 +22,9 @@
     cursor: pointer;
     border: 1px solid $colorYellow;
     border-radius: $borderMedium;
-    margin: $sizeTypeRem1;
     color: $colorWhite;
+    display: flex;
+    justify-content: center;
 }
 @media screen and (max-width:$responsiveMedium) {
     .commu__button__yellow{
