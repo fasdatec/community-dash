@@ -35,15 +35,19 @@
     }
     @media screen and (max-width:$responsiveMedium){
         .commu__navbar__logo{
-            display:none;
+           top: $sizeTypeRem2;
+           left: $sizeTypeRem1;
         }
         .commu__navbar__parr{
             ul{
-                justify-content: left;
+                justify-content: end;
+                .commu__nabar__none__text{
+                    display: none;
+                }
                 .commu__hamburguer__menu__button{
                     display: block;
-                    color: $colorWhite;
-                    &:hover{
+                    svg{
+                        font-size: $sizeMediumLargeX3;
                         color: $colorYellow;
                     }
                 }

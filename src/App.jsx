@@ -6,8 +6,8 @@ import Forget from './Pages/Forget';
 import Home from './Pages/Home';
 import Create from "./Pages/Create";
 import Calendar from "./Pages/Calendar";
-import Channels from "./Pages/Channels";
 import Publicaciones from "./Pages/Publicaciones";
+import Tips from "./Pages/Tips";
 const App = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const App = () => {
         <Route exact path="/Create" element={<Create />} />
         <Route exact path="/Calendar" element={<Calendar />} />
         <Route exact path="/Publicaciones" element={<Publicaciones />} />
-        <Route exact path="/Channels" element={<Channels />} />
+        <Route exact path="/Tips" element={<Tips/>} />
       </Routes>
     </>
   )

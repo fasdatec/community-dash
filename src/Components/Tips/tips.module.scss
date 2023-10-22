@@ -1,0 +1,12 @@
+@import "../../assets/sass/variables.scss";
+.commu__tips__container{
+    padding: $sizeTypeRem1;
+    .commu__tips__title__faq{
+        color: $colorYellow;
+        font-weight: $weight400;
+    }
+    .commu__tips__parr{
+        color: $colorWhite;
+        margin-top: $sizeTypeRem1;
+    }
+}

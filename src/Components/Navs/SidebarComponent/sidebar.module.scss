@@ -1,7 +1,7 @@
 @import "../../../assets/sass/variables.scss";
 .commu__sidebar__general{
-    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
-    height: $sizeTypeViewHeight100;
+    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4 +  $sizeTypeRem1;
+    min-height: $sizeTypeViewHeight100;
     background-color: $colorBlueDarkSNavBackground;
     border-right: $borderLittle2 solid $colorYellowBackground;
     .commu__sidebar__parr{
