@@ -8,6 +8,9 @@ import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
 
 const Sidebar = () => {
+  const closeSesion = () =>{
+    alert('Sesion Rota')
+  }
   return (
     <>
     <div className={fasdatec.commu__sidebar__general}>
@@ -36,6 +39,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+      <button type="button" className={fasdatec.commu__sidebar__logout} onClick={closeSesion}>Cerrar Sesión</button>
     </div>
     </>
   )
