@@ -28,10 +28,15 @@
         a{
             text-decoration: none;
             color: $colorWhite;
+            transition: all 0.2s ease-in;
+            &:hover{
+                color: $colorYellow;
+                transition: all 0.2s ease-in-out;
+            }
         }
-        a:hover{
-            color: $colorYellowBackground;
-        }
+    }
+    .commu__responsive__nav{
+        display: none;
     }
     @media screen and (max-width:$responsiveMedium){
         .commu__navbar__logo{
@@ -53,5 +58,70 @@
                 }
             }
         }
+        .commu__responsive__nav{
+            top: $sizeTypeRem0;
+            height: $sizeTypeViewHeight100;
+            width: $sizeTypePercentage100;
+            display: block;
+            text-align: center;
+            position: absolute;
+            z-index: $sizeZindex2;
+            margin-left: -$sizeTypePercentage100;
+            transition: all 0.2s ease-in-out;
+            background: #201F2F;
+            border-top: $borderLittle2 solid $colorYellowBackground;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            .commu__sidebar__parr{
+                padding: $paddingMedium2;
+                .commu__close__responsive{
+                    display: flex;
+                    justify-content: end;
+                    margin-bottom: $sizeTypeRem1;
+                    svg{
+                        color: $colorYellow;
+                        font-size: $sizeMediumX5;
+                        cursor: pointer;
+                    }
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: $sizeTypeRem3;
+                }
+                li{
+                    list-style-type: none;
+                    cursor: pointer;
+                    color: $colorYellow;
+                    text-align: left;
+                    svg{
+                        font-size: $sizeMediumX2;
+                        margin-right: $sizeTypeRem1;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: $colorYellow;
+                    &:hover{
+                        color: $colorYellowBackground;
+                    }
+                }
+            }
+            .commu__sidebar__logout{
+                border: none;
+                background: $colorYellowBackground;
+                width: $sizeTypePercentage100;
+                font-weight: $weight800;
+                letter-spacing: $borderLittle1;
+                color: $colorBlack;
+                padding: $paddingLittle1;
+                cursor: pointer;
+            }
+        }
     }
+    
 }

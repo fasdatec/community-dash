@@ -34,7 +34,7 @@
             }
         }
     }
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:$responsiveNormal) {
         .commu__flexrow__form{
             flex-direction: column;
             .commu__flexclm__form{
