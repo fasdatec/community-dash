@@ -1,0 +1,70 @@
+@import '../../assets/sass/variables.scss';
+.commu__section__form__container{
+    padding: $sizeTypeRem1;
+    .commu__form__subtitle{
+        color: $colorWhite;
+    }
+    .commu__form__subtitleOne{
+        color: $colorWhite;
+        margin-top: $sizeTypeRem2;
+    }
+    .commu__flexrow__form{
+        display: flex;
+        flex-direction: row;
+        gap: $sizeTypeRem3;
+        margin-top: $sizeTypeRem2;
+        .commu__flexclm__form{
+            display: flex;
+            flex-direction: column;
+            width: $sizeTypePercentage100;
+            .commu__creation__label{
+                color: $colorWhite;
+                font-weight: $weight400;
+                font-size: $sizeMediumX1;
+                margin-bottom: $paddingLittle;
+            }
+            .commu__creation__input{
+                border-radius: $borderMedium;
+                border: $borderLittle1 solid $colorYellow;
+                background: transparent;
+                padding: $paddingLittle2;
+                color: $colorWhite;
+                outline: none;
+                width: $sizeTypePercentage100;
+            }
+        }
+    }
+    @media screen and (max-width:900px) {
+        .commu__flexrow__form{
+            flex-direction: column;
+            .commu__flexclm__form{
+                .commu__creation__input{
+                    width: $sizeTypePercentage90;
+                }
+            }
+        }
+    }
+    .commu__flexbtn{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: $sizeTypeRem2;
+        gap: $sizeTypeRem1;
+        .commu__btn__cancel{
+            color: $colorWhite;
+            font-weight: $weight800;
+            background: $colorBlueDarkBackground;
+            border: none;
+            padding: $paddingLittle2;
+            width: $sizeTypePercentage30;
+        }
+        .commu__btn__send{
+            color: $colorBlack;
+            font-weight: $weight800;
+            background: $colorYellowBackground;
+            border: none;
+            padding: $paddingLittle2;
+            width: $sizeTypePercentage30;
+        }
+    }
+}

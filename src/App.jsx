@@ -10,6 +10,7 @@ import FormPost from "./Components/CreatePost/FormPost";
 import Calendar from "./Pages/Calendar";
 import Publicaciones from "./Pages/Publicaciones";
 import Tips from "./Pages/Tips";
+import Users from "./Pages/Users";
 const App = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const App = () => {
         <Route exact path="/Calendar" element={<Calendar />} />
         <Route exact path="/Publicaciones" element={<Publicaciones />} />
         <Route exact path="/Tips" element={<Tips/>} />
+        <Route exact path="/Users" element={<Users />} />
       </Routes>
     </>
   )
