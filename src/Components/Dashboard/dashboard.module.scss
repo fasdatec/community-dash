@@ -7,6 +7,7 @@
     .commu__post{
         display: flex;
         width: $sizeTypePercentage100;
+        min-height: $sizeTypeViewHeight100;
         background-color: $colorBlueDarkSNavBackground;
         h1{
             color: $colorWhite;

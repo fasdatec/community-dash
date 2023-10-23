@@ -21,7 +21,7 @@ const CreatePost = () => {
           <div className={fasdatec.commu__section__create__post}>
             <h1>Creación de Posts</h1>
             <div className={fasdatec.commu__post__social}>
-              <PostSocialMedia titleSocialMedia='Facebook' imglogo={fblogo}/>
+              <PostSocialMedia titleSocialMedia='Facebook' imglogo={fblogo} />
               <PostSocialMedia titleSocialMedia='Instagram' imglogo={iglogo} />
               <PostSocialMedia titleSocialMedia='TikTok' imglogo={tklogo} />
               <PostSocialMedia titleSocialMedia='YouTube' imglogo={ytblogo} />

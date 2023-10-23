@@ -5,6 +5,8 @@ import Register from './Pages/Register';
 import Forget from './Pages/Forget';
 import Home from './Pages/Home';
 import Create from "./Pages/Create";
+import CreatePostbyClient from "./Components/CreatePost/CreatePostbyClient";
+import FormPost from "./Components/CreatePost/FormPost";
 import Calendar from "./Pages/Calendar";
 import Publicaciones from "./Pages/Publicaciones";
 import Tips from "./Pages/Tips";
@@ -17,6 +19,8 @@ const App = () => {
         <Route exact path="/Recuperar" element={<Forget />} />
         <Route exact path="/Dashboard" element={<Home />} />
         <Route exact path="/Create" element={<Create />} />
+        <Route exact path="/Create/Client/" element={<CreatePostbyClient/>} /> {/*Id del cliente y para mostrar redes*/}
+        <Route exact path="/Create/Client/id/" element={<FormPost/>}/> {/*Id del cliente y id de su red para crear */}
         <Route exact path="/Calendar" element={<Calendar />} />
         <Route exact path="/Publicaciones" element={<Publicaciones />} />
         <Route exact path="/Tips" element={<Tips/>} />

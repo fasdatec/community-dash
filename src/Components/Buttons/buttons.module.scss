@@ -25,6 +25,7 @@
     color: $colorWhite;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 @media screen and (max-width:$responsiveMedium) {
     .commu__button__yellow{
