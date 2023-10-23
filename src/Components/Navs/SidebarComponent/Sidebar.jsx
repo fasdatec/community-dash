@@ -5,6 +5,7 @@ import { LuCalendarDays } from 'react-icons/lu'
 import { AiOutlineFileText } from 'react-icons/ai'
 import { BsCreditCard2FrontFill } from 'react-icons/bs'
 import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
+import { FaUsers } from 'react-icons/fa'
 
 const Sidebar = () => {
   return (
@@ -29,6 +30,9 @@ const Sidebar = () => {
           </li>
           <li>
             <MdTipsAndUpdates /> <a href="/Tips">Tips para Publicar</a>
+          </li>
+          <li>
+            <FaUsers /> <a href="/Users">Usuarios</a>
           </li>
         </ul>
       </div>
