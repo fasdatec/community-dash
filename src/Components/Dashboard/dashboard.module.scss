@@ -24,6 +24,11 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: $sizeTypeRem2;
             }
+            @media screen and (max-width: $responsiveMedium){
+                .commu__post__social{
+                    grid-template-columns: 1fr;
+                }
+            }
         }
     }
 }
@@ -39,4 +44,22 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+.commu__section__subscriptions{
+    width: $sizeTypePercentage100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .commu__subscriptions__contain{
+        padding: $paddingMedium;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $sizeTypeRem4;
+        margin-top: $sizeTypeRem1;
+    }
+    @media screen and (max-width: $responsiveMedium){
+        .commu__subscriptions__contain{
+            grid-template-columns: 1fr;
+        }
+    }
 }

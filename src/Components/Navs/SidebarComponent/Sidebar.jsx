@@ -17,7 +17,7 @@ const Sidebar = () => {
       <div className={fasdatec.commu__sidebar__parr}>
         <ul>
           <li>
-            <BsCreditCard2FrontFill /> <a href="#">Suscripciónes</a>
+            <BsCreditCard2FrontFill /> <a href="/Subscriptions">Suscripciónes</a>
           </li>
           <li>
             <AiOutlineFileText /> <a href='/Publicaciones'>Publicaciones</a>

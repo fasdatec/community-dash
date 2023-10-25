@@ -64,6 +64,7 @@ $sizeLarge: 3rem; //48px
 //variables para cualquier tipo de tamaño
 //px
 $sizeTypeAll0: 0px;
+$sizeTypeAll20: 20px;
 $sizeTypeAll100: 100px;
 $sizeTypeAll200: 200px;
 $sizeTypeAll300: 300px;
@@ -112,9 +113,10 @@ $sizeTypeRem1:1rem;
 $sizeTypeRem2:2rem;
 $sizeTypeRem3:3rem;
 $sizeTypeRem4:5rem;
-$sizeType4rem: 4rem;
+$sizeTypeRem5:4rem;
 :export{
     sizeTypeAll0: $sizeTypeAll0;
+    sizeTypeAll20: $sizeTypeAll20;
     sizeTypeAll100: $sizeTypeAll100;
     sizeTypeAll200: $sizeTypeAll200;
     sizeTypeAll300: $sizeTypeAll300;
@@ -160,7 +162,7 @@ $sizeType4rem: 4rem;
     sizeTypeRem2:$sizeTypeRem2;
     sizeTypeRem3:$sizeTypeRem3;
     sizeTypeRem4:$sizeTypeRem4;
-    sizeType4rem: $sizeType4rem;
+    sizeTypeRem5:$sizeTypeRem5;
 }
 //variables para el grosor de las letras
 $weight100: 100;

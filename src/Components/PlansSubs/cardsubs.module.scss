@@ -1,0 +1,33 @@
+@import "../../assets/sass/variables.scss";
+.commu__card__subs{
+    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
+    background: transparent;
+    border-radius: $borderMedium;
+    border: $borderLittle1 $colorYellow solid ;
+    padding: $paddingMedium4;
+    text-align: justify;
+    color: $colorWhite;
+    box-shadow: 0px 0px 10px $colorYellow;
+    .commu__card__subs__title{
+        color: $colorYellow !important;
+        font-size: $sizeMediumX2;
+        text-align: center;
+    }
+    .commu__card__subs__price{
+        color: $colorYellow;
+        text-align: start;
+        font-size: $sizeMediumX2;
+        font-weight: $weightBold;
+    }
+    .commu__card__subs__advantage{
+        color: $colorYellow;
+        text-align: start; 
+        font-size: $sizeMediumX2;
+        font-weight: $weightBold;
+        margin-top: $paddingMedium4;  
+    }
+    .commu__card__subs__buttons{
+        margin-bottom: $paddingMedium;
+        margin-top: $paddingMedium;
+    }
+}
