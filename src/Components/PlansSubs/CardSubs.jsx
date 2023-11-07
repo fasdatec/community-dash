@@ -1,6 +1,5 @@
 import React from "react";
 import fasdatec from "./cardsubs.module.scss"
-import { ButtonYellowRound } from "../Buttons/Buttons";
 import { ButtonYellowTransparentRound } from "../Buttons/Buttons";
 const CardSubs = ({titlePlan, pricePlan, describePlan, advantagePlan}) =>{
     return (
@@ -16,7 +15,7 @@ const CardSubs = ({titlePlan, pricePlan, describePlan, advantagePlan}) =>{
                 </li>
             </ul>
             <div className={fasdatec.commu__card__subs__buttons}>
-                <ButtonYellowTransparentRound titleButton='Comprar ahora' direction='/Pago' />
+                <ButtonYellowTransparentRound titleButton='Comprar ahora' direction='/Pago/Plan' />
             </div>
         </div>
         </>

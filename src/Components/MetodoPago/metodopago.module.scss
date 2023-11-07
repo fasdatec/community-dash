@@ -1,0 +1,111 @@
+@import '../../assets/sass/variables.scss';
+.commu__subs__images__resumen{
+    display: flex;
+    justify-content: space-between;
+    .commu__resumen{
+        color: $colorYellow;
+        padding-right: $sizeTypeRem4 + $sizeTypeRem1;
+        text-align: center;
+        .commu__pedido{
+            margin-top: $sizeTypeRem1;
+            padding: $sizeTypeRem1;
+            box-shadow: 0px 8px 20px $colorBlack;
+            color: $colorWhite;
+        }
+    }
+}
+@media screen and (max-width:$responsiveNormal){
+    .commu__subs__images__resumen{
+        flex-direction: column;
+        align-items: center;
+        .commu__images__cards img{
+            height: $sizeTypeRem2;
+        }
+        .commu__resumen{
+            padding: $sizeTypeRem0;
+            width: $sizeTypePercentage90;
+            margin-top: $sizeTypeRem2;
+        }
+    }
+}
+.commu__section__form__container{
+    padding: $sizeTypeRem1;
+    width: $sizeTypePercentage95;
+    .commu__form__subtitle{
+        color: $colorWhite;
+    }
+    .commu__form__subtitleOne{
+        color: $colorWhite;
+        margin-top: $sizeTypeRem2;
+    }
+    .commu__flexrow__form{
+        display: flex;
+        flex-direction: row;
+        gap: $sizeTypeRem3;
+        margin-top: $sizeTypeRem2;
+        .commu__flexclm__form{
+            display: flex;
+            flex-direction: column;
+            width: $sizeTypePercentage100;
+            .commu__creation__label{
+                color: $colorWhite;
+                font-weight: $weight400;
+                font-size: $sizeMediumX1;
+                margin-bottom: $paddingLittle;
+            }
+            .commu__creation__input{
+                border-radius: $borderMedium;
+                border: $borderLittle1 solid $colorYellow;
+                background: transparent;
+                padding: $paddingLittle2;
+                color: $colorWhite;
+                outline: none;
+                width: $sizeTypePercentage100;
+            }
+        }
+    }
+    @media screen and (max-width:$responsiveNormal) {
+        .commu__flexrow__form{
+            flex-direction: column;
+            .commu__flexclm__form{
+                .commu__creation__input{
+                    width: $sizeTypePercentage90;
+                }
+            }
+        }
+    }
+    .commu__flexbtn{
+        display: flex;
+        justify-content: center;
+        margin: $sizeTypeRem4;
+        gap: $sizeTypeRem1;
+        .commu__btn__cancel{
+            color: $colorWhite;
+            font-weight: $weight800;
+            background: $colorBlueDarkBackground;
+            border: none;
+            padding: $paddingLittle2;
+            width: $sizeTypePercentage30;
+            cursor: pointer;
+        }
+        .commu__btn__send{
+            color: $colorBlack;
+            font-weight: $weight800;
+            background: $colorYellowBackground;
+            border: none;
+            padding: $paddingLittle2;
+            width: $sizeTypePercentage30;
+            cursor: pointer;
+        }
+    }
+    .commu__term__subscriptions{
+        color: $colorYellow;
+        font-size: $sizeLittle;
+        width: $sizeTypePercentage50;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding-top: $sizeTypeRem2;
+        text-align: center;
+    }
+}

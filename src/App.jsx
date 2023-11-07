@@ -12,7 +12,7 @@ import Publicaciones from "./Pages/Publicaciones";
 import Tips from "./Pages/Tips";
 import Users from "./Pages/Users";
 import Subscriptions from "./Pages/Subscriptions";
-import MetodoPago from "./Components/PlansSubs/MetodoPago";
+import MetodoPago from "./Components/MetodoPago/MetodoPago";
 const App = () => {
   return (
     <>
@@ -27,7 +27,7 @@ const App = () => {
         <Route exact path="/Calendar" element={<Calendar />} />
         <Route exact path="/Publicaciones" element={<Publicaciones />} />
         <Route exact path="/Subscriptions" element={<Subscriptions />} />
-        <Route exact path="/Pago" element={<MetodoPago />} />
+        <Route exact path="/Pago/Plan" element={<MetodoPago />} />
         <Route exact path="/Tips" element={<Tips/>} />
         <Route exact path="/Users" element={<Users />} />
       </Routes>

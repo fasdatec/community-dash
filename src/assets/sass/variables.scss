@@ -33,6 +33,7 @@ $colorBlack: #000;
     colorBlack: $colorBlack;
 } 
 //variables para el tamaño de cualquier letras
+$sizeLittle: 0.6rem; //12.8px
 $sizeMedium: 1rem; //16px
 $sizeMediumX1: 1.1rem; //17.6px
 $sizeMediumX2: 1.2rem; //19.2px
@@ -47,6 +48,7 @@ $sizeMediumLargeX4: 2.7rem; //43.2px
 $sizeMediumLargeX5: 2.8rem; //44.8px
 $sizeLarge: 3rem; //48px
 :export {
+    sizeLittle: $sizeLittle;
     sizeMedium: $sizeMedium;
     sizeMediumX1: $sizeMediumX1;
     sizeMediumX2: $sizeMediumX2;
