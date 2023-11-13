@@ -43,6 +43,11 @@
   }
 }
 @media screen and (max-width:$responsiveMedium){
+  .commu__post{
+    grid-template-columns: 1fr;
+    align-self: center;
+    padding-left: $sizeTypeRem0;
+  }
   .commu__section__content{
     padding: $sizeTypeRem3;
   }

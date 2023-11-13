@@ -3,7 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' //ofrece vistas Month y DayGrid
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
-
+import fasdatec from '../Dashboard/dashboard.module.scss';
 export default class Calendar extends React.Component {
     customButtons={
         myCustomButton:{
@@ -17,6 +17,7 @@ export default class Calendar extends React.Component {
         return (
             
             <>
+            <div className={fasdatec.commu__contain__calendar}>
             <FullCalendar
                 plugins={[ dayGridPlugin, timeGridPlugin, listPlugin ]}
                 initialView='dayGridMonth'
@@ -42,10 +43,12 @@ export default class Calendar extends React.Component {
                     list: "Lista"}
                 }      
                 events={[
-                    { title: 'Publicacion 1', date: '2023-10-09' },
-                    { title: 'Publicacion 2', date: '2023-10-10' }
-                ]}  
-            />
+                    { title: 'Publicacion 1', date: '2023-11-09' },
+                    { title: 'Publicacion 2', date: '2023-11-10' }
+                ]}
+                eventColor={'#378006'}
+                />
+            </div>
             </>
         )
     }

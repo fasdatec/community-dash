@@ -1,7 +1,7 @@
 import React from "react";
 import fasdatec from "./cardsubs.module.scss"
-import { ButtonYellowTransparentRound } from "../Buttons/Buttons";
-const CardSubs = ({titlePlan, pricePlan, describePlan, advantagePlan}) =>{
+
+const CardSubs = ({titlePlan, pricePlan, describePlan, advantagePlan, buttonPlan}) =>{
     return (
         <>
         <div className={fasdatec.commu__card__subs}>
@@ -9,13 +9,9 @@ const CardSubs = ({titlePlan, pricePlan, describePlan, advantagePlan}) =>{
             <p className={fasdatec.commu__card__subs__price}>{pricePlan}</p>
             <p>{describePlan}</p>
             <p className={fasdatec.commu__card__subs__advantage}>Beneficios</p>
-            <ul>
-                <li>
-                    {advantagePlan}
-                </li>
-            </ul>
+                {advantagePlan}
             <div className={fasdatec.commu__card__subs__buttons}>
-                <ButtonYellowTransparentRound titleButton='Comprar ahora' direction='/Pago/Plan' />
+                {buttonPlan}
             </div>
         </div>
         </>

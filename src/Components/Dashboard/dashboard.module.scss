@@ -27,6 +27,8 @@
             @media screen and (max-width: $responsiveMedium){
                 .commu__post__social{
                     grid-template-columns: 1fr;
+                    align-self: center;
+                    padding-left: $sizeTypeRem0;
                 }
             }
         }
@@ -53,7 +55,7 @@
     .commu__subscriptions__contain{
         padding: $paddingMedium;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: $sizeTypeRem4;
         margin-top: $sizeTypeRem1;
     }
@@ -62,4 +64,7 @@
             grid-template-columns: 1fr;
         }
     }
+}
+.commu__contain__calendar{
+    width: 80%;
 }

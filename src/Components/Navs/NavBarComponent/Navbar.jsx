@@ -47,7 +47,7 @@ const Navbar = () => {
                 <AiFillDashboard /> <a href="/Dashboard">Inicio</a>
               </li>
               <li>
-                <BsCreditCard2FrontFill /> <a href="#">Suscripciónes</a>
+                <BsCreditCard2FrontFill /> <a href="/Subscriptions">Suscripciónes</a>
               </li>
               <li>
                 <AiOutlineFileText /> <a href='/Publicaciones'>Publicaciones</a>

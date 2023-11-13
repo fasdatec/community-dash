@@ -1,4 +1,14 @@
 @import '../../assets/sass/variables.scss';
+.commu__btn__send{
+    color: $colorBlack;
+    font-weight: $weight800;
+    background: $colorYellowBackground;
+    border: none;
+    padding: $paddingLittle2;
+    width: $sizeTypePercentage30;
+    cursor: pointer;
+}
+
 .commu__subs__images__resumen{
     display: flex;
     justify-content: space-between;
@@ -107,5 +117,12 @@
         margin: auto;
         padding-top: $sizeTypeRem2;
         text-align: center;
+    }
+    .prueba{
+        color: white;
+        padding: $paddingLittle2;
+        justify-content: baseline;
+        font-size: 20px;
+        width: 50vw;
     }
 }
