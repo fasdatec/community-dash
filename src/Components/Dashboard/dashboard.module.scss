@@ -6,15 +6,65 @@
     }
     .commu__post{
         display: flex;
+        width: $sizeTypePercentage100;
+        min-height: $sizeTypeViewHeight100;
         background-color: $colorBlueDarkSNavBackground;
         h1{
             color: $colorWhite;
             padding: $paddingMedium;
             text-transform: capitalize;
         }
+        .commu__section__create__post{
+            display: flex;
+            flex-direction: column;
+            width: $sizeTypePercentage100;
+            .commu__post__social{
+                padding-left: $paddingLarge + $paddingLarge;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: $sizeTypeRem2;
+            }
+            @media screen and (max-width: $responsiveMedium){
+                .commu__post__social{
+                    grid-template-columns: 1fr;
+                    align-self: center;
+                    padding-left: $sizeTypeRem0;
+                }
+            }
+        }
     }
 }
 .commu__calendar{
     width: $sizeTypePercentage100;
     padding: $sizeTypeRem3;
+}
+.commu__post__container{
+    width: $sizeTypePercentage100;
+}
+.commu__mis__publicaciones{
+    width: $sizeTypePercentage100;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.commu__section__subscriptions{
+    width: $sizeTypePercentage100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .commu__subscriptions__contain{
+        padding: $paddingMedium;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $sizeTypeRem4;
+        margin-top: $sizeTypeRem1;
+    }
+    @media screen and (max-width: $responsiveMedium){
+        .commu__subscriptions__contain{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+.commu__contain__calendar{
+    width: 80%;
 }

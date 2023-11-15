@@ -12,7 +12,6 @@ const Dashboard = () => {
       </div>
       <div className={fasdatec.commu__post}>
         <Sidebar />
-        <Post />
       </div>
     </section>
     </>
