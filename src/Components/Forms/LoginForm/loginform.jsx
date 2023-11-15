@@ -47,7 +47,7 @@ const loginform = () => {
                     <a href="/Registro" className={fasdatec.commu__link__text}> Ingresa aqui</a></span>
                 </div>
                 {/**<button className={fasdatec.commu__btn}>Ingresar</button> */}
-                <a href="/Dashboard" className={fasdatec.commu__btn}>Ingresar</a>
+                <a href="/Form" className={fasdatec.commu__btn}>Ingresar</a>
                 <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__center} ${fasdatec.commu__top}`}>
                     <span className={fasdatec.commu__span__text}>¿Olvidaste tu Contraseña?
                     <a href="/Recuperar" className={fasdatec.commu__link__text}> Da un clic aqui</a></span>

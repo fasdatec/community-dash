@@ -13,6 +13,7 @@ import Tips from "./Pages/Tips";
 import Users from "./Pages/Users";
 import Subscriptions from "./Pages/Subscriptions";
 import MetodoPago from "./Components/MetodoPago/MetodoPago";
+import MultFormMain from "./Components/MultFormMain/MultFormMain";
 const App = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const App = () => {
         <Route exact path="/Pago/Plan" element={<MetodoPago />} />
         <Route exact path="/Tips" element={<Tips/>} />
         <Route exact path="/Users" element={<Users />} />
+        <Route exact path="/Form" element={<MultFormMain />} />
       </Routes>
     </>
   )
