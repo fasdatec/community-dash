@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
+import useAuth from '../../auth/useAuth';
 import fasdatec from './navbar.module.scss';
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoCreateOutline } from 'react-icons/io5'
@@ -10,9 +11,7 @@ import { FaUsers } from 'react-icons/fa'
 
 const Navbar = () => {
   const burguerRef = useRef();
-  const closeSesion = () =>{
-    alert('Sesion Rota')
-  }
+  const { logout } = useAuth()
   const menuResponsive = () =>{
     burguerRef.current.style.marginLeft !== "-100%" ? (
       burguerRef.current.style.marginLeft = "-100%"
@@ -69,7 +68,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button type="button" className={fasdatec.commu__sidebar__logout} onClick={closeSesion}>Cerrar Sesión</button>
+          <button type="button" className={fasdatec.commu__sidebar__logout} onClick={() => logout()}>Cerrar Sesión</button>
         </div>
       </div>
     </>

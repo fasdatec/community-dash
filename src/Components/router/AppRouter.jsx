@@ -1,0 +1,28 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import PublicRoute from "./PublicRoute";
+import PrivateRoute from './PrivateRoute';
+import routes from "../../assets/helpers/routes";
+import Login from "../../Pages/Login";
+import Home from '../../Pages/Home' 
+
+const AppRouter = () => {
+  return (
+    <>
+      <Routes>
+        <Route exact path={routes.login} element={
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        } />
+        <Route path={'/home/*'} element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }/>
+      </Routes>
+    </>
+  )
+}
+
+export default AppRouter

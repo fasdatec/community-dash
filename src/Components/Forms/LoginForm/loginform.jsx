@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from "react";
+import useAuth from '../../auth/useAuth';
 import fasdatec from './login.module.scss';
 import imgLogin from '../../../assets/images/login.svg';
 
 const loginform = () => {
+    const {login} = useAuth()
+    const [loginInfo,setLoginInfo] = useState({
+        username: "",
+        password: ""
+    })
+    const handleInputChange = (e) => {
+        e.target.name === "username" ?
+          setLoginInfo({
+            ...loginInfo,
+            username: e.target.value.replace(/[^a-zA-Z 0-9]/g, ""),
+          })
+        :setLoginInfo({
+            ...loginInfo,
+            [e.target.name]: e.target.value.replace(/[^a-zA-Z0-9@#]/g, ""),
+          });
+      }
+    const handleSubmit = (form) => {
+        form.preventDefault();
+        login(loginInfo);
+    }
   return (
     <>
       <section className={fasdatec.commu__container__form}>
@@ -14,7 +35,7 @@ const loginform = () => {
         </article>
         <article className={fasdatec.commu__form__steps}>
           <h2 className={fasdatec.commu__title__head__form}>Inicio de Sesión al ComuFasda</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className={fasdatec.commu__form__group}>
                     <div className={fasdatec.commu__form__desing}>
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +52,7 @@ const loginform = () => {
                         </svg>
                         <label htmlFor="user" className={fasdatec.commu__label__form}>Usuario</label>
                     </div>
-                    <input type="text" className={fasdatec.commu__desing__input} name="" id="user" placeholder='Ingresa tu Usuario o Correo' />
+                    <input type="text" className={fasdatec.commu__desing__input} name="username" onChange={handleInputChange} value={loginInfo.username} id="user" placeholder='Ingresa tu Usuario o Correo' />
                 </div>
                 <div className={fasdatec.commu__form__group}>
                     <div className={fasdatec.commu__form__desing}>
@@ -40,14 +61,14 @@ const loginform = () => {
                         </svg>
                         <label htmlFor="pass" className={fasdatec.commu__label__form}>Password</label>
                     </div>
-                    <input type="text" className={fasdatec.commu__desing__input} name="" id="pass" placeholder='Ingresa tu Contraseña' />
+                    <input type="password" className={fasdatec.commu__desing__input} name="password" onChange={handleInputChange} value={loginInfo.password} id="pass" placeholder='Ingresa tu Contraseña' />
                 </div>
                 <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__bottom}`}>
                     <span className={fasdatec.commu__span__text}>¿No tienes cuenta? 
                     <a href="/Registro" className={fasdatec.commu__link__text}> Ingresa aqui</a></span>
                 </div>
-                {/**<button className={fasdatec.commu__btn}>Ingresar</button> */}
-                <a href="/Form" className={fasdatec.commu__btn}>Ingresar</a>
+                <button className={fasdatec.commu__btn} type="submit">Ingresar</button>
+                {/*<a href="/Form" className={fasdatec.commu__btn}>Ingresar</a>*/}
                 <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__center} ${fasdatec.commu__top}`}>
                     <span className={fasdatec.commu__span__text}>¿Olvidaste tu Contraseña?
                     <a href="/Recuperar" className={fasdatec.commu__link__text}> Da un clic aqui</a></span>

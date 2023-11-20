@@ -1,4 +1,5 @@
 import React from 'react'
+import useAuth from '../../auth/useAuth'
 import fasdatec from './sidebar.module.scss'
 import { IoCreateOutline } from 'react-icons/io5'
 import { LuCalendarDays } from 'react-icons/lu'
@@ -8,9 +9,7 @@ import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
 
 const Sidebar = () => {
-  const closeSesion = () =>{
-    alert('Sesion Rota')
-  }
+  const { logout } = useAuth()
   return (
     <>
     <div className={fasdatec.commu__sidebar__general}>
@@ -39,7 +38,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <button type="button" className={fasdatec.commu__sidebar__logout} onClick={closeSesion}>Cerrar Sesión</button>
+      <button type="button" className={fasdatec.commu__sidebar__logout} onClick={() => logout()}>Cerrar Sesión</button>
     </div>
     </>
   )
