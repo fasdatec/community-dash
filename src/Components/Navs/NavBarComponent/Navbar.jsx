@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useAuth from '../../auth/useAuth';
+import routes from '../../../assets/helpers/routes';
 import fasdatec from './navbar.module.scss';
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoCreateOutline } from 'react-icons/io5'
@@ -22,14 +23,14 @@ const Navbar = () => {
   return (
     <>
       <div className={fasdatec.commu__navbar__general}>
-        <a href='/Dashboard' className={fasdatec.commu__navbar__logo}>CommuFasda</a>
+        <a href={routes.home} className={fasdatec.commu__navbar__logo}>CommuFasda</a>
         <div className={fasdatec.commu__navbar__parr}>
           <ul>
             <li>
-              <a className={fasdatec.commu__nabar__none__text} href='/Create'>Publicación</a>
+              <a className={fasdatec.commu__nabar__none__text} href={routes.publicaciones.creacion}>Publicación</a>
             </li>
             <li>
-              <a className={fasdatec.commu__nabar__none__text} href='#'>Suscripciónes</a>
+              <a className={fasdatec.commu__nabar__none__text} href={routes.publicaciones.suscripciones}>Suscripciónes</a>
             </li>
             <li>
               <a onClick={menuResponsive} className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu/></a>
@@ -43,28 +44,28 @@ const Navbar = () => {
             </span>
             <ul>
               <li>
-                <AiFillDashboard /> <a href="/Dashboard">Inicio</a>
+                <a href={routes.home}><AiFillDashboard /> Inicio</a>
               </li>
               <li>
-                <BsCreditCard2FrontFill /> <a href="/Subscriptions">Suscripciónes</a>
+                <a href={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</a>
               </li>
               <li>
-                <AiOutlineFileText /> <a href='/Publicaciones'>Publicaciones</a>
+                <a href={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</a>
               </li>
               <li>
-                <LuCalendarDays /> <a href='/Calendar'>Calendario</a>
+                <a href={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
               </li>
               <li>
-                <IoCreateOutline/> <a href='/Create'>Crear Publicación</a> 
+                <a href={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</a> 
               </li>
               <li>
-                <MdOutlinePendingActions /> <a href="">Ver Status</a>
+                <a href=""><MdOutlinePendingActions /> Ver Status</a>
               </li>
               <li>
-                <MdTipsAndUpdates /> <a href="/Tips">Tips para Publicar</a>
+                <a href={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</a>
               </li>
               <li>
-                <FaUsers /> <a href="/Users">Usuarios</a>
+                <a href={routes.registros.usuarios}><FaUsers /> Usuarios</a>
               </li>
             </ul>
           </div>

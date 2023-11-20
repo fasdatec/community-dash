@@ -8,36 +8,53 @@ import Register from "../../Pages/Register";
 import Forget from '../../Pages/Forget';
 import Home from '../../Pages/Home';
 import Dashboard from "../Dashboard/Dashboard";
+import Users from '../../Pages/Users';
+import Tips from '../../Pages/Tips';
+import Calendar from '../../Pages/Calendar';
+import Create from '../../Pages/Create';
+import Publicaciones from '../../Pages/Publicaciones';
+import Subscriptions from '../../Pages/Subscriptions'; 
 
 const AppRouter = () => {
   return (
     <>
       <Routes>
         <Route exact path={routes.login} element={
-          <PublicRoute>
-            <Login />
-          </PublicRoute>
+          <PublicRoute> <Login /> </PublicRoute>
         }/>
         <Route exact path={routes.registros.home} element={
-          <PublicRoute>
-            <Register />
-          </PublicRoute>
+          <PublicRoute> <Register /> </PublicRoute>
         }/>
         <Route exact path={routes.recuperar} element={
-          <PublicRoute>
-            <Forget />
-          </PublicRoute>
+          <PublicRoute> <Forget /> </PublicRoute>
         }/>
+        {/*Routes of the APP*/}
         <Route path={'/home/*'} element={
-          <PrivateRoute>
-            <Home />
-          </PrivateRoute>
+          <PrivateRoute> <Home /> </PrivateRoute>
         }/>
         <Route exact path={'/dashboard/*'} element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        } />
+          <PrivateRoute> <Dashboard /></PrivateRoute>
+        }/>
+        <Route exact path={routes.registros.usuarios} element={
+          <PrivateRoute> <Users /> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.calendar} element={
+          <PrivateRoute> <Calendar /> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.tips} element={
+          <PrivateRoute> <Tips/> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.suscripciones} element={
+          <PrivateRoute> <Subscriptions/> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.listado} element={
+          <PrivateRoute> <Publicaciones /> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.creacion} element={
+          <PrivateRoute> <Create /> </PrivateRoute>
+        }/>
+
+
       </Routes>
     </>
   )

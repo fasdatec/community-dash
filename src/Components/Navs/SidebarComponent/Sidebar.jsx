@@ -7,6 +7,7 @@ import { AiOutlineFileText } from 'react-icons/ai'
 import { BsCreditCard2FrontFill } from 'react-icons/bs'
 import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
+import routes from '../../../assets/helpers/routes'
 
 const Sidebar = () => {
   const { logout } = useAuth()
@@ -16,25 +17,25 @@ const Sidebar = () => {
       <div className={fasdatec.commu__sidebar__parr}>
         <ul>
           <li>
-            <BsCreditCard2FrontFill /> <a href="/Subscriptions">Suscripciónes</a>
+            <a href={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</a>
           </li>
           <li>
-            <AiOutlineFileText /> <a href='/Publicaciones'>Publicaciones</a>
+            <a href={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</a>
           </li>
           <li>
-            <LuCalendarDays /> <a href='/Calendar'>Calendario</a>
+            <a href={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
           </li>
           <li>
-            <IoCreateOutline/> <a href='/Create'>Crear Publicación</a> 
+            <a href={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</a> 
           </li>
           <li>
-            <MdOutlinePendingActions /> <a href="">Ver Status</a>
+            <a href=""><MdOutlinePendingActions /> Ver Status</a>
           </li>
           <li>
-            <MdTipsAndUpdates /> <a href="/Tips">Tips para Publicar</a>
+            <a href={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</a>
           </li>
           <li>
-            <FaUsers /> <a href="/Users">Usuarios</a>
+            <a href={routes.registros.usuarios}><FaUsers /> Usuarios</a>
           </li>
         </ul>
       </div>
