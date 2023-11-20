@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import routes from "../../../assets/helpers/routes";
 import useAuth from '../../auth/useAuth';
 import fasdatec from './login.module.scss';
 import imgLogin from '../../../assets/images/login.svg';
@@ -65,13 +66,12 @@ const loginform = () => {
                 </div>
                 <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__bottom}`}>
                     <span className={fasdatec.commu__span__text}>¿No tienes cuenta? 
-                    <a href="/Registro" className={fasdatec.commu__link__text}> Ingresa aqui</a></span>
+                    <a href={routes.registros.home} className={fasdatec.commu__link__text}> Ingresa aqui</a></span>
                 </div>
                 <button className={fasdatec.commu__btn} type="submit">Ingresar</button>
-                {/*<a href="/Form" className={fasdatec.commu__btn}>Ingresar</a>*/}
                 <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__center} ${fasdatec.commu__top}`}>
                     <span className={fasdatec.commu__span__text}>¿Olvidaste tu Contraseña?
-                    <a href="/Recuperar" className={fasdatec.commu__link__text}> Da un clic aqui</a></span>
+                    <a href={routes.recuperar} className={fasdatec.commu__link__text}> Da un clic aqui</a></span>
                 </div>
             </form>
         </article>

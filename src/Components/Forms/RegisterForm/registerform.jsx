@@ -1,7 +1,42 @@
-import React from 'react'
+import React, { useState} from "react";
+import { useNavigate } from "react-router-dom";
+import routes from "../../../assets/helpers/routes";
+import useAuth from '../../auth/useAuth';
 import fasdatec from './regis.module.scss';
 import imgRegister from '../../../assets/images/register.svg';
 const formRegister = () => {
+    const navigate = useNavigate();
+    const { signUp } = useAuth();
+    const [signUpData, setSignUpData] = useState({
+        "name": "dasdasasd",
+        "username": "",
+        "password": "",
+        "rol": "representante",
+        "image":"https://i.imgur.com/gJS9RAa.jpg",
+        "email":""
+    })
+    const handleInputChange = (e) => {
+        ( e.target.name === 'rol' || e.target.name === "username" ) ? (
+            setSignUpData({
+                ...signUpData,
+                [e.target.name]: e.target.value.replace(/[^a-z A-Z 0-9]/g, ""),
+            })
+        ) : ( e.target.name === "name" || e.target.email === "email") ? (
+            setSignUpData({
+            ...signUpData,
+            [e.target.name]: e.target.value.replace(/[^a-z-ÁÉÍÓÚáéíóú A-Z0-9//=¿?.,!¡;:()\u00f1\u00d1\u00C0\u017F\"-]/g, ""),
+        })) : (
+            setSignUpData({
+                ...signUpData,
+                [e.target.name]: e.target.value.replace(/[^a-zA-Z0-9@#.]/g, ""),
+            })
+        )
+    }
+    const handleSubmit = (form) => {
+        form.preventDefault();
+        signUp(signUpData);
+        navigate(routes.login);
+    }
   return (
     <>
         <section className={fasdatec.commu__container__form}>
@@ -13,7 +48,7 @@ const formRegister = () => {
             </article>
             <article className={fasdatec.commu__form__steps}>
                 <h2 className={fasdatec.commu__title__head__form}>Crear Cuenta para el ComuFasda</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={fasdatec.commu__form__group}>
                         <div className={fasdatec.commu__form__desing}>
                             <svg width="35" height="35" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +65,7 @@ const formRegister = () => {
                             </svg>
                             <label htmlFor="user" className={fasdatec.commu__label__form}>Usuario</label>
                         </div>
-                        <input type="text" className={fasdatec.commu__desing__input} name="" id="user" placeholder='Ingresa tu Usuario de Acceso' />
+                        <input type="text" className={fasdatec.commu__desing__input} name="username" onChange={handleInputChange} value={signUpData.username} id="user" placeholder='Ingresa tu Usuario de Acceso' />
                     </div>
                     <div className={fasdatec.commu__form__group}>
                         <div className={fasdatec.commu__form__desing}>
@@ -43,7 +78,7 @@ const formRegister = () => {
                             </svg>
                             <label htmlFor="mail" className={fasdatec.commu__label__form}>Correo Electronico</label>
                         </div>
-                        <input type="text" className={fasdatec.commu__desing__input} name="" id="mail" placeholder='Ingresa tu Correo' />
+                        <input type="text" className={fasdatec.commu__desing__input} name="email" onChange={handleInputChange} value={signUpData.email} id="mail" placeholder='Ingresa tu Correo' />
                     </div>
                     <div className={fasdatec.commu__form__group}>
                         <div className={fasdatec.commu__form__desing}>
@@ -52,13 +87,13 @@ const formRegister = () => {
                             </svg>
                             <label htmlFor="pass" className={fasdatec.commu__label__form}>Password</label>
                         </div>
-                        <input type="text" className={fasdatec.commu__desing__input} name="" id="pass" placeholder='Ingresa tu Contraseña' />
+                        <input type="password" className={fasdatec.commu__desing__input} name="password" onChange={handleInputChange} value={signUpData.password} id="pass" placeholder='Ingresa tu Contraseña' />
                     </div>
                     <div className={`${fasdatec.commu__form__group} ${fasdatec.commu__bottom}`}>
                         <span className={fasdatec.commu__span__text}>¿Ya tienes una Cuenta? 
                         <a href="/" className={fasdatec.commu__link__text}> Da un clic aqui</a></span>
                     </div>
-                    <button className={fasdatec.commu__btn}>Registrar</button>
+                    <button className={fasdatec.commu__btn} type="submit">Registrar</button>
                 </form>
             </article>
         </section>

@@ -16,7 +16,10 @@ export default function AuthProvider({ children }) {
   useEffect(() => {
     isLogin()
   }, [])
-  /* function to verify if the user had the correct data to login*/
+  /* 
+  Function´s of the login for use the APP
+  */
+  /* function to verify if the user give the correct data*/
   const isLogin = () => {
     const token = localStorage.getItem('token')
     instance.get(`/users/islogin`, { headers: { authorization: token } })
@@ -28,7 +31,7 @@ export default function AuthProvider({ children }) {
       navigate(location.pathname)
     })
   }
-  /*Function to verify the token and another information for navigate to login*/    
+  /*Function to verify the token for navigate to login*/    
   const login = (user, fromLocation) => {
     instance.post(`/users/login`, user)
     .then((response) => {
@@ -48,12 +51,12 @@ export default function AuthProvider({ children }) {
         color:'#fff',
         background:'#131313',
         confirmButtonColor: '#000',
-        icon: 'error',
+        icon: 'warning',
         timer:2000
       });
     });
   };
-  /*Function to crash the sesion*/
+  /*Function to Crash the sesion*/
   const logout = () => {
     const token = localStorage['token']
     instance.put("/users/logouts", { usuario: "prueba" }, 
@@ -77,12 +80,51 @@ export default function AuthProvider({ children }) {
       }
     });
   }
+  /* 
+  Function´s of new account and forget the password
+  */
+  /*Function of add a new user in the signing*/
+  const signUp = (user) => {
+    instance.post(`/users/add`, user )
+    .then((response)=>{
+      if (response.data.info.status === 200) { 
+          MySwal.fire({
+              title: response.data.info.message,
+              showConfirmButton: true,
+              allowOutsideClick: false,
+              color:'#fff',
+              background:'#131313',
+              confirmButtonColor: '#000',
+              icon: 'success',
+              timer:2000
+            });
+            navigate(routes.login);
+          }
+        }).catch((error) => {
+          if(error.response.data.info.status === 400){
+            MySwal.fire({
+              title: 'Este Usuario ya existe',
+              showConfirmButton: false,
+              allowOutsideClick: false,
+              color:'#fff',
+              background:'#131313',
+              confirmButtonColor: '#000',
+              icon: 'warning',
+              timer:2000
+            });
+            navigate(routes.registros.home);
+          }
+        })
+      }
   /*Function of the context*/
   const contextValue = {
     user,
+    /**Functions of login*/
     isLogged,
     login,
     logout,
+    /**Functions to register a user */
+    signUp,
   }
   return (
       <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>

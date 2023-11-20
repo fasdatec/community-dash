@@ -4,6 +4,8 @@ import PublicRoute from "./PublicRoute";
 import PrivateRoute from './PrivateRoute';
 import routes from "../../assets/helpers/routes";
 import Login from "../../Pages/Login";
+import Register from "../../Pages/Register";
+import Forget from '../../Pages/Forget';
 import Home from '../../Pages/Home' 
 
 const AppRouter = () => {
@@ -14,7 +16,17 @@ const AppRouter = () => {
           <PublicRoute>
             <Login />
           </PublicRoute>
-        } />
+        }/>
+        <Route exact path={routes.registros.home} element={
+          <PublicRoute>
+            <Register />
+          </PublicRoute>
+        }/>
+        <Route exact path={routes.recuperar} element={
+          <PublicRoute>
+            <Forget />
+          </PublicRoute>
+        }/>
         <Route path={'/home/*'} element={
           <PrivateRoute>
             <Home />
