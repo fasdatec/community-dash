@@ -36,12 +36,10 @@ export default function AuthProvider({ children }) {
     instance.post(`/users/login`, user)
     .then((response) => {
       setUser(response.data.data);
-      console.log(response.data.data);
       localStorage.setItem("token", response.data.data.token);
       if (fromLocation) {
         return navigate(fromLocation.from, { state: { pagina: fromLocation.pagina } });
       }
-      navigate(routes.home);
     })
     .catch((error) => {
       MySwal.fire({
@@ -115,7 +113,7 @@ export default function AuthProvider({ children }) {
             navigate(routes.registros.home);
           }
         })
-      }
+  }
   /*Function of the context*/
   const contextValue = {
     user,

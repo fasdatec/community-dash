@@ -4,6 +4,7 @@ import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import { ButtonYellowRoundOnC, ButtonYellowTransparentRoundOnC, ButtonYellowRound } from "../../Buttons/Buttons";
 import StepFinal from "./StepFinal";
+import routes from "../../../assets/helpers/routes";
 
 class MultistepForm extends React.Component {
     state  = {
@@ -56,7 +57,7 @@ class MultistepForm extends React.Component {
                         <div className={fasdatecOne.commu__form__multi__buttons}>
                             <div className={fasdatecOne.commu__form__buttons}>
                                 <ButtonYellowTransparentRoundOnC direction={this.prevStep} titleButton="Anterior" />
-                                <ButtonYellowRound direction="/Dashboard" titleButton="Generar" />
+                                <ButtonYellowRound direction={routes.dashboard} titleButton="Generar" />
                             </div>
                         </div>        
                     </>

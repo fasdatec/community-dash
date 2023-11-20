@@ -5,6 +5,7 @@ const routes = {
         home: '/signinup'
     },
     home: '/home/',
+    dashboard: '/dashboard/',
 
 }
 export default routes;

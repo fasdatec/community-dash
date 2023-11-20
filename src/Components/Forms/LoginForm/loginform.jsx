@@ -5,7 +5,7 @@ import fasdatec from './login.module.scss';
 import imgLogin from '../../../assets/images/login.svg';
 
 const loginform = () => {
-    const {login} = useAuth()
+    const { login } = useAuth();
     const [loginInfo,setLoginInfo] = useState({
         username: "",
         password: ""

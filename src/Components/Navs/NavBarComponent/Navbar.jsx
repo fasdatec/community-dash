@@ -16,7 +16,7 @@ const Navbar = () => {
     burguerRef.current.style.marginLeft !== "-100%" ? (
       burguerRef.current.style.marginLeft = "-100%"
       ) : (
-          burguerRef.current.style.marginLeft = "0%"
+        burguerRef.current.style.marginLeft = "0%"
       )
   }
   return (

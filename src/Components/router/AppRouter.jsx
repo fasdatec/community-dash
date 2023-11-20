@@ -6,7 +6,8 @@ import routes from "../../assets/helpers/routes";
 import Login from "../../Pages/Login";
 import Register from "../../Pages/Register";
 import Forget from '../../Pages/Forget';
-import Home from '../../Pages/Home' 
+import Home from '../../Pages/Home';
+import Dashboard from "../Dashboard/Dashboard";
 
 const AppRouter = () => {
   return (
@@ -32,6 +33,11 @@ const AppRouter = () => {
             <Home />
           </PrivateRoute>
         }/>
+        <Route exact path={'/dashboard/*'} element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        } />
       </Routes>
     </>
   )
