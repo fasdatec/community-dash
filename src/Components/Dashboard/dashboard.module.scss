@@ -14,6 +14,9 @@
             padding: $paddingMedium;
             text-transform: capitalize;
         }
+        .commu__form__multistep{
+            width: $sizeTypePercentage80;
+        }
         .commu__section__create__post{
             display: flex;
             flex-direction: column;
@@ -66,5 +69,9 @@
     }
 }
 .commu__contain__calendar{
-    width: 80%;
+    width: $sizeTypePercentage80;
+}
+.commu__multistep__form{
+    padding: $sizeTypeRem3;
+    width: $sizeTypePercentage90;
 }

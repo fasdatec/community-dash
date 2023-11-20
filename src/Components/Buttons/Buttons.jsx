@@ -23,3 +23,18 @@ export const ButtonYellowTransparentRound = ({titleButton, direction}) => {
   )
 }
 
+export const ButtonYellowRoundOnC = ({titleButton, direction}) => {
+  return (
+    <>
+      <a className={fasdatec.commu__button__yellow__round} onClick={direction}>{titleButton}</a>
+    </>
+  )
+}
+export const ButtonYellowTransparentRoundOnC = ({titleButton, direction}) => {
+  return (
+    <>
+      <a className={fasdatec.commu__button__yellow__transparent} onClick={direction}>{titleButton}</a>
+    </>
+  )
+}
+
