@@ -3,8 +3,31 @@
     padding: $paddingLittle;
     background-color: $colorYellowBackground;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: $colorBlack;
+}
+.commu__button__yellow__round{
+    padding: $paddingLittle1;
+    background-color: $colorYellowBackground;
+    width: $sizeTypePercentage100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: $borderMedium2;
+    color: $colorBlack;
+    text-decoration: none;
+}
+.commu__button__yellow__transparent{
+    padding: $paddingLittle;
+    background-color: none;
+    cursor: pointer;
+    border: $borderLittle1 solid $colorYellow;
     border-radius: $borderMedium;
-    margin: $sizeTypeRem1;
+    color: $colorWhite;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 @media screen and (max-width:$responsiveMedium) {
     .commu__button__yellow{

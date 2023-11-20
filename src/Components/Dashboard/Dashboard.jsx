@@ -3,6 +3,7 @@ import Sidebar from '../Navs/SidebarComponent/Sidebar';
 import Navbar from '../Navs/NavBarComponent/Navbar';
 import Post from '../Post/Post'
 import fasdatec from './dashboard.module.scss'
+
 const Dashboard = () => {
   return (
     <>
@@ -12,7 +13,6 @@ const Dashboard = () => {
       </div>
       <div className={fasdatec.commu__post}>
         <Sidebar />
-        <Post />
       </div>
     </section>
     </>

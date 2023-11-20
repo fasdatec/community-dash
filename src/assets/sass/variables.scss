@@ -25,12 +25,15 @@ $colorWhiteBackground: #fff;
 $colorWhite: #fff;
 $colorBlueDark: #2f2e41;
 $colorYellow: #ffb727;
+$colorBlack: #000;
 :export {
     colorWhite: $colorWhite;
     colorBlueDark: $colorBlueDark;
     colorYellow: $colorYellow;
+    colorBlack: $colorBlack;
 } 
 //variables para el tamaño de cualquier letras
+$sizeLittle: 0.6rem; //12.8px
 $sizeMedium: 1rem; //16px
 $sizeMediumX1: 1.1rem; //17.6px
 $sizeMediumX2: 1.2rem; //19.2px
@@ -45,6 +48,7 @@ $sizeMediumLargeX4: 2.7rem; //43.2px
 $sizeMediumLargeX5: 2.8rem; //44.8px
 $sizeLarge: 3rem; //48px
 :export {
+    sizeLittle: $sizeLittle;
     sizeMedium: $sizeMedium;
     sizeMediumX1: $sizeMediumX1;
     sizeMediumX2: $sizeMediumX2;
@@ -62,6 +66,7 @@ $sizeLarge: 3rem; //48px
 //variables para cualquier tipo de tamaño
 //px
 $sizeTypeAll0: 0px;
+$sizeTypeAll20: 20px;
 $sizeTypeAll100: 100px;
 $sizeTypeAll200: 200px;
 $sizeTypeAll300: 300px;
@@ -110,8 +115,10 @@ $sizeTypeRem1:1rem;
 $sizeTypeRem2:2rem;
 $sizeTypeRem3:3rem;
 $sizeTypeRem4:5rem;
+$sizeTypeRem5:4rem;
 :export{
     sizeTypeAll0: $sizeTypeAll0;
+    sizeTypeAll20: $sizeTypeAll20;
     sizeTypeAll100: $sizeTypeAll100;
     sizeTypeAll200: $sizeTypeAll200;
     sizeTypeAll300: $sizeTypeAll300;
@@ -157,6 +164,7 @@ $sizeTypeRem4:5rem;
     sizeTypeRem2:$sizeTypeRem2;
     sizeTypeRem3:$sizeTypeRem3;
     sizeTypeRem4:$sizeTypeRem4;
+    sizeTypeRem5:$sizeTypeRem5;
 }
 //variables para el grosor de las letras
 $weight100: 100;
