@@ -7,6 +7,7 @@
     .commu__form__subtitleOne{
         color: $colorWhite;
         margin-top: $sizeTypeRem2;
+        margin-bottom: $sizeTypeRem1;
     }
     .commu__flexrow__form{
         display: flex;
@@ -57,6 +58,7 @@
             border: none;
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
+            cursor: pointer;
         }
         .commu__btn__send{
             color: $colorBlack;
@@ -65,6 +67,103 @@
             border: none;
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
+            cursor: pointer;
+        }
+    }
+    //Desing of the table
+    table {
+        border: $borderLittle1 solid $colorWhiteBackground;
+        background: $colorTableContent;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: $sizeTypePercentage100;
+        table-layout: fixed;
+        thead{
+            tr {
+                background-color:$colorTable;
+                color: $colorWhite;
+                border-bottom: $borderLittle1 solid $colorWhiteBackground;
+                th{
+                    padding: $paddingMedium;
+                    text-align: center;
+                    font-weight: $weight600;
+                }
+            }
+        }
+        tbody{
+            tr{
+                transition: 0.3s all ease-in;
+                &:hover{
+                    background: $colorTable;
+                    transition: 0.3s all ease-in-out;
+                }
+                td{
+                    padding: $paddingMedium;
+                    text-align: center;
+                    color: $colorWhite;
+                    font-weight: $weight100;
+                    border-bottom: $borderLittle1 solid $colorWhiteBackground;
+                   
+                }
+            }
+            
+        }
+    } 
+    @media screen and (max-width: 600px) {
+        table {
+            thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: $borderLittle1;
+                margin: -$borderLittle1;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: $borderLittle1;
+            }
+            tr {
+                border-bottom: $borderLittle3 solid $colorWhiteBackground;
+                display: block;
+            }
+            td {
+                border-bottom: $borderLittle1 solid $colorWhiteBackground;
+                display: block;
+                margin: auto;
+                font-size: $sizeLittle1;
+                text-align: center;
+                &::before{
+                    content: attr(data-label);
+                    float: left;
+                    text-transform: uppercase;
+                }
+                &::last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    //End of the desing table
+    .commu__btn__update__action{
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        svg{
+            font-size: $sizeMedium + $sizeLittle;
+        }
+    }
+    .commu__btn__delete__action{
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        svg{
+            font-size: $sizeMedium + $sizeLittle;
         }
     }
 }

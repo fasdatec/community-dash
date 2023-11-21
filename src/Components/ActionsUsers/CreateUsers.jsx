@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { MdDelete, MdEditDocument  } from "react-icons/md";
+import routes from '../../assets/helpers/routes';
+import instance from '../../assets/api/axios';
 import Navbar from '../Navs/NavBarComponent/Navbar'
 import Sidebar from '../Navs/SidebarComponent/Sidebar';
 import fasdatec from '../Dashboard/dashboard.module.scss';
@@ -14,8 +17,8 @@ const CreateUsers = () => {
   const cancelProcess = () =>{
     MySwal.fire({
       title: `¿Estas seguro que deseas cancelar la creación del Usuario?`,
-      width: '80%',
-      padding: '3em',
+      width: '60%',
+      padding: '1em',
       icon: 'warning',
       color:'#fff',
       showDenyButton: true,
@@ -34,22 +37,22 @@ const CreateUsers = () => {
           showConfirmButton: false,
           allowOutsideClick: false,
           color:'#fff',
-          width: '80%',
-          padding: '3em',
+          width: '60%',
+          padding: '1em',
           background: "rgba(18, 18, 43, 0.92)",
           backdrop: 'rgba(6, 6, 46, 0.877)',
           confirmButtonColor: '#000',
           icon: 'success',
           timer:2500
         });
-        navigate(`/Dashboard`)
+        navigate(routes.home)
       } else if (result.isDenied) {
         MySwal.fire({
           title: 'Puedes Seguir creando a tu usuario',
           showConfirmButton: false,
           color:'#fff',
-          width: '80%',
-          padding: '3em',
+          width: '60%',
+          padding: '1em',
           allowOutsideClick: false,
           background: "rgba(18, 18, 43, 0.92)",
           backdrop: 'rgba(6, 6, 46, 0.877)',
@@ -63,7 +66,7 @@ const CreateUsers = () => {
   const doneProcess = () =>{
     MySwal.fire({
       title: `¿Estas seguro de crear al usuario?`,
-      width: '80%',
+      width: '60%',
       padding: '3em',
       icon: 'warning',
       color:'#fff',
@@ -83,7 +86,7 @@ const CreateUsers = () => {
           showConfirmButton: false,
           allowOutsideClick: false,
           color:'#fff',
-          width: '80%',
+          width: '60%',
           padding: '3em',
           background: "rgba(18, 18, 43, 0.92)",
           backdrop: 'rgba(6, 6, 46, 0.877)',
@@ -96,7 +99,7 @@ const CreateUsers = () => {
           title: 'Puedes Seguir creando a tu usuario',
           showConfirmButton: false,
           color:'#fff',
-          width: '80%',
+          width: '60%',
           padding: '3em',
           allowOutsideClick: false,
           background: "rgba(18, 18, 43, 0.92)",
@@ -107,6 +110,66 @@ const CreateUsers = () => {
         });
       }
     })
+  }
+  const [userData, setUserData] = useState([]);
+  const getUsersInfo = async () =>{
+    instance.get(`users/`)
+    .then((response) =>{
+      setUserData(response.data.users)
+    }).catch((error) => {
+      MySwal.fire({
+        title: error.message,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        color:'#fff',
+        background: "rgba(18, 18, 43, 0.92)",
+        backdrop: 'rgba(6, 6, 46, 0.877)',
+        confirmButtonColor: '#000',
+        icon: 'error',
+        timer:2500
+      });
+    });
+  }
+  useEffect(() =>{
+    getUsersInfo()
+  },[])
+  const updateUser = () =>{
+    alert('Actualizando Usuario')
+  } 
+  const deleteUser = async (id) =>{
+    instance.delete(`users/delete/${id}`)
+    .then((response) => {
+      MySwal.fire({
+        title: response.data.info.message,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        color:'#fff',
+        width: '60%',
+        padding: '1em',
+        background: "rgba(18, 18, 43, 0.92)",
+        backdrop: 'rgba(6, 6, 46, 0.877)',
+        confirmButtonColor: '#000',
+        icon: 'success',
+        timer:2000
+      });
+      navigate(routes.home)
+      })
+    .catch((error) => {
+      MySwal.fire({
+        title: error.response.data.info.message,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        color:'#fff',
+        width: '60%',
+        padding: '1em',
+        background: "rgba(18, 18, 43, 0.92)",
+        backdrop: 'rgba(6, 6, 46, 0.877)',
+        confirmButtonColor: '#000',
+        icon: 'error',
+        timer:2000
+      });
+      getUsers();
+    });
   }
   return (
     <>
@@ -146,6 +209,40 @@ const CreateUsers = () => {
                 </div>
               </div>{/*formu*/}
               <h2 className={fasdatecOne.commu__form__subtitleOne}>Listado de Usuarios</h2>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {userData.map((dataUser) => (
+                        <tr key={dataUser.id}>
+                          <td data-label="Nombre">{dataUser.username}</td>
+                          <td data-label="Imagen">{dataUser.image}</td>
+                          <td data-label="Rol">{dataUser.rol.toUpperCase()}</td>
+                          <td data-label="Editar">
+                            <button className={fasdatecOne.commu__btn__update__action}
+                              onClick={() => updateUser()}
+                            >
+                              <MdEditDocument />
+                            </button>
+                          </td>
+                          <td data-label="Eliminar">
+                            <button className={fasdatecOne.commu__btn__delete__action} 
+                              onClick={() => deleteUser(dataUser.id)}
+                            >
+                              <MdDelete />
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
             </div>
           </div>
         </div>
