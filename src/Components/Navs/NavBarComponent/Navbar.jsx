@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../auth/useAuth';
 import routes from '../../../assets/helpers/routes';
 import fasdatec from './navbar.module.scss';
@@ -27,10 +28,10 @@ const Navbar = () => {
         <div className={fasdatec.commu__navbar__parr}>
           <ul>
             <li>
-              <a className={fasdatec.commu__nabar__none__text} href={routes.publicaciones.creacion}>Publicación</a>
+              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.creacion}>Publicación</Link>
             </li>
             <li>
-              <a className={fasdatec.commu__nabar__none__text} href={routes.publicaciones.suscripciones}>Suscripciónes</a>
+              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciónes</Link>
             </li>
             <li>
               <a onClick={menuResponsive} className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu/></a>
@@ -44,28 +45,28 @@ const Navbar = () => {
             </span>
             <ul>
               <li>
-                <a href={routes.home}><AiFillDashboard /> Inicio</a>
+                <Link to={routes.home}><AiFillDashboard /> Inicio</Link>
               </li>
               <li>
-                <a href={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</a>
+                <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</Link>
               </li>
               <li>
-                <a href={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</a>
+                <Link to={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</Link>
               </li>
               <li>
-                <a href={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
+                <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</Link>
               </li>
               <li>
-                <a href={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</a> 
+                <Link to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
               </li>
               <li>
-                <a href=""><MdOutlinePendingActions /> Ver Status</a>
+                <Link to=""><MdOutlinePendingActions /> Ver Status</Link>
               </li>
               <li>
-                <a href={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</a>
+                <Link to={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</Link>
               </li>
               <li>
-                <a href={routes.registros.usuarios}><FaUsers /> Usuarios</a>
+                <Link to={routes.registros.usuarios}><FaUsers /> Usuarios</Link>
               </li>
             </ul>
           </div>

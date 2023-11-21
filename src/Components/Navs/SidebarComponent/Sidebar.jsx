@@ -18,22 +18,22 @@ const Sidebar = () => {
       <div className={fasdatec.commu__sidebar__parr}>
         <ul>
           <li>
-            <a href={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</a>
+            <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</Link>
           </li>
           <li>
-            <a href={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</a>
+            <Link to={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</Link>
           </li>
           <li>
-            <a href={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
+            <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
           </li>
           <li>
-            <a href={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</a> 
+            <LinkaLink to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
           </li>
           <li>
-            <a href=""><MdOutlinePendingActions /> Ver Status</a>
+            <Link href=""><MdOutlinePendingActions /> Ver Status</Link>
           </li>
           <li>
-            <a href={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</a>
+            <Link to={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</Link>
           </li>
           <li>
             <Link to={routes.registros.usuarios} ><FaUsers /> Usuarios</Link>
