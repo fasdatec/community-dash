@@ -24,10 +24,10 @@ const Sidebar = () => {
             <Link to={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</Link>
           </li>
           <li>
-            <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</a>
+            <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</Link>
           </li>
           <li>
-            <LinkaLink to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
+            <Link to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
           </li>
           <li>
             <Link href=""><MdOutlinePendingActions /> Ver Status</Link>
