@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import useAuth from '../../auth/useAuth'
+import routes from '../../../assets/helpers/routes'
 import fasdatec from './sidebar.module.scss'
 import { IoCreateOutline } from 'react-icons/io5'
 import { LuCalendarDays } from 'react-icons/lu'
@@ -7,7 +9,6 @@ import { AiOutlineFileText } from 'react-icons/ai'
 import { BsCreditCard2FrontFill } from 'react-icons/bs'
 import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
-import routes from '../../../assets/helpers/routes'
 
 const Sidebar = () => {
   const { logout } = useAuth()
@@ -35,7 +36,7 @@ const Sidebar = () => {
             <a href={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</a>
           </li>
           <li>
-            <a href={routes.registros.usuarios}><FaUsers /> Usuarios</a>
+            <Link to={routes.registros.usuarios} ><FaUsers /> Usuarios</Link>
           </li>
         </ul>
       </div>
