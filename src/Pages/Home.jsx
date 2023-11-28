@@ -7,7 +7,7 @@ const Home = () => {
   const {user} = useAuth();
   return (
     <>
-    {user.name === 'james'
+    {user.algoritmo === 'EF'
     ? <MultFormMain />
     : <Dashboard />}
     </>
