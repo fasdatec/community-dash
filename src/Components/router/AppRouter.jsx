@@ -9,6 +9,7 @@ import Forget from '../../Pages/Forget';
 import Home from '../../Pages/Home';
 import Dashboard from "../Dashboard/Dashboard";
 import Users from '../../Pages/Users';
+import Clients from '../../Pages/Clients';
 import Tips from '../../Pages/Tips';
 import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
@@ -36,7 +37,11 @@ const AppRouter = () => {
           <PrivateRoute> <Dashboard /></PrivateRoute>
         }/>
         <Route exact path={routes.registros.usuarios} element={
+
           <PrivateRoute> <Users /> </PrivateRoute>
+        }/>
+        <Route exact path={routes.registros.clientes} element={
+          <PrivateRoute> <Clients /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.calendar} element={
           <PrivateRoute> <Calendar /> </PrivateRoute>

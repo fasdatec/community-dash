@@ -3,7 +3,8 @@ const routes = {
     recuperar: '/recoverpass',
     registros:{
         home: '/signinup',
-        usuarios: '/registerusers/'
+        usuarios: '/registerusers/',
+        clientes: '/clients/'
     },
     home: '/home/',
     dashboard: '/dashboard/',
@@ -13,6 +14,7 @@ const routes = {
         tips: '/tipspost/',
         calendar: '/calendar/',
         suscripciones: '/subscriptions/'
+        
     } 
 
 }
