@@ -13,7 +13,8 @@ import Tips from '../../Pages/Tips';
 import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
-import Subscriptions from '../../Pages/Subscriptions'; 
+import Subscriptions from '../../Pages/Subscriptions';
+import Client from '../../Pages/Client'; 
 
 const AppRouter = () => {
   return (
@@ -53,11 +54,12 @@ const AppRouter = () => {
         <Route exact path={routes.publicaciones.creacion} element={
           <PrivateRoute> <Create /> </PrivateRoute>
         }/>
-
-
+        <Route exact path={routes.publicaciones.post} element={ 
+          <PrivateRoute> <Client /> </PrivateRoute>
+        }/>
       </Routes>
     </>
   )
 }
 
-export default AppRouter
+export default AppRouter;

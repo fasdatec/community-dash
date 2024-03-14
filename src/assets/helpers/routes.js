@@ -12,7 +12,9 @@ const routes = {
         creacion: '/createpost/',
         tips: '/tipspost/',
         calendar: '/calendar/',
-        suscripciones: '/subscriptions/'
+        suscripciones: '/subscriptions/',
+        clientes: '/client/',
+        post: '/createpost/post/',
     } 
 
 }

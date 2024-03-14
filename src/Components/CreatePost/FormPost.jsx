@@ -7,6 +7,7 @@ import fasdatecOne from './postsactions.module.scss'
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+
 const FormPost = () => {
   const MySwal = withReactContent(Swal);
   const navigate = useNavigate();
