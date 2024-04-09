@@ -1,7 +1,6 @@
 import React from "react";
 import fasdatec from './postsocialmedia.module.scss'
 import { ButtonYellowTransparentRound } from "../Buttons/Buttons";
-import  "../../Pages/Create";
 
 const PostSocialMedia = ({titleSocialMedia, imglogo}) => {
   return (
@@ -12,10 +11,11 @@ const PostSocialMedia = ({titleSocialMedia, imglogo}) => {
           <p>{titleSocialMedia}</p>
         </div>
         <div className={fasdatec.commu__button__card}>
-          <ButtonYellowTransparentRound titleButton='Crear' direction='/createpost/post/'/>
+          <ButtonYellowTransparentRound titleButton='Crear' direction='/posts/'/>
         </div>
       </div>
     </>
   )
 }
 export default PostSocialMedia
+

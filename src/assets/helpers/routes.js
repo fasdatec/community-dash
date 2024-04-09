@@ -13,8 +13,7 @@ const routes = {
         tips: '/tipspost/',
         calendar: '/calendar/',
         suscripciones: '/subscriptions/',
-        clientes: '/client/',
-        post: '/createpost/post/',
+        post: '/posts/'
     } 
 
 }
