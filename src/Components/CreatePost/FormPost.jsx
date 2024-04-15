@@ -42,7 +42,7 @@ const FormPost = () => {
           icon: 'success',
           timer:2500
         });
-        navigate(`/Create`)
+        navigate(`/createpost`)
       } else if (result.isDenied) {
         MySwal.fire({
           title: 'Puedes Seguir creando tu publicación',
@@ -121,22 +121,38 @@ const FormPost = () => {
           <h1>Creación de Post para X</h1>
           <div className={fasdatecOne.commu__section__form__container}>
             <h2 className={fasdatecOne.commu__form__subtitle}>Ingresa los Datos que se piden</h2>
-            <div >{/*formu*/}
-              <div className={fasdatecOne.commu__flexrow__form}>
-                <div className={fasdatecOne.commu__flexclm__form}>
-                  <label htmlFor="titulo" className={fasdatecOne.commu__creation__label}>Titulo</label>
-                  <input type="text" id='titulo' className={fasdatecOne.commu__creation__input} placeholder='Titulo'/>
-                </div>
-                <div className={fasdatecOne.commu__flexclm__form}>
-                  <label htmlFor="Marca" className={fasdatecOne.commu__creation__label}>Marca</label>
-                  <input type="text" id='Marca' className={fasdatecOne.commu__creation__input} placeholder='Marca'/>
-                </div>
-              </div>
-              <div className={fasdatecOne.commu__flexbtn}>
-                <input type="button" onClick={cancelProcess} className={fasdatecOne.commu__btn__cancel} value="Cancelar" />
-                <input type="button" onClick={doneProcess} className={fasdatecOne.commu__btn__send} value="Crear Post" />
-              </div>
-            </div>{/*formu*/}
+            <div>
+  <div className={fasdatecOne.commu__flexrow__form}>
+    <div className={fasdatecOne.commu__flexclm__form}>
+      <label htmlFor="titulo" className={fasdatecOne.commu__creation__label}>Titulo</label>
+      <input type="text" id='titulo' className={fasdatecOne.commu__creation__input} placeholder='Titulo'/>
+    </div>
+    <div className={fasdatecOne.commu__flexclm__form}>
+      <label htmlFor="Marca" className={fasdatecOne.commu__creation__label}>Marca</label>
+      <input type="text" id='Marca' className={fasdatecOne.commu__creation__input} placeholder='Marca'/>
+    </div>
+    <div className={fasdatecOne.commu__flexclm__form}>
+    <label htmlFor="encabezado" className={fasdatecOne.commu__creation__label}>Encabezado</label>
+    <input type="text" id='encabezado' className={fasdatecOne.commu__creation__input} placeholder='encabezado'/>
+  </div>
+  <div className={fasdatecOne.commu__flexclm__form}>
+    <label htmlFor="texto" className={fasdatecOne.commu__creation__label}>Texto</label>
+    <input type="text" id='texto' className={fasdatecOne.commu__creation__input} placeholder='texto'/>
+  </div>
+  <div className={fasdatecOne.commu__flexclm__form}>
+    <label htmlFor="video-imagen" className={fasdatecOne.commu__creation__label}>Video o Imagen</label>
+    <input type="file" id='video-imagen' className={fasdatecOne.commu__creation__input} placeholder='video-imagen'/>
+  </div>
+ 
+  </div>
+  <div className={fasdatecOne.commu__flexbtn}>
+    <input type="button" onClick={cancelProcess} className={fasdatecOne.commu__btn__cancel} value="Cancelar" />
+    <input type="button" onClick={doneProcess} className={fasdatecOne.commu__btn__send} value="Crear Post" />
+  </div>
+  
+</div>
+
+
           </div>
         </div>
       </div>
