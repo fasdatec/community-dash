@@ -69,7 +69,9 @@ const Navbar = () => {
                 <Link to={routes.registros.usuarios}><FaUsers /> Usuarios</Link>
               </li>
               <li>
-                <Link to={routes.registros.clientes} ><FaUsers /> Clientes</Link>
+
+                <Link to={routes.registros.clientes}><FaUsers /> Clientes</Link>
+
               </li>
             </ul>
           </div>

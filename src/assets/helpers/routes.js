@@ -4,7 +4,9 @@ const routes = {
     registros:{
         home: '/signinup',
         usuarios: '/registerusers/',
-        clientes: '/clients/'
+
+        clientes: '/registerClients/'
+
     },
     home: '/home/',
     dashboard: '/dashboard/',
@@ -13,8 +15,10 @@ const routes = {
         creacion: '/createpost/',
         tips: '/tipspost/',
         calendar: '/calendar/',
-        suscripciones: '/subscriptions/'
-        
+
+        suscripciones: '/subscriptions/',
+        post: '/posts/'
+
     } 
 
 }
