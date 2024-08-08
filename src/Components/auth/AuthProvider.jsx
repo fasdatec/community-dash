@@ -10,7 +10,7 @@ export default function AuthProvider({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
   const MySwal = withReactContent(Swal);
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(true)
   const isLogged = () => !!user;
 
   useEffect(() => {

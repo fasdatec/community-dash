@@ -55,7 +55,10 @@ const AppRouter = () => {
           <PrivateRoute> <Publicaciones /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.creacion} element={
-          <PrivateRoute> <Create /> </PrivateRoute>
+          <PrivateRoute> <Create/> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.post} element={
+          <PrivateRoute> <Posts/> </PrivateRoute>
         }/>
 
 
@@ -64,4 +67,4 @@ const AppRouter = () => {
   )
 }
 
-export default AppRouter
+export default AppRouter;
