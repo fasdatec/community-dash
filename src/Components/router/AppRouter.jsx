@@ -9,11 +9,13 @@ import Forget from '../../Pages/Forget';
 import Home from '../../Pages/Home';
 import Dashboard from "../Dashboard/Dashboard";
 import Users from '../../Pages/Users';
+import Clients from '../../Pages/Clients';
 import Tips from '../../Pages/Tips';
 import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
 import Subscriptions from '../../Pages/Subscriptions'; 
+import Clients from '../../Pages/Clients'
 
 const AppRouter = () => {
   return (
@@ -36,7 +38,11 @@ const AppRouter = () => {
           <PrivateRoute> <Dashboard /></PrivateRoute>
         }/>
         <Route exact path={routes.registros.usuarios} element={
+
           <PrivateRoute> <Users /> </PrivateRoute>
+        }/>
+        <Route exact path={routes.registros.clientes} element={
+          <PrivateRoute> <Clients /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.calendar} element={
           <PrivateRoute> <Calendar /> </PrivateRoute>
@@ -51,7 +57,10 @@ const AppRouter = () => {
           <PrivateRoute> <Publicaciones /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.creacion} element={
-          <PrivateRoute> <Create /> </PrivateRoute>
+          <PrivateRoute> <Create/> </PrivateRoute>
+        }/>
+        <Route exact path={routes.publicaciones.post} element={
+          <PrivateRoute> <Posts/> </PrivateRoute>
         }/>
 
 
@@ -60,4 +69,4 @@ const AppRouter = () => {
   )
 }
 
-export default AppRouter
+export default AppRouter;

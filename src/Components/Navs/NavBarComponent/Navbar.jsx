@@ -68,6 +68,11 @@ const Navbar = () => {
               <li>
                 <Link to={routes.registros.usuarios}><FaUsers /> Usuarios</Link>
               </li>
+              <li>
+
+                <Link to={routes.registros.clientes}><FaUsers /> Clientes</Link>
+
+              </li>
             </ul>
           </div>
           <button type="button" className={fasdatec.commu__sidebar__logout} onClick={() => logout()}>Cerrar Sesión</button>

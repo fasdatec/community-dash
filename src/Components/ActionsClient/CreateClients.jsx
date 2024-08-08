@@ -6,17 +6,17 @@ import instance from '../../assets/api/axios';
 import Navbar from '../Navs/NavBarComponent/Navbar'
 import Sidebar from '../Navs/SidebarComponent/Sidebar';
 import fasdatec from '../Dashboard/dashboard.module.scss';
-import fasdatecOne from './usersactions.module.scss';
+import fasdatecOne from './clientsactions.module.scss';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
-const CreateUsers = () => {
+const CreateClients = () => {
   const MySwal = withReactContent(Swal);
   const navigate = useNavigate();
-  const options = ['Administrador','CM','Desing'];
+  const options = ['Facebock','Instagram','TikTok','YouTube','X','LinkedIn'];
   const cancelProcess = () =>{
     MySwal.fire({
-      title: `¿Estas seguro que deseas cancelar la creación del Usuario?`,
+      title: `¿Estas seguro que deseas cancelar la creación del Cliente?`,
       width: '60%',
       padding: '1em',
       icon: 'warning',
@@ -48,7 +48,7 @@ const CreateUsers = () => {
         navigate(routes.home)
       } else if (result.isDenied) {
         MySwal.fire({
-          title: 'Puedes Seguir creando a tu usuario',
+          title: 'Puedes Seguir creando a tu cliente',
           showConfirmButton: false,
           color:'#fff',
           width: '60%',
@@ -65,7 +65,7 @@ const CreateUsers = () => {
   }
   const doneProcess = () =>{
     MySwal.fire({
-      title: `¿Estas seguro de crear al usuario?`,
+      title: `¿Estas seguro de crear al cliente?`,
       width: '60%',
       padding: '3em',
       icon: 'warning',
@@ -82,7 +82,7 @@ const CreateUsers = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         MySwal.fire({
-          title: 'Usuario Creado',
+          title: 'Cliente Creado',
           showConfirmButton: false,
           allowOutsideClick: false,
           color:'#fff',
@@ -96,7 +96,7 @@ const CreateUsers = () => {
         });
       } else if (result.isDenied) {
         MySwal.fire({
-          title: 'Puedes Seguir creando a tu usuario',
+          title: 'Puedes Seguir creando a tu cliente',
           showConfirmButton: false,
           color:'#fff',
           width: '60%',
@@ -111,11 +111,11 @@ const CreateUsers = () => {
       }
     })
   }
-  const [clientData, setClientData] = useState([]);
-  const getClientInfo = async () =>{
-    instance.get(`clients/`)
+  const [userData, setUserData] = useState([]);
+  const getUsersInfo = async () =>{
+    instance.get(`users/`)
     .then((response) =>{
-      setClientData(response.data.clients)
+      setUserData(response.data.users)
     }).catch((error) => {
       MySwal.fire({
         title: error.message,
@@ -131,13 +131,13 @@ const CreateUsers = () => {
     });
   }
   useEffect(() =>{
-    getClientsInfo()
+    getUsersInfo()
   },[])
-  const updateClients = () =>{
-    alert('Actualizando Usuario')
+  const updateUser = () =>{
+    alert('Actualizando Cliente')
   } 
-  const deleteClient = async (id) =>{
-    instance.delete(`clients/delete/${id}`)
+  const deleteUser = async (id) =>{
+    instance.delete(`users/delete/${id}`)
     .then((response) => {
       MySwal.fire({
         title: response.data.info.message,
@@ -168,7 +168,7 @@ const CreateUsers = () => {
         icon: 'error',
         timer:2000
       });
-      getClients();
+      getUsers();
     });
   }
   return (
@@ -180,50 +180,50 @@ const CreateUsers = () => {
         <div className={fasdatec.commu__post}>
           <Sidebar />
           <div className={fasdatec.commu__section__create__post}>
-            <h1>Administración de Usuarios</h1>
+            <h1>Creación de Cliente</h1>
             <div className={fasdatecOne.commu__section__form__container}>
               <h2 className={fasdatecOne.commu__form__subtitle}>Ingresa los Datos que se piden</h2>
               <div >{/*formu*/}
                 <div className={fasdatecOne.commu__flexrow__form}>
                   <div className={fasdatecOne.commu__flexclm__form}>
-                    <label htmlFor="mail" className={fasdatecOne.commu__creation__label}>Correo Electronico</label>
-                    <input type="email" id='mail' className={fasdatecOne.commu__creation__input} placeholder='Correo Electronico'/>
+                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Nombre de Cliente</label>
+                    <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Usuario'/>
                   </div>
                   <div className={fasdatecOne.commu__flexclm__form}>
-                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Nombre de Acceso</label>
-                    <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Nombre de Acceso'/>
-                  </div>
-                  <div className={fasdatecOne.commu__flexclm__form}>
-                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Rol del Usuario</label>
-                    <select className={fasdatecOne.commu__creation__input} name="rol">
+                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Tipo de Red Social</label>
+                    <select className={fasdatecOne.commu__creation__input} name="social">
                       <option>Elige una Opción</option>
                         {options.map((strong, index) => {
                           return <option key={index} > {strong} </option>
                       })}
                     </select>
                   </div>
+                  <div className={fasdatecOne.commu__flexclm__form}>
+                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Usuario</label>
+                    <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Usuario Encargado'/>
+                  </div>
                 </div>
                 <div className={fasdatecOne.commu__flexbtn}>
                   <input type="button" onClick={cancelProcess} className={fasdatecOne.commu__btn__cancel} value="Cancelar" />
-                  <input type="button" onClick={doneProcess} className={fasdatecOne.commu__btn__send} value="Crear Usuario" />
+                  <input type="button" onClick={doneProcess} className={fasdatecOne.commu__btn__send} value="Crear Cliente" />
                 </div>
               </div>{/*formu*/}
-              <h2 className={fasdatecOne.commu__form__subtitleOne}>Listado de Usuarios</h2>
+              <h2 className={fasdatecOne.commu__form__subtitleOne}>Listado de Clientes</h2>
                   <table>
                     <thead>
                       <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Rol</th>
-                        <th scope="col">Editar</th>
+                        <th scope="col">Rol de Usuario</th>
+                        <th scope="col">Actualizar</th>
                         <th scope="col">Eliminar</th>
                       </tr>
                     </thead>
                     <tbody>
                       {userData.map((dataUser) => (
                         <tr key={dataUser.id}>
-                          <td data-label="Nombre">{dataClient.username}</td>
-                          <td data-label="Rol">{dataClient.rol.toUpperCase()}</td>
-                          <td data-label="Editar">
+                          <td data-label="Nombre">{dataUser.username}</td>
+                          <td data-label="Rol">{dataUser.rol.toUpperCase()}</td>
+                          <td data-label="Actualizar">
                             <button className={fasdatecOne.commu__btn__update__action}
                               onClick={() => updateUser()}
                             >
@@ -232,7 +232,7 @@ const CreateUsers = () => {
                           </td>
                           <td data-label="Eliminar">
                             <button className={fasdatecOne.commu__btn__delete__action} 
-                              onClick={() => deleteClient(dataClient.id)}
+                              onClick={() => deleteCLIENTS(dataUser.id)}
                             >
                               <MdDelete />
                             </button>
@@ -249,4 +249,4 @@ const CreateUsers = () => {
   )
 }
 
-export default CreateUsers
+export default CreateClients
