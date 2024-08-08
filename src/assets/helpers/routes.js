@@ -12,7 +12,8 @@ const routes = {
         creacion: '/createpost/',
         tips: '/tipspost/',
         calendar: '/calendar/',
-        suscripciones: '/subscriptions/'
+        suscripciones: '/subscriptions/',
+        post: '/posts/'
     } 
 
 }
