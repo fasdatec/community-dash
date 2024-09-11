@@ -15,7 +15,6 @@ import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
 import Subscriptions from '../../Pages/Subscriptions'; 
-import Clients from '../../Pages/Clients'
 
 const AppRouter = () => {
   return (
@@ -36,6 +35,9 @@ const AppRouter = () => {
         }/>
         <Route exact path={'/dashboard/*'} element={
           <PrivateRoute> <Dashboard /></PrivateRoute>
+        }/>
+        <Route exact path={'/login/'} element={
+          <PrivateRoute> <Login /></PrivateRoute>
         }/>
         <Route exact path={routes.registros.usuarios} element={
 
@@ -59,9 +61,9 @@ const AppRouter = () => {
         <Route exact path={routes.publicaciones.creacion} element={
           <PrivateRoute> <Create/> </PrivateRoute>
         }/>
-        <Route exact path={routes.publicaciones.post} element={
+        {/* <Route exact path={routes.publicaciones.post} element={
           <PrivateRoute> <Posts/> </PrivateRoute>
-        }/>
+        }/> */}
 
 
       </Routes>

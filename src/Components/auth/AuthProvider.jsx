@@ -22,9 +22,10 @@ export default function AuthProvider({ children }) {
   /* function to verify if the user give the correct data*/
   const isLogin = () => {
     const token = localStorage.getItem('token')
-    instance.get(`/users/islogin`, { headers: { authorization: token } })
+    instance.get(`/users/islogin`, { headers: { authorization: `Bearer ${token}` } })
     .then((response) => {
-      setUser(response.data.data)
+      setUser(response.data.data.name)
+      localStorage.setItem('token', response.data.data.token)
     })
     .catch((error) => {
       localStorage.removeItem('token');
@@ -42,6 +43,7 @@ export default function AuthProvider({ children }) {
       }
     })
     .catch((error) => {
+      console.log(error);
       MySwal.fire({
         title: error.response.data.info.message,
         showConfirmButton: false,
