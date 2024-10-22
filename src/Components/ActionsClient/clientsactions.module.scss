@@ -27,9 +27,9 @@
             .commu__creation__input{
                 border-radius: $borderMedium;
                 border: $borderLittle1 solid $colorYellow;
-                background: transparent;
+                background: rgb(0, 0, 0);
                 padding: $paddingLittle2;
-                color: $colorWhite;
+                color: #ffb727;
                 outline: none;
                 width: $sizeTypePercentage90;
             }
