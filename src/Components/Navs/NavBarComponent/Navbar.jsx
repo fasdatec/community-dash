@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.creacion}>Publicación</Link>
             </li>
             <li>
-              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciónes</Link>
+              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciones</Link>
             </li>
             <li>
               <a onClick={menuResponsive} className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu/></a>

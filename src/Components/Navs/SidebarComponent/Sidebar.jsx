@@ -18,7 +18,7 @@ const Sidebar = () => {
       <div className={fasdatec.commu__sidebar__parr}>
         <ul>
           <li>
-            <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</Link>
+            <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciones</Link>
           </li>
           <li>
             <Link to={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</Link>

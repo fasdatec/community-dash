@@ -1,13 +1,19 @@
 @import "../../assets/sass/variables.scss";
 .commu__card__subs{
-    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
+    //width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem4;
+    //width: ($sizeType Rem4 + $sizeTypeRem4 + $sizeTypeRem4) / 2;
+    justify-content: center;
+    width: 250px;
+    //width: 60%;
+    height: min;
     background: transparent;
     border-radius: $borderMedium;
     border: $borderLittle1 $colorYellow solid;
-    padding: $paddingMedium4;
+    padding: $paddingMedium2;
     text-align: justify;
     color: $colorWhite;
     box-shadow: 0px 0px 10px $colorYellow;
+    margin: 0 auto;
     .commu__card__subs__title{
         color: $colorYellow !important;
         font-size: $sizeMediumX2;
@@ -28,7 +34,8 @@
     }
     .commu__card__subs__buttons{
         margin-bottom: $paddingMedium;
-        margin-top: $paddingMedium4;
-        margin-left: -1.5rem;
+        margin-top: $paddingMedium2;
+        
+        //margin-left: -1.5rem;
     }
 }

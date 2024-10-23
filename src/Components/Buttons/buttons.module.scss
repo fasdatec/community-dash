@@ -4,13 +4,14 @@
     background-color: $colorYellowBackground;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: center ;
     color: $colorBlack;
 }
 .commu__button__yellow__round{
+    margin: 0 auto;
     padding: $paddingLittle1;
     background-color: $colorYellowBackground;
-    width: $sizeTypePercentage100;
+    width: full;
     cursor: pointer;
     display: flex;
     justify-content: center;
