@@ -10,7 +10,7 @@
         min-height: $sizeTypeViewHeight100;
         background-color: $colorBlueDarkSNavBackground;
         h1{
-            color: white;
+            color: $colorWhite;
             padding: $paddingMedium;
             text-transform: capitalize;
         }
@@ -81,8 +81,9 @@
 }
 .commu__contain__calendar{
     width: $sizeTypePercentage80;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     position: relative;
+    //color: white;
     color: rgb(255, 183, 39);
     width: 100%;
     margin: 0 auto;
