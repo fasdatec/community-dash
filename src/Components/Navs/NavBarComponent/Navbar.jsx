@@ -10,21 +10,23 @@ import { AiOutlineFileText, AiFillDashboard, AiOutlineClose } from 'react-icons/
 import { BsCreditCard2FrontFill } from 'react-icons/bs'
 import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
+import image from '../../../assets/images/ft.png';
+<img src={image} alt="" />
 
 const Navbar = () => {
   const burguerRef = useRef();
   const { logout } = useAuth()
-  const menuResponsive = () =>{
+  const menuResponsive = () => {
     burguerRef.current.style.marginLeft !== "-100%" ? (
       burguerRef.current.style.marginLeft = "-100%"
-      ) : (
-        burguerRef.current.style.marginLeft = "0%"
-      )
+    ) : (
+      burguerRef.current.style.marginLeft = "0%"
+    )
   }
   return (
     <>
       <div className={fasdatec.commu__navbar__general}>
-        <a href={routes.home} className={fasdatec.commu__navbar__logo}>CommuFasda</a>
+        <a href={routes.home} className={fasdatec.commu__navbar__logo}>    CommuFasda</a>
         <div className={fasdatec.commu__navbar__parr}>
           <ul>
             <li>
@@ -34,14 +36,17 @@ const Navbar = () => {
               <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciones</Link>
             </li>
             <li>
-              <a onClick={menuResponsive} className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu/></a>
+              <img className={fasdatec.img__profile} src={image} alt="" />
+              </li>
+            <li>
+              <a onClick={menuResponsive} className={fasdatec.commu__hamburguer__menu__button}><RxHamburgerMenu /></a>
             </li>
           </ul>
         </div>
         <div className={fasdatec.commu__responsive__nav} ref={burguerRef}>
           <div className={fasdatec.commu__sidebar__parr}>
             <span className={fasdatec.commu__close__responsive}>
-              <AiOutlineClose onClick={menuResponsive}/>
+              <AiOutlineClose onClick={menuResponsive} />
             </span>
             <ul>
               <li>
@@ -57,7 +62,7 @@ const Navbar = () => {
                 <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</Link>
               </li>
               <li>
-                <Link to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
+                <Link to={routes.publicaciones.creacion}><IoCreateOutline /> Crear Publicación</Link>
               </li>
               <li>
                 <Link to=""><MdOutlinePendingActions /> Ver Status</Link>

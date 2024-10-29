@@ -10,8 +10,8 @@
         left: $sizeTypeRem2;
     }
     .commu__navbar__parr{
-        padding: $paddingMedium2;
-        font-size: $sizeMedium;
+        padding: $paddingMedium1;
+        font-size: $sizeMedium;        
         ul{
             gap: $sizeTypeRem2;
             display: flex;
@@ -33,6 +33,9 @@
                 color: $colorYellow;
                 transition: all 0.2s ease-in-out;
             }
+        }
+        .img__profile{
+            width: $sizeTypePercentage75;
         }
     }
     .commu__responsive__nav{
