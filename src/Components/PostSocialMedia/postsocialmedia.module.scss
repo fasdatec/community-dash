@@ -20,5 +20,15 @@
     }
     .commu__button__card{
         width: $sizeTypePercentage100;
+        a{
+            text-decoration: none;
+            color: $colorWhite;
+            transition: all 0.2s ease-in;
+            &:hover{
+                background-color: $colorYellow;
+                color: $colorBlack;
+                transition: all 0.2s ease-in-out;
+            }
+        }
     }
 }

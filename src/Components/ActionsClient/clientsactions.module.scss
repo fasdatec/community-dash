@@ -27,9 +27,9 @@
             .commu__creation__input{
                 border-radius: $borderMedium;
                 border: $borderLittle1 solid $colorYellow;
-                background: rgb(0, 0, 0);
+                background: $colorBlueDark;
                 padding: $paddingLittle2;
-                color: #ffb727;
+                color: $colorYellow;
                 outline: none;
                 width: $sizeTypePercentage90;
             }
@@ -59,15 +59,31 @@
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
+            border-radius: $sizeTypeAll20;
+            &:hover{
+                background-color: transparent;
+                color: $colorYellow;
+                border-top: 1px solid $colorYellow  ;
+                transition: 0.3s all ease-in-out;
+                box-shadow: 1px 2px 20px 10px $colorYellow;
+            }
         }
         .commu__btn__send{
             color: $colorBlack;
             font-weight: $weight800;
-            background: $colorYellowBackground;
+            background: $colorYellow;
             border: none;
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
+            border-radius: $sizeTypeAll20;
+            &:hover{
+                background-color: transparent;
+                color: $colorYellow;
+                border-top: 1px solid $colorYellow;
+                transition: 0.3s all ease-in-out;
+                box-shadow: 1px 2px 20px 10px $colorYellow;
+            }
         }
     }
     //Desing of the table

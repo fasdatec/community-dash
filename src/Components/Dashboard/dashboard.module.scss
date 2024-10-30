@@ -8,9 +8,9 @@
         display: flex;
         width: $sizeTypePercentage100;
         min-height: $sizeTypeViewHeight100;
-        background-color: $colorBlueDarkSNavBackground;
+        background-color: $colorBlueDarkSNavBackground  ;
         h1{
-            color: $colorWhite;
+            color: $colorYellow;
             padding: $paddingMedium;
             text-transform: capitalize;
         }
@@ -21,6 +21,7 @@
             display: flex;
             flex-direction: column;
             width: $sizeTypePercentage100;
+            padding: $sizeTypeRem1;
             .commu__post__social{
                 padding-left: $paddingLarge + $paddingLarge;
                 display: grid;
@@ -38,10 +39,10 @@
     }
 }
 .commu__calendar{
-    width: $sizeTypePercentage100;
-    padding: $sizeTypeRem3;
-    color:rgb(255, 183, 39)
-    
+    width: $sizeTypePercentage80;
+    padding: $sizeTypeRem1;
+    color: $colorYellow;
+    align-items: center;
 }
 .commu__post__container{
     width: $sizeTypePercentage100;
@@ -51,22 +52,22 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: $sizeTypeRem1;
+    margin-top: $sizeTypeRem0;
 }
 .commu__section__subscriptions{
     width: $sizeTypePercentage100;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: $sizeTypeRem1;
     .commu__subscriptions__contain{
-        // padding: $paddingMedium;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        //gap: $sizeTypeRem2;
         gap: 2rem;
-        margin-top: $sizeTypeRem2;
+        margin-top: $sizeTypeRem2   ;
         justify-content: center;
         align-items: center;
-
     }
 
     li {
@@ -81,10 +82,9 @@
 }
 .commu__contain__calendar{
     width: $sizeTypePercentage80;
-    background-color: black;
+    background-color: $colorBlueDarkSNavBackground;
     position: relative;
-    //color: white;
-    color: rgb(255, 183, 39);
+    color: $colorYellow;
     width: 100%;
     margin: 0 auto;
 }

@@ -2,18 +2,20 @@
 .commu__navbar__general {
     background-color: $colorBlueDarkBackground;
     width:$sizeTypePercentage100;
+    box-shadow: 0px 2px 0px $colorYellow;
+    height: $sizeTypeRem2.1;
     .commu__navbar__logo {
         text-decoration: none;
         color: $colorYellow;
         position: absolute;
-        top: $sizeTypeRem2;
+        top: $sizeTypeRem1;
         left: $sizeTypeRem2;
     }
     .commu__navbar__parr{
-        padding: $paddingMedium1;
+        padding: $paddingLittle;
         font-size: $sizeMedium;        
         ul{
-            gap: $sizeTypeRem2;
+            gap: $sizeTypeRem2; 
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -35,7 +37,7 @@
             }
         }
         .img__profile{
-            width: $sizeTypePercentage75;
+            width: $sizeTypePercentage70;
         }
     }
     .commu__responsive__nav{

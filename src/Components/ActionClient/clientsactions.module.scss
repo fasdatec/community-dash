@@ -61,6 +61,7 @@
             cursor: pointer;
         }
         .commu__btn__send{
+            border-radius: 10px;
             color: $colorBlack;
             font-weight: $weight800;
             background: $colorYellowBackground;
@@ -68,7 +69,6 @@
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
-        }
     }
     //Desing of the table
     table {
