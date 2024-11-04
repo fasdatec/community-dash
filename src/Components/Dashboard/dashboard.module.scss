@@ -17,7 +17,7 @@
         .commu__form__multistep{
             width: $sizeTypePercentage80;
         }
-        .commu__section__create__post{
+        .te__post{
             display: flex;
             flex-direction: column;
             width: $sizeTypePercentage100;
@@ -42,7 +42,7 @@
     width: $sizeTypePercentage80;
     padding: $sizeTypeRem1;
     color: $colorYellow;
-    align-items: center;
+    align-items: center;    
 }
 .commu__post__container{
     width: $sizeTypePercentage100;
@@ -68,6 +68,7 @@
         margin-top: $sizeTypeRem2   ;
         justify-content: center;
         align-items: center;
+
     }
 
     li {
@@ -87,8 +88,9 @@
     color: $colorYellow;
     width: 100%;
     margin: 0 auto;
+    align-items: center;
 }
 .commu__multistep__form{
-    padding: $sizeTypeRem3;
+    padding: $sizeTypeRem3 ;
     width: $sizeTypePercentage90;
 }
