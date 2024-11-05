@@ -17,7 +17,7 @@
         .commu__form__multistep{
             width: $sizeTypePercentage80;
         }
-        .te__post{
+        .commu__section__create__post{
             display: flex;
             flex-direction: column;
             width: $sizeTypePercentage100;
@@ -27,6 +27,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: $sizeTypeRem2;
+                margin: $sizeTypeRem2;
             }
             @media screen and (max-width: $responsiveMedium){
                 .commu__post__social{

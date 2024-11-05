@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateUsers from '../Components/ActionsUsers/CreateUsers';
+import CreateUsers from '../Components/ActionsUsers/CreateUsers'
 const Users = () => {
   return (
     <>

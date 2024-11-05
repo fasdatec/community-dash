@@ -14,7 +14,8 @@ import Tips from '../../Pages/Tips';
 import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
-import Subscriptions from '../../Pages/Subscriptions'; 
+import Subscriptions from '../../Pages/Subscriptions';
+
 
 const AppRouter = () => {
   return (
@@ -29,18 +30,17 @@ const AppRouter = () => {
         <Route exact path={routes.recuperar} element={
           <PublicRoute> <Forget /> </PublicRoute>
         }/>
-        {/*Routes of the APP*/}
+        {/* Routes of the APP */}
         <Route path={'/home/*'} element={
           <PrivateRoute> <Home /> </PrivateRoute>
         }/>
         <Route exact path={'/dashboard/*'} element={
-          <PrivateRoute> <Dashboard /></PrivateRoute>
+          <PrivateRoute> <Dashboard /> </PrivateRoute>
         }/>
         <Route exact path={'/login/'} element={
-          <PrivateRoute> <Login /></PrivateRoute>
+          <PrivateRoute> <Login /> </PrivateRoute>
         }/>
-        <Route exact path={routes.registros.usuarios} element={
-
+        <Route exact path={routes.publicaciones.users} element={
           <PrivateRoute> <Users /> </PrivateRoute>
         }/>
         <Route exact path={routes.registros.clientes} element={
@@ -50,22 +50,20 @@ const AppRouter = () => {
           <PrivateRoute> <Calendar /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.tips} element={
-          <PrivateRoute> <Tips/> </PrivateRoute>
+          <PrivateRoute> <Tips /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.suscripciones} element={
-          <PrivateRoute> <Subscriptions/> </PrivateRoute>
+          <PrivateRoute> <Subscriptions /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.listado} element={
           <PrivateRoute> <Publicaciones /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.creacion} element={
-          <PrivateRoute> <Create/> </PrivateRoute>
+          <PrivateRoute> <Create /> </PrivateRoute>
         }/>
         {/* <Route exact path={routes.publicaciones.post} element={
-          <PrivateRoute> <Posts/> </PrivateRoute>
+          <PrivateRoute> <Posts /> </PrivateRoute>
         }/> */}
-
-
       </Routes>
     </>
   )

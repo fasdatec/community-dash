@@ -48,7 +48,7 @@ const CreateUsers = () => {
         navigate(routes.home)
       } else if (result.isDenied) {
         MySwal.fire({
-          title: 'Puedes Seguir creando a tu usuario',
+          title: 'Puedes Seguir creando tu usuario',
           showConfirmButton: false,
           color:'#fff',
           width: '60%',
