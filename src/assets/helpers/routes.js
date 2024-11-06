@@ -13,8 +13,8 @@ const routes = {
         listado: '/listpost/',
         creacion: '/createpost/',                             
         calendar: '/calendar/',
-        //createUsers: '/createusers',
         suscripciones: '/subscriptions/',
+        tips: '/tips/',
         post: '/posts/'
 
     } 

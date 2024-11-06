@@ -45,7 +45,7 @@ const PlansSubs = () =>{
                             <li>ejemplo 3</li>
                             </ul>} 
                         buttonPlan={<stripe-buy-button className={fasdatec.commu__prueba} buy-button-id="buy_btn_1OAhJ7Aoi5Crq5LdbDQtYZ4u" publishable-key="pk_test_51O9rtYAoi5Crq5LdBzZwXeYZSY5CbBVGfLqk4OmgBwkos7PYA6UHbQum2k24L3ela4Ytti5HtADCClv3ZHth671r00I0NoiYjC">
-                        </stripe-buy-button>} />
+                        </stripe-buy-button>}/>
                     </div>
                 </div>
             </div>

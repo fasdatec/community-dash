@@ -41,6 +41,7 @@
             .commu__flexclm__form{
                 .commu__creation__input{
                     width: $sizeTypePercentage90;
+
                 }
             }
         }
@@ -49,7 +50,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        margin-top: $sizeTypeRem2;
+        margin-top: $sizeTypeRem3;
         gap: $sizeTypeRem1;
         .commu__btn__cancel{
             color: $colorWhite;
@@ -81,7 +82,7 @@
         table-layout: fixed;
         thead{
             tr {
-                background-color:$colorTable;
+                background-color:$colorBlueDark;
                 color: $colorWhite;
                 border-bottom: $borderLittle1 solid $colorWhiteBackground;
                 th{

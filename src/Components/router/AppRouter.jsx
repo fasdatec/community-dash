@@ -40,7 +40,7 @@ const AppRouter = () => {
         <Route exact path={'/login/'} element={
           <PrivateRoute> <Login /> </PrivateRoute>
         }/>
-        <Route exact path={routes.publicaciones.users} element={
+        <Route exact path={routes.registros.usuarios} element={
           <PrivateRoute> <Users /> </PrivateRoute>
         }/>
         <Route exact path={routes.registros.clientes} element={

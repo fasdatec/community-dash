@@ -112,65 +112,65 @@ const CreateClients = () => {
     })
   }
   const [userData, setUserData] = useState([]);
-  const getUsersInfo = async () =>{
-    instance.get(`users/`)
-    .then((response) =>{
-      setUserData(response.data.users)
-    }).catch((error) => {
-      MySwal.fire({
-        title: error.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'error',
-        timer:2500
-      });
-    });
-  }
-  useEffect(() =>{
-    getUsersInfo()
-  },[])
-  const updateUser = () =>{
-    alert('Actualizando Cliente')
-  } 
-  const deleteUser = async (id) =>{
-    instance.delete(`users/delete/${id}`)
-    .then((response) => {
-      MySwal.fire({
-        title: response.data.info.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        width: '60%',
-        padding: '1em',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'success',
-        timer:2000
-      });
-      navigate(routes.home)
-      })
-    .catch((error) => {
-      MySwal.fire({
-        title: error.response.data.info.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        width: '60%',
-        padding: '1em',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'error',
-        timer:2000
-      });
-      getUsers();
-    });
-  }
+  // const getUsersInfo = async () =>{
+  //   instance.get(`users/`)
+  //   .then((response) =>{
+  //     setUserData(response.data.users)
+  //   }).catch((error) => {
+  //     MySwal.fire({
+  //       title: error.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'error',
+  //       timer:2500
+  //     });
+  //   });
+  // }
+  // useEffect(() =>{
+  //   getUsersInfo()
+  // },[])
+  // const updateUser = () =>{
+  //   alert('Actualizando Cliente')
+  // } 
+  // const deleteUser = async (id) =>{
+  //   instance.delete(`users/delete/${id}`)
+  //   .then((response) => {
+  //     MySwal.fire({
+  //       title: response.data.info.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       width: '60%',
+  //       padding: '1em',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'success',
+  //       timer:2000
+  //     });
+  //     navigate(routes.home)
+  //     })
+  //   .catch((error) => {
+  //     MySwal.fire({
+  //       title: error.response.data.info.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       width: '60%',
+  //       padding: '1em',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'error',
+  //       timer:2000
+  //     });
+  //     getUsers();
+  //   });
+  // }
   return (
     <>
       <section className={fasdatec.commu__section__post}>
@@ -189,6 +189,11 @@ const CreateClients = () => {
                     <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Nombre de Cliente</label>
                     <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Usuario'/>
                   </div>
+                  
+                  <div className={fasdatecOne.commu__flexclm__form}>
+                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Usuario</label>
+                    <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Usuario Encargado'/>
+                  </div>
                   <div className={fasdatecOne.commu__flexclm__form}>
                     <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Tipo de Red Social</label>
                     <select className={fasdatecOne.commu__creation__input} name="social">
@@ -197,10 +202,6 @@ const CreateClients = () => {
                           return <option key={index} > {strong} </option>
                       })}
                     </select>
-                  </div>
-                  <div className={fasdatecOne.commu__flexclm__form}>
-                    <label htmlFor="name" className={fasdatecOne.commu__creation__label}>Usuario</label>
-                    <input type="text" id='name' className={fasdatecOne.commu__creation__input} placeholder='Usuario Encargado'/>
                   </div>
                 </div>
                 <div className={fasdatecOne.commu__flexbtn}>
