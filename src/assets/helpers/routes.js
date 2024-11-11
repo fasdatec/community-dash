@@ -16,6 +16,7 @@ const routes = {
         suscripciones: '/subscriptions/',
         tips: '/tips/',
         post: '/posts/'
+        //erstatus: '/verstatus/'
 
     } 
 

@@ -61,6 +61,9 @@ const AppRouter = () => {
         <Route exact path={routes.publicaciones.creacion} element={
           <PrivateRoute> <Create /> </PrivateRoute>
         }/>
+        <Route exact path={routes.publicaciones.verstatus} element={
+          <PrivateRoute> <Create /> </PrivateRoute>
+        }/>
         {/* <Route exact path={routes.publicaciones.post} element={
           <PrivateRoute> <Posts /> </PrivateRoute>
         }/> */}
