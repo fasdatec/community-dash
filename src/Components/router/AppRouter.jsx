@@ -16,7 +16,6 @@ import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
 import Subscriptions from '../../Pages/Subscriptions';
 
-
 const AppRouter = () => {
   return (
     <>

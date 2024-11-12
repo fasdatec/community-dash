@@ -4,9 +4,9 @@ import Sidebar from '../Navs/SidebarComponent/Sidebar'
 import fasdatec from '../Dashboard/dashboard.module.scss';
 import PostSocialMedia from '../PostSocialMedia/PostSocialMedia';
 import iglogo from "../../assets/images/iglogo.svg"
-import fblogo from "../../assets/images/fblogo.svg"
-import tklogo from "../../assets/images/tklogo.svg"
-import ytblogo from "../../assets/images/ytblogo.svg"
+import fblogo from "../../assets/images/fbnw.svg"
+import tklogo from "../../assets/images/ttnw.svg"
+import ytblogo from "../../assets/images/ytnw.svg"
 import xlogo from "../../assets/images/xlogo.svg"
 import inlogo from "../../assets/images/inlogo.svg"
 const CreatePost = () => {

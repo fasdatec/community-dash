@@ -68,7 +68,7 @@ export default function AuthProvider({ children }) {
     }).catch((error) => {
       if(error.response.status === 500){
         MySwal.fire({
-          title:'Inicio de Sesión erroneo',
+          title:'Inicio de Sesión Erróneo',
           showConfirmButton: false,
           allowOutsideClick: false,
           color:'#fff',
@@ -103,7 +103,7 @@ export default function AuthProvider({ children }) {
         }).catch((error) => {
           if(error.response.data.info.status === 400){
             MySwal.fire({
-              title: 'Este Usuario ya existe',
+              title: 'Usuario Existente',
               showConfirmButton: false,
               allowOutsideClick: false,
               color:'#fff',

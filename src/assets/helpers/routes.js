@@ -15,9 +15,8 @@ const routes = {
         calendar: '/calendar/',
         suscripciones: '/subscriptions/',
         tips: '/tips/',
-        post: '/posts/'
-        //erstatus: '/verstatus/'
-
+        post: '/posts/',
+        verstatus: '/verstatus/',
     } 
 
 }

@@ -1,10 +1,10 @@
-import React from "react";
-import Verstatus from "../Components/Verstatus/Verstatus";
+import React from 'react'
+import Verstatus from '../Components/Verstatus/Verstatus'
 
-const Verstatus = () => {
+const VerstatusPage = () => {
     return(
         <>
-            <Verstatus />
+            <VerstatusComponent /> {/* Verstatus */}
         </>
     )
 }
