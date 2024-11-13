@@ -5,10 +5,11 @@ import fasdatec from '../Dashboard/dashboard.module.scss';
 import PostSocialMedia from '../PostSocialMedia/PostSocialMedia';
 import iglogo from "../../assets/images/iglogo.svg"
 import fblogo from "../../assets/images/fbnw.svg"
-import tklogo from "../../assets/images/ttnw.svg"
+import tklogo from "../../assets/images/ttblacknw.svg"
 import ytblogo from "../../assets/images/ytnw.svg"
 import xlogo from "../../assets/images/xlogo.svg"
-import inlogo from "../../assets/images/inlogo.svg"
+import inlogo from "../../assets/images/inlogo.svg" 
+import { FaFacebook } from "react-icons/fa";
 const CreatePost = () => {
   return (
     <>

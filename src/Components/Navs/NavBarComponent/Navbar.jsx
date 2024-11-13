@@ -80,7 +80,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button type="button" className={fasdatec.commu__sidebar__logout} onClick={() => logout()}>Cerrar Sesión</button>
+          <button type="button" className={fasdatec.__logout} onClick={() => logout()}>Cerrar Sesión</button>
         </div>
       </div>
     </>

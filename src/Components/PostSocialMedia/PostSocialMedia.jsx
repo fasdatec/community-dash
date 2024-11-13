@@ -11,7 +11,7 @@ const PostSocialMedia = ({titleSocialMedia, imglogo}) => {
           <p>{titleSocialMedia}</p>
         </div>
         <div className={fasdatec.commu__button__card}>
-          <ButtonYellowTransparentRound titleButton='Crear' direction='/posts/'/>
+          <ButtonYellowTransparentRound titleButton='Crear' direction='/createpost/'/>
         </div>
       </div>
     </>

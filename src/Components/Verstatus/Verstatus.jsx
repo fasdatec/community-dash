@@ -10,7 +10,7 @@ import ytblogo from "../../assets/images/ytnw.svg"
 import xlogo from "../../assets/images/xlogo.svg"
 import inlogo from "../../assets/images/inlogo.svg"
 
-const VerstatusPage = () => {
+const Verstatus = () => {
     return (
         <>
         <section className={fasdatec.commu__verstatus__post}>

@@ -1,10 +1,10 @@
 import React from 'react'
 import Verstatus from '../Components/Verstatus/Verstatus'
 
-const VerstatusPage = () => {
+const Verstatus = () => {
     return(
         <>
-            <VerstatusComponent /> {/* Verstatus */}
+            <Verstatus/> {/* Verstatus */}
         </>
     )
 }
