@@ -9,7 +9,6 @@ import tklogo from "../../assets/images/ttblacknw.svg"
 import ytblogo from "../../assets/images/ytnw.svg"
 import xlogo from "../../assets/images/xlogo.svg"
 import inlogo from "../../assets/images/inlogo.svg" 
-import { FaFacebook } from "react-icons/fa";
 const CreatePost = () => {
   return (
     <>

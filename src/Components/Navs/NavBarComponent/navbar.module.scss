@@ -13,7 +13,8 @@
     }
     .commu__navbar__parr{
         padding: $paddingLittle;
-        font-size: $sizeMedium;        
+        font-size: $sizeMedium;
+        font-weight: $weight500;        
         ul{
             gap: $sizeTypeRem2; 
             display: flex;
@@ -48,6 +49,7 @@
         .commu__navbar__logo{
            top: $sizeTypeRem2;
            left: $sizeTypeRem1;
+           font-weight: $weight800;
         }
         .commu__navbar__parr{
             ul{

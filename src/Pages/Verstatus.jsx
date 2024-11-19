@@ -1,10 +1,10 @@
 import React from 'react'
-import Verstatus from '../Components/Verstatus/Verstatus'
+import VerstatusComponent from '../Components/Verstatus/VerstatusComponent'
 
 const Verstatus = () => {
     return(
         <>
-            <Verstatus/> {/* Verstatus */}
+            <VerstatusComponent/> {/* Verstatus */}
         </>
     )
 }
