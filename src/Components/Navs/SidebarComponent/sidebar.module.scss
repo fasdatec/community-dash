@@ -8,7 +8,8 @@
     flex-direction: column;
     justify-content: space-between;
     .commu__sidebar__parr{
-        padding: $paddingMedium2;
+        padding: $paddingMedium4;
+        margin-top: $sizeTypePercentage5;
         ul{
             display: flex;
             flex-direction: column;

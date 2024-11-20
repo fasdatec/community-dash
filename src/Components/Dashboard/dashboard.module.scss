@@ -41,7 +41,7 @@
 }
 .commu__calendar{
     width: $sizeTypePercentage80;
-    padding: $sizeTypeRem1;
+    padding: $sizeTypeRem2;
     color: $colorYellow;
     align-items: center;    
 }
@@ -49,12 +49,12 @@
     width: $sizeTypePercentage100;
 }
 .commu__mis__publicaciones{
-    width: $sizeTypePercentage100;
+    width: $sizeTypePercentage80;
     display: flex;
     flex-direction: column;
     position: relative;
     padding: $sizeTypeRem1;
-    margin-top: $sizeTypeRem0;
+    margin-top: $sizeTypeRem1;
 }
 .commu__section__subscriptions{
     width: $sizeTypePercentage100;
@@ -81,6 +81,7 @@
             grid-template-columns: 1fr;
         }
     }
+        
 }
 .commu__contain__calendar{
     width: $sizeTypePercentage80;
@@ -94,4 +95,10 @@
 .commu__multistep__form{
     padding: $sizeTypeRem3 ;
     width: $sizeTypePercentage90;
+}
+.commu__verstatus__section{
+    color: $colorWhite;
+    font-weight: $weight400;
+    font-size: $sizeMediumX1;
+    margin-bottom: $paddingLittle;
 }

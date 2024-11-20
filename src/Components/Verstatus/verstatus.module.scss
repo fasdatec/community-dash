@@ -1,11 +1,6 @@
 @import "../../assets/sass/variables.scss";
 .commu__verstatus__post{
+    display: flex;
  size: $sizeTypeRem1;   
 }
-.commu__verstatus__section{
-    color: $colorWhite;
-    font-weight: $weight400;
-    font-size: $sizeMediumX1;
-    font-weight: $weight500;
-    margin-bottom: $paddingLittle;
-}
+

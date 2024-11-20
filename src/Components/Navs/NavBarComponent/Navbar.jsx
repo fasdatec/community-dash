@@ -36,6 +36,12 @@ const Navbar = () => {
               <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciones</Link>
             </li>
             <li>
+              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.calendar}>Calendario</Link>
+            </li>
+            {/* <li>
+              <link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.calendar}>Calendario</Link>
+            </li> */}
+            <li>
               <img className={fasdatec.img__profile} src={image} alt="" />
               </li>
             <li>
