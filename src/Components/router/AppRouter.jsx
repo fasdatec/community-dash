@@ -15,7 +15,7 @@ import Calendar from '../../Pages/Calendar';
 import Create from '../../Pages/Create';
 import Publicaciones from '../../Pages/Publicaciones';
 import Subscriptions from '../../Pages/Subscriptions';
-import ViewStatus from '../../Pages/Verstatus'
+import Verstatus from '../../Pages/Verstatus';
 
 const AppRouter = () => {
   return (
@@ -62,7 +62,7 @@ const AppRouter = () => {
           <PrivateRoute> <Create /> </PrivateRoute>
         }/>
         <Route exact path={routes.publicaciones.verstatus} element={
-          <PrivateRoute> <ViewStatus /> </PrivateRoute>
+          <PrivateRoute> <Verstatus /> </PrivateRoute>
         }/>
         {/* <Route exact path={routes.publicaciones.post} element={
           <PrivateRoute> <Posts /> </PrivateRoute>

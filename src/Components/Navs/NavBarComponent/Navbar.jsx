@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className={fasdatec.commu__navbar__parr}>
           <ul>
             <li>
-              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.creacion}>Publicación</Link>
+              <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.creacion}>Pub licación</Link>
             </li>
             <li>
               <Link className={fasdatec.commu__nabar__none__text} to={routes.publicaciones.suscripciones}>Suscripciones</Link>

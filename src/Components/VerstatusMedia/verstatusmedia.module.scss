@@ -1,0 +1,34 @@
+@import "../../assets/sass/variables.scss";
+.commu__card__social__media{
+    padding: $sizeTypeRem1;
+    padding-top: $sizeTypeRem2;
+    width: $sizeTypeRem4 + $sizeTypeRem4;
+    height: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem2;
+    border-radius: $borderMedium;
+    text-align: center;
+    box-shadow: $sizeTypeAll0 $sizeTypeAll0  $sizeTypeAll20 $colorBlack;
+    color: $colorWhite;
+    .commu__img__sm{
+        height: $sizeTypePercentage70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .commu__img__logo__sm{
+            width: $sizeTypeRem5;
+            margin-bottom: $sizeTypeRem1;
+        }
+    }
+    .commu__button__card{
+        width: $sizeTypePercentage100;
+        a{
+            text-decoration: none;
+            color: $colorWhite;
+            transition: all 0.2s ease-in;
+            &:hover{
+                background-color: $colorYellow;
+                color: $colorBlack;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
