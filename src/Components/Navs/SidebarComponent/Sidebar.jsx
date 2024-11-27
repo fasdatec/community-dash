@@ -3,11 +3,8 @@ import { Link } from 'react-router-dom'
 import useAuth from '../../auth/useAuth'
 import routes from '../../../assets/helpers/routes'
 import fasdatec from './sidebar.module.scss'
-import { IoCreateOutline } from 'react-icons/io5'
-import { LuCalendarDays } from 'react-icons/lu'
-import { AiOutlineFileText } from 'react-icons/ai'
-import { BsCreditCard2FrontFill } from 'react-icons/bs'
-import { MdOutlinePendingActions, MdTipsAndUpdates } from 'react-icons/md'
+import { BsCaretUpSquare, BsCreditCard2FrontFill, BsFillFileTextFill } from 'react-icons/bs'
+import { MdAddAlert, MdCalendarMonth, MdCreate, MdCreateNewFolder, MdCrisisAlert, MdOutlineCalendarViewDay, MdOutlineCreate, MdOutlinePendingActions, MdTaxiAlert, MdTipsAndUpdates } from 'react-icons/md'
 import { FaUsers } from 'react-icons/fa'
 
 const Sidebar = () => {
@@ -18,19 +15,19 @@ const Sidebar = () => {
       <div className={fasdatec.commu__sidebar__parr}>
         <ul>
           <li>
-            <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciónes</Link>
+            <Link to={routes.publicaciones.suscripciones}><BsCreditCard2FrontFill /> Suscripciones</Link>
           </li>
           <li>
-            <Link to={routes.publicaciones.listado}><AiOutlineFileText /> Publicaciones</Link>
+            <Link to={routes.publicaciones.listado}><BsFillFileTextFill/> Publicaciones</Link>
           </li>
           <li>
-            <Link to={routes.publicaciones.calendar}><LuCalendarDays /> Calendario</Link>
+            <Link to={routes.publicaciones.calendar}><MdCalendarMonth /> Calendario</Link>
           </li>
           <li>
-            <Link to={routes.publicaciones.creacion}><IoCreateOutline/> Crear Publicación</Link> 
+            <Link to={routes.publicaciones.creacion}><MdCreate/> Crear Publicación</Link> 
           </li>
           <li>
-            <Link href=""><MdOutlinePendingActions /> Ver Status</Link>
+            <Link to={routes.publicaciones.verstatus}><MdCrisisAlert/> Ver Status</Link>
           </li>
           <li>
             <Link to={routes.publicaciones.tips}><MdTipsAndUpdates /> Tips para Publicar</Link>

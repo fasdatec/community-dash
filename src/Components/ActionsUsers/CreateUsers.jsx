@@ -48,7 +48,7 @@ const CreateUsers = () => {
         navigate(routes.home)
       } else if (result.isDenied) {
         MySwal.fire({
-          title: 'Puedes Seguir creando a tu usuario',
+          title: 'Puedes Seguir creando tu usuario',
           showConfirmButton: false,
           color:'#fff',
           width: '60%',
@@ -112,65 +112,65 @@ const CreateUsers = () => {
     })
   }
   const [clientData, setClientData] = useState([]);
-  const getClientInfo = async () =>{
-    instance.get(`clients/`)
-    .then((response) =>{
-      setClientData(response.data.clients)
-    }).catch((error) => {
-      MySwal.fire({
-        title: error.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'error',
-        timer:2500
-      });
-    });
-  }
-  useEffect(() =>{
-    getClientsInfo()
-  },[])
-  const updateClients = () =>{
-    alert('Actualizando Usuario')
-  } 
-  const deleteClient = async (id) =>{
-    instance.delete(`clients/delete/${id}`)
-    .then((response) => {
-      MySwal.fire({
-        title: response.data.info.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        width: '60%',
-        padding: '1em',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'success',
-        timer:2000
-      });
-      navigate(routes.home)
-      })
-    .catch((error) => {
-      MySwal.fire({
-        title: error.response.data.info.message,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color:'#fff',
-        width: '60%',
-        padding: '1em',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        confirmButtonColor: '#000',
-        icon: 'error',
-        timer:2000
-      });
-      getClients();
-    });
-  }
+  //const getClientInfo = async () =>{
+  //   instance.get(`clients/`)
+  //   .then((response) =>{
+  //     setClientData(response.data.clients)
+  //   }).catch((error) => {
+  //     MySwal.fire({
+  //       title: error.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'error',
+  //       timer:2500
+  //     });
+  //   });
+  // }
+  // useEffect(() =>{
+  //   getClientsInfo()
+  // },[])
+  // const updateClients = () =>{
+  //   alert('Actualizando Usuario')
+  // } 
+  // const deleteClient = async (id) =>{
+  //   instance.delete(`clients/delete/${id}`)
+  //   .then((response) => {
+  //     MySwal.fire({
+  //       title: response.data.info.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       width: '60%',
+  //       padding: '1em',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'success',
+  //       timer:2000
+  //     });
+  //     navigate(routes.home)
+  //     })
+  //   .catch((error) => {
+  //     MySwal.fire({
+  //       title: error.response.data.info.message,
+  //       showConfirmButton: false,
+  //       allowOutsideClick: false,
+  //       color:'#fff',
+  //       width: '60%',
+  //       padding: '1em',
+  //       background: "rgba(18, 18, 43, 0.92)",
+  //       backdrop: 'rgba(6, 6, 46, 0.877)',
+  //       confirmButtonColor: '#000',
+  //       icon: 'error',
+  //       timer:2000
+  //     });
+  //     getClients();
+  //   });
+  // }
   return (
     <>
       <section className={fasdatec.commu__section__post}>
@@ -180,7 +180,7 @@ const CreateUsers = () => {
         <div className={fasdatec.commu__post}>
           <Sidebar />
           <div className={fasdatec.commu__section__create__post}>
-            <h1>Administración de Usuarios</h1>
+            <h1>Creación de Usuarios</h1>
             <div className={fasdatecOne.commu__section__form__container}>
               <h2 className={fasdatecOne.commu__form__subtitle}>Ingresa los Datos que se piden</h2>
               <div >{/*formu*/}
@@ -218,7 +218,7 @@ const CreateUsers = () => {
                         <th scope="col">Eliminar</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    {/* <tbody>
                       {userData.map((dataUser) => (
                         <tr key={dataUser.id}>
                           <td data-label="Nombre">{dataClient.username}</td>
@@ -239,7 +239,7 @@ const CreateUsers = () => {
                           </td>
                         </tr>
                       ))}
-                    </tbody>
+                    </tbody> */}
                   </table>
             </div>
           </div>

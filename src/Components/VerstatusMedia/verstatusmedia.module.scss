@@ -1,5 +1,5 @@
 @import "../../assets/sass/variables.scss";
-.commu__card__social__media{
+.commu__card__social__media__verstatus{
     padding: $sizeTypeRem1;
     padding-top: $sizeTypeRem2;
     width: $sizeTypeRem4 + $sizeTypeRem4;
@@ -8,17 +8,17 @@
     text-align: center;
     box-shadow: $sizeTypeAll0 $sizeTypeAll0  $sizeTypeAll20 $colorBlack;
     color: $colorWhite;
-    .commu__img__sm{
+    .commu__img__sm__verstatus{
         height: $sizeTypePercentage70;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .commu__img__logo__sm{
+        .commu__img__logo__sm__verstatus{
             width: $sizeTypeRem5;
             margin-bottom: $sizeTypeRem1;
         }
     }
-    .commu__button__card{
+    .commu__button__card__verstatus{
         width: $sizeTypePercentage100;
         a{
             text-decoration: none;

@@ -8,9 +8,9 @@
         display: flex;
         width: $sizeTypePercentage100;
         min-height: $sizeTypeViewHeight100;
-        background-color: $colorBlueDarkSNavBackground;
+        background-color: $colorBlueDarkSNavBackground  ;
         h1{
-            color: $colorWhite;
+            color: $colorYellow;
             padding: $paddingMedium;
             text-transform: capitalize;
         }
@@ -21,11 +21,13 @@
             display: flex;
             flex-direction: column;
             width: $sizeTypePercentage100;
+            padding: $sizeTypeRem1;
             .commu__post__social{
                 padding-left: $paddingLarge + $paddingLarge;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: $sizeTypeRem2;
+                margin: $sizeTypeRem2;
             }
             @media screen and (max-width: $responsiveMedium){
                 .commu__post__social{
@@ -38,40 +40,65 @@
     }
 }
 .commu__calendar{
-    width: $sizeTypePercentage100;
-    padding: $sizeTypeRem3;
+    width: $sizeTypePercentage80;
+    padding: $sizeTypeRem2;
+    color: $colorYellow;
+    align-items: center;    
 }
 .commu__post__container{
     width: $sizeTypePercentage100;
 }
 .commu__mis__publicaciones{
-    width: $sizeTypePercentage100;
+    width: $sizeTypePercentage80;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: $sizeTypeRem1;
+    margin-top: $sizeTypeRem1;
 }
 .commu__section__subscriptions{
     width: $sizeTypePercentage100;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: $sizeTypeRem1;
     .commu__subscriptions__contain{
-        padding: $paddingMedium;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $sizeTypeRem4;
-        margin-top: $sizeTypeRem1;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-top: $sizeTypeRem2   ;
+        justify-content: center;
+        align-items: center;
+
     }
+
+    li {
+        margin-left: 15px;
+    }
+
     @media screen and (max-width: $responsiveMedium){
         .commu__subscriptions__contain{
             grid-template-columns: 1fr;
         }
     }
+        
 }
 .commu__contain__calendar{
     width: $sizeTypePercentage80;
+    background-color: $colorBlueDarkSNavBackground;
+    position: relative;
+    color: $colorYellow;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
 }
 .commu__multistep__form{
-    padding: $sizeTypeRem3;
+    padding: $sizeTypeRem3 ;
     width: $sizeTypePercentage90;
+}
+.commu__verstatus__section{
+    color: $colorWhite;
+    font-weight: $weight400;
+    font-size: $sizeMediumX1;
+    margin-bottom: $paddingLittle;
 }

@@ -12,7 +12,9 @@ const Dashboard = () => {
         <Navbar />
       </div>
       <div className={fasdatec.commu__post}>
+      <div className={fasdatec.commu__verstatus}>
         <Sidebar />
+      </div> 
       </div>
     </section>
     </>

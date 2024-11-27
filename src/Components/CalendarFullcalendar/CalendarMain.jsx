@@ -25,7 +25,7 @@ export default class Calendar extends React.Component {
                     myCustomButton: {
                         text: 'Todos los post',
                         click: function() {
-                            alert('prueba')
+                            alert('Prueba')
                         },
                     },
                 }}

@@ -3,7 +3,7 @@ import Navbar from '../Navs/NavBarComponent/Navbar'
 import Sidebar from '../Navs/SidebarComponent/Sidebar'
 import fasdatec from '../Dashboard/dashboard.module.scss';
 import PostSocialMediabyClient from '../PostSocialMedia/PostSocialMediabyClient';
-import fblogo from "../../assets/images/fblogo.svg"
+import fblogo from "../../assets/images/fbnw.svg"
 
 const CreatePostbyClient = () => {
   return (

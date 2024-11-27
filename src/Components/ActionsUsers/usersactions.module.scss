@@ -1,18 +1,19 @@
 @import '../../assets/sass/variables.scss';
 .commu__section__form__container{
-    padding: $sizeTypeRem1;
+    padding: $sizeTypeRem2;
     .commu__form__subtitle{
         color: $colorWhite;
     }
     .commu__form__subtitleOne{
         color: $colorWhite;
         margin-top: $sizeTypeRem2;
-        margin-bottom: $sizeTypeRem1;
+        margin-bottom: $sizeTypeRem2;
+        margin-top: $sizeTypeRem3;
     }
     .commu__flexrow__form{
         display: flex;
         flex-direction: row;
-        gap: $sizeTypeRem3;
+        gap: $sizeTypeRem2;
         margin-top: $sizeTypeRem2;
         .commu__flexclm__form{
             display: flex;
@@ -27,11 +28,11 @@
             .commu__creation__input{
                 border-radius: $borderMedium;
                 border: $borderLittle1 solid $colorYellow;
-                background: transparent;
+                background: $colorBlueDark;
                 padding: $paddingLittle2;
-                color: $colorWhite;
+                color: $colorYellow;
                 outline: none;
-                width: $sizeTypePercentage100;
+                width: $sizeTypePercentage90;
             }
         }
     }
@@ -49,7 +50,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        margin-top: $sizeTypeRem2;
+        margin-top: $sizeTypeRem3;
         gap: $sizeTypeRem1;
         .commu__btn__cancel{
             color: $colorWhite;
@@ -59,15 +60,31 @@
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
+            border-radius: $sizeTypeAll20;
+            &:hover{
+                background-color: transparent;
+                color: $colorWhite;
+                border-top: 0px solid $colorYellow  ;
+                transition: 0.3s all ease-in-out;
+                box-shadow: 1px 2px 20px 10px $colorWhite;
+            }
         }
         .commu__btn__send{
             color: $colorBlack;
             font-weight: $weight800;
-            background: $colorYellowBackground;
+            background: $colorYellow;
             border: none;
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
+            border-radius: $sizeTypeAll20;
+            &:hover{
+                background-color: transparent;
+                color: $colorYellow;
+                border-top: 0px solid $colorYellow;
+                transition: 0.3s all ease-in-out;
+                box-shadow: 1px 2px 20px 10px $colorYellow;
+            }
         }
     }
     //Desing of the table
@@ -81,7 +98,7 @@
         table-layout: fixed;
         thead{
             tr {
-                background-color:$colorTable;
+                background-color:$colorBlueDark;
                 color: $colorWhite;
                 border-bottom: $borderLittle1 solid $colorWhiteBackground;
                 th{

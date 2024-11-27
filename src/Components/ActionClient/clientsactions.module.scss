@@ -41,6 +41,7 @@
             .commu__flexclm__form{
                 .commu__creation__input{
                     width: $sizeTypePercentage90;
+
                 }
             }
         }
@@ -49,7 +50,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        margin-top: $sizeTypeRem2;
+        margin-top: $sizeTypeRem3;
         gap: $sizeTypeRem1;
         .commu__btn__cancel{
             color: $colorWhite;
@@ -61,6 +62,7 @@
             cursor: pointer;
         }
         .commu__btn__send{
+            border-radius: 10px;
             color: $colorBlack;
             font-weight: $weight800;
             background: $colorYellowBackground;
@@ -68,7 +70,6 @@
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
-        }
     }
     //Desing of the table
     table {
@@ -81,7 +82,7 @@
         table-layout: fixed;
         thead{
             tr {
-                background-color:$colorTable;
+                background-color:$colorBlueDark;
                 color: $colorWhite;
                 border-bottom: $borderLittle1 solid $colorWhiteBackground;
                 th{
