@@ -1,6 +1,7 @@
 import React from 'react'
 import fasdatec from './buttons.module.scss'
 
+
 export const ButtonYellow = ({titleButton, direction}) => {
   return (
     <>
