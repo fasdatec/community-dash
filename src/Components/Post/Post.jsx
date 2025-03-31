@@ -2,6 +2,7 @@ import React from 'react'
 import fasdatec from './post.module.scss'
 import { FacebookEmbed, InstagramEmbed, LinkedInEmbed, TikTokEmbed, TwitterEmbed, YouTubeEmbed } from "react-social-media-embed";
 
+
 const Post = () => {
   return (
     <>
