@@ -11,7 +11,7 @@ const formRegister = () => {
         "name": "dasdasasd",
         "username": "",
         "password": "",
-        "rol": "representante",
+        "rol": "supervisor",
         "image":"https://i.imgur.com/gJS9RAa.jpg",
         "email":""
     })
