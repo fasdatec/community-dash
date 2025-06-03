@@ -1,76 +1,94 @@
-@import '../../assets/sass/variables.scss';
-.commu__section__form__container{
+.commu__section__form__container {
     padding: $sizeTypeRem1;
-    .commu__form__subtitle{
+    .commu__form__subtitle,
+    .commu__form__subtitleOne {
         color: $colorWhite;
     }
-    .commu__form__subtitleOne{
-        color: $colorWhite;
+    .commu__form__subtitleOne {
         margin-top: $sizeTypeRem2;
         margin-bottom: $sizeTypeRem1;
     }
-    .commu__flexrow__form{
+    .commu__flexrow__form {
         display: flex;
         flex-direction: row;
         gap: $sizeTypeRem3;
         margin-top: $sizeTypeRem2;
-        .commu__flexclm__form{
+        .commu__flexclm__form {
             display: flex;
             flex-direction: column;
             width: $sizeTypePercentage100;
-            .commu__creation__label{
+            .commu__creation__label {
                 color: $colorWhite;
                 font-weight: $weight400;
                 font-size: $sizeMediumX1;
                 margin-bottom: $paddingLittle;
             }
-            .commu__creation__input{
+            .commu__creation__input {
                 border-radius: $borderMedium;
                 border: $borderLittle1 solid $colorYellow;
-                background: transparent;
+                background-color: $colorBlueDarkBackground;
                 padding: $paddingLittle2;
                 color: $colorWhite;
                 outline: none;
                 width: $sizeTypePercentage90;
-            }
-        }
-    }
-    @media screen and (max-width:$responsiveNormal) {
-        .commu__flexrow__form{
-            flex-direction: column;
-            .commu__flexclm__form{
-                .commu__creation__input{
-                    width: $sizeTypePercentage90;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+                option {
+                    background-color: $colorBlueDarkBackground;
+                    color: $colorYellowBackground;
+                }
+                &:focus {
+                    border-color: lighten($colorYellow, 15%);
+                    background-color: darken($colorBlueDarkBackground, 8%);
+                    box-shadow: 0 0 5px lighten($colorYellow, 40%);
                 }
             }
         }
     }
-    .commu__flexbtn{
+    @media screen and (max-width: $responsiveNormal) {
+        .commu__flexrow__form {
+            flex-direction: column;
+            .commu__flexclm__form {
+                .commu__creation__input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .commu__flexbtn {
         display: flex;
         justify-content: center;
         margin: auto;
         margin-top: $sizeTypeRem2;
         gap: $sizeTypeRem1;
-        .commu__btn__cancel{
-            color: $colorWhite;
+        .commu__btn__cancel,
+        .commu__btn__send {
             font-weight: $weight800;
-            background: $colorBlueDarkBackground;
             border: none;
             padding: $paddingLittle2;
             width: $sizeTypePercentage30;
             cursor: pointer;
+            border-radius: $borderMedium;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
         }
-        .commu__btn__send{
+        .commu__btn__cancel {
+            color: $colorWhite;
+            background: $colorBlueDarkBackground;
+            &:hover,
+            &:focus {
+                background: lighten($colorBlueDarkBackground, 10%);
+            }
+        }
+        .commu__btn__send {
             color: $colorBlack;
-            font-weight: $weight800;
             background: $colorYellowBackground;
-            border: none;
-            padding: $paddingLittle2;
-            width: $sizeTypePercentage30;
-            cursor: pointer;
+            &:hover,
+            &:focus {
+                background: darken($colorYellowBackground, 10%);
+            }
         }
     }
-    //Desing of the table
     table {
         border: $borderLittle1 solid $colorWhiteBackground;
         background: $colorTableContent;
@@ -79,37 +97,45 @@
         padding: 0;
         width: $sizeTypePercentage100;
         table-layout: fixed;
-        thead{
-            tr {
-                background-color:$colorTable;
+        thead tr {
+            background-color: $colorTable;
+            color: $colorWhite;
+            border-bottom: $borderLittle1 solid $colorWhiteBackground;
+            th {
+                padding: $paddingMedium;
+                text-align: center;
+                font-weight: $weight600;
+            }
+        }
+        tbody tr {
+            transition: background-color 0.3s ease;
+            &:hover {
+                background: $colorTable;
+            }
+            td {
+                padding: $paddingMedium;
+                text-align: center;
                 color: $colorWhite;
+                font-weight: $weight100;
                 border-bottom: $borderLittle1 solid $colorWhiteBackground;
-                th{
-                    padding: $paddingMedium;
-                    text-align: center;
-                    font-weight: $weight600;
+                button {
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    color: $colorYellow;
+                    transition: color 0.3s ease;
+                    svg {
+                        font-size: $sizeMedium + $sizeLittle;
+                        vertical-align: middle;
+                    }
+                    &:hover,
+                    &:focus {
+                        color: lighten($colorYellow, 20%);
+                    }
                 }
             }
         }
-        tbody{
-            tr{
-                transition: 0.3s all ease-in;
-                &:hover{
-                    background: $colorTable;
-                    transition: 0.3s all ease-in-out;
-                }
-                td{
-                    padding: $paddingMedium;
-                    text-align: center;
-                    color: $colorWhite;
-                    font-weight: $weight100;
-                    border-bottom: $borderLittle1 solid $colorWhiteBackground;
-
-                }
-            }
-
-        }
-    } 
+    }
     @media screen and (max-width: 600px) {
         table {
             thead {
@@ -132,38 +158,35 @@
                 margin: auto;
                 font-size: $sizeLittle1;
                 text-align: center;
-                &::before{
+                &::before {
                     content: attr(data-label);
                     float: left;
+                    font-weight: $weight600;
                     text-transform: uppercase;
+                    color: $colorYellow;
                 }
-                &::last-child {
+                &:last-child {
                     border-bottom: 0;
                 }
             }
         }
     }
-    //End of the desing table
-    .commu__btn__update__action{
+    .commu__btn__update__action,
+    .commu__btn__delete__action {
         border: none;
         background: transparent;
         cursor: pointer;
         display: flex;
         align-items: center;
         margin: auto;
-        svg{
+        color: $colorYellow;
+        transition: color 0.3s ease;
+        svg {
             font-size: $sizeMedium + $sizeLittle;
         }
-    }
-    .commu__btn__delete__action{
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        svg{
-            font-size: $sizeMedium + $sizeLittle;
+        &:hover,
+        &:focus {
+            color: lighten($colorYellow, 20%);
         }
     }
 }

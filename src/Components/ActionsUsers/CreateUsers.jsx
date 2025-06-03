@@ -21,7 +21,7 @@ const CreateUsers = () => {
   const [rol, setRole] = useState('');
   const [userData, setUserData] = useState([]);
   const [password, setPassword] = useState('');
-  const [confirmPassword, setconfirmPassword] = useState('');
+const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const cancelProcess = () => {
@@ -73,9 +73,8 @@ const CreateUsers = () => {
       }
     })
   }
-  const validatePassword = (password) => {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-    return passwordRegex.test(password);
+const validatePassword = (password) => {
+  return password.length > 0; // Acepta cualquier contraseña no vacíaa
   }
   const doneProcess = async () => {
     // Validar que todos los campos estén completos
@@ -84,12 +83,13 @@ const CreateUsers = () => {
       return;
     }
 
-      if (!validatePassword(password)) {
-    setPasswordError('La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una minúscula, un número y un carácter especial.');
-    return;
-  } else {
-    setPasswordError('');
-  }
+      if (!password) {
+  setPasswordError('La contraseña es obligatoria.');
+  return;
+} else {
+  setPasswordError('');
+}
+
   if (password !== confirmPassword) {
     setError('Las contraseñas no coinciden');
     return;
@@ -437,40 +437,44 @@ const CreateUsers = () => {
                        
                     </select>
                   </div>
-                  <div className={fasdatecOne.commu_flexrow_form}>
-  <div className={fasdatecOne.commu_flexclm_form}>
-    <label htmlFor="password" className={fasdatecOne.commu_creation_label}>Contraseña</label>
-    <input 
-      type="password" 
-      id='password' 
-      className={fasdatecOne.commu_creation_input} 
-      placeholder='Contraseña'
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-    />
-  </div>
-  <div className={fasdatecOne.commu_flexclm_form}>
-    <label htmlFor="confirmPassword" className={fasdatecOne.commu_creation_label}>Confirmar Contraseña</label>
-    <input 
-      type="password" 
-      id='confirmPassword' 
-      className={fasdatecOne.commu_creation_input} 
-      placeholder='Confirmar Contraseña'
-      value={confirmPassword}
-      onChange={(e) => setconfirmPassword(e.target.value)}
-    />
-  </div>
+                  <div className={fasdatecOne.commu__flexclm__form}>
+  <label htmlFor="password" className={fasdatecOne.commu__creation__label}>Contraseña</label>
+  <input 
+    type="password" 
+    id='password' 
+    className={fasdatecOne.commu__creation__input} 
+    placeholder='Contraseña'
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+  />
 </div>
-{password && !validatePassword(password) && 
-  <p style={{ color: 'red', textAlign: 'center', marginTop: '10px' }}>
-    La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una minúscula, un número y un carácter especial.
-  </p>
-}
-{password && confirmPassword && password !== confirmPassword && 
-  <p style={{ color: 'red', textAlign: 'center', marginTop: '10px' }}>
-    Las contraseñas no coinciden.
-  </p>
-}
+
+<div className={fasdatecOne.commu__flexclm__form}>
+  <label 
+    htmlFor="confirmPassword" 
+    className={fasdatecOne.commu__creation__label}
+  >
+    Confirmar Contraseña
+  </label>
+    <input
+    type="password"
+    id="confirmPassword"
+    className={fasdatecOne.commu__creation__input}
+    placeholder="Confirmar Contraseña"
+    value={confirmPassword}
+    onChange={(e) => {
+      setConfirmPassword(e.target.value);
+      if (password && e.target.value && password !== e.target.value) {
+        setPasswordError('Las contraseñas no coinciden.');
+      } else {
+        setPasswordError('');
+      }
+    }}
+  />
+  {passwordError && (
+    <p className={fasdatecOne.commu__error__message}>{passwordError}</p>
+  )}
+</div>  
                 </div>
                 {error && <p style={{ color: 'red', textAlign: 'center', marginTop: '10px' }}>{error}</p>}
                 <div className={fasdatecOne.commu__flexbtn}>

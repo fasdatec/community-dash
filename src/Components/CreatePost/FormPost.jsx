@@ -118,7 +118,7 @@ const FormPost = () => {
       <div className={fasdatec.commu__post}>
         <Sidebar />
         <div className={fasdatec.commu__section__create__post}>
-          <h1>Creación de Post para X</h1>
+          <h1>Creación de Post para una red social</h1>
           <div className={fasdatecOne.commu__section__form__container}>
             <h2 className={fasdatecOne.commu__form__subtitle}>Ingresa los Datos que se piden</h2>
             <div>
