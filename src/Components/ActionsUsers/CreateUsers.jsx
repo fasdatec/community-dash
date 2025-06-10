@@ -78,10 +78,15 @@ const validatePassword = (password) => {
   }
   const doneProcess = async () => {
     // Validar que todos los campos estén completos
-    if (!email || !username || !password || !rol) {
-      setError('Todos los campos son requeridos.');
-      return;
-    }
+if (!email || !username || !password) {
+  setError('Todos los campos son requeridos.');
+  return;
+}
+
+if (!rol || rol.trim() === "") {
+  setError('Debes seleccionar un Rol.');
+  return;
+}
 
       if (!password) {
   setPasswordError('La contraseña es obligatoria.');
@@ -179,11 +184,12 @@ const validatePassword = (password) => {
           getUsersInfo();
           
         } catch (error) {
-          console.error('Error al crear usuario:', error);
+            console.error('Error al crear usuario:', error);
+            console.log('🔍 Detalle del error:', error.response?.data);
           
           MySwal.fire({
-            title: error.response?.data?.message || 'Error al crear usuario',
-            text: 'Verifica los datos e intenta nuevamente',
+            title: 'Error al crear usuario',
+            text: error.response?.data?.info?.message || 'Verifica los datos e intenta nuevamente',
             showConfirmButton: true,
             color: '#fff',
             width: '60%',
@@ -282,7 +288,7 @@ const validatePassword = (password) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await instance.put(`users/update/${user.id}`, result.value);
+          const response = await instance.put(`users/update/${user._id}`, result.value);
   
           MySwal.fire({
             title: "¡Usuario Actualizado!",
@@ -314,7 +320,7 @@ const validatePassword = (password) => {
     });
   };
 
-  const deleteUser = async (id) => {
+ const deleteUser = async (_id) => {
     MySwal.fire({
       title: `¿Estás seguro de eliminar este usuario?`,
       width: '60%',
@@ -325,18 +331,20 @@ const validatePassword = (password) => {
       allowOutsideClick: false,
       background: "rgba(18, 18, 43, 0.92)",
       backdrop: 'rgba(6, 6, 46, 0.877)',
-      showCancelButton: false,
+      showCancelButton: false, // Esto es redundante si showDenyButton es true
       denyButtonColor: '#000',
       denyButtonText: 'Cancelar',
       confirmButtonColor: '#ffb727',
       confirmButtonText: 'Confirmar',
     }).then(async (result) => {
-      if (result.isConfirmed) {
+      if (result.isConfirmed) { // El usuario hizo clic en "Confirmar"
+        console.log("¡Confirmación de eliminación aceptada! ID a eliminar:", _id); // Mover aquí
+
         try {
-          await instance.delete(`/users/delete/${id}`);
+          await instance.delete(`/users/delete/${_id}`);
           
           // Remover el usuario eliminado de la lista local
-          setUserData(prevUsers => prevUsers.filter(user => user.id !== id));
+          setUserData(prevUsers => prevUsers.filter(user => user._id !== _id));
           
           MySwal.fire({
             title: 'Usuario eliminado correctamente',
@@ -352,10 +360,13 @@ const validatePassword = (password) => {
             timer: 2000
           });
         } catch (error) {
-          console.error('Error al eliminar usuario:', error);
-          
+          // Si llega aquí, significa que la llamada a `instance.delete` falló.
+          console.error('❌ Error al eliminar usuario (desde el catch del frontend):', error.response?.data || error.message || error);
+          // Los otros console.log que tenías aquí no van, porque no fue "cancelado" ni "confirmado exitosamente"
+
           MySwal.fire({
             title: error.response?.data?.message || 'Error al eliminar usuario',
+            text: error.response?.data?.message || 'No se pudo eliminar el usuario',
             showConfirmButton: true,
             allowOutsideClick: true,
             color: '#fff',
@@ -367,10 +378,28 @@ const validatePassword = (password) => {
             icon: 'error'
           });
         }
+      } else if (result.isDenied) { // El usuario hizo clic en "Cancelar" (denyButtonText)
+        console.log("Eliminación cancelada por el usuario."); // Mover aquí
+        // No hay necesidad de un MySwal.fire si ya se está en el 'denied' del principal
+        // Si quieres un mensaje, debería ser distinto para no confundir.
+        MySwal.fire({
+            title: 'Puedes seguir gestionando usuarios',
+            showConfirmButton: false,
+            allowOutsideClick: true, // Permitir cerrar
+            color: '#fff',
+            background: "rgba(18, 18, 43, 0.92)",
+            backdrop: 'rgba(6, 6, 46, 0.877)',
+            timer: 1500,
+            icon: 'info' // Cambiado a 'info' para indicar que no es un error
+        });
+
+      } else if (result.dismiss === Swal.DismissReason.backdrop || result.dismiss === Swal.DismissReason.esc) {
+        // El usuario cerró el modal sin usar los botones (clic en el fondo o Escape)
+        console.log("Eliminación descartada (modal cerrado sin acción).");
+        // Puedes o no mostrar un mensaje aquí, dependiendo de la UX deseada
       }
     });
-  }
-
+};
   // Función para mostrar el rol correctamente 
   const formatRole = (rol) => {
     if (!rol) return '—';
@@ -507,7 +536,7 @@ const validatePassword = (password) => {
                         </td>
                         <td data-label="Eliminar">
                           <button className={fasdatecOne.commu__btn__delete__action} 
-                            onClick={() => deleteUser(user.id)}
+                            onClick={() => deleteUser(user._id)}
                           >
                             <MdDelete />
                           </button>
