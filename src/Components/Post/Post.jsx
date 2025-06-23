@@ -7,7 +7,7 @@ const Post = () => {
   return (
     <>
     <div className={fasdatec.commu__post}>
-      <FacebookEmbed className ={fasdatec.commu__post__facebook} url="https://www.facebook.com/100077404405612/posts/pfbid036jtaZUWSAJLaeYuApzzFeMdx9dRRa9mH1c5AusoCmjs4ep1i6ss2UjQW9WmtB1XEl/?mibextid=9R9pXO" width={328} />
+      <FacebookEmbed className ={fasdatec.commu_post_facebook} url="https://www.facebook.com/100077404405612/posts/pfbid036jtaZUWSAJLaeYuApzzFeMdx9dRRa9mH1c5AusoCmjs4ep1i6ss2UjQW9WmtB1XEl/?mibextid=9R9pXO" width={328} />
       <InstagramEmbed url="https://www.instagram.com/p/CyOq3mHpRD3/?igshid=MTc4MmM1YmI2Ng==" width={328} />
       <TikTokEmbed url="https://www.tiktok.com/@espinoza19740/video/7246694024986283270" width={325} />
       <TwitterEmbed url="https://twitter.com/CondorPana/status/1713718363904454746?ref_src=twsrc%5Etfw" width={325} />
