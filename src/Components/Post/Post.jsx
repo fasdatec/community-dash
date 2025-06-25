@@ -1,25 +1,56 @@
-import React from 'react'
-import fasdatec from './post.module.scss'
-import { FacebookEmbed, InstagramEmbed, LinkedInEmbed, TikTokEmbed, TwitterEmbed, YouTubeEmbed } from "react-social-media-embed";
-
+import React, { useEffect, useState } from 'react';
+import axios from '../../assets/api/axios'; // usa tu configuración axios
+import fasdatec from './post.module.scss';
 
 const Post = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchAllPosts = async () => {
+      try {
+        const response = await axios.get('/posts/get/post/all'); // endpoint para traer todos los posts
+        if (response.data.ok) {
+          setPosts(response.data.posts);
+        } else {
+          setPosts([]);
+        }
+      } catch (error) {
+        console.error("Error al obtener posts:", error);
+        setPosts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAllPosts();
+  }, []);
+
+  if (loading) return <p>Cargando publicaciones...</p>;
+  if (posts.length === 0) return <p>No hay publicaciones registradas.</p>;
+
   return (
-    <>
     <div className={fasdatec.commu__post}>
-      <FacebookEmbed className ={fasdatec.commu_post_facebook} url="https://www.facebook.com/100077404405612/posts/pfbid036jtaZUWSAJLaeYuApzzFeMdx9dRRa9mH1c5AusoCmjs4ep1i6ss2UjQW9WmtB1XEl/?mibextid=9R9pXO" width={328} />
-      <InstagramEmbed url="https://www.instagram.com/p/CyOq3mHpRD3/?igshid=MTc4MmM1YmI2Ng==" width={328} />
-      <TikTokEmbed url="https://www.tiktok.com/@espinoza19740/video/7246694024986283270" width={325} />
-      <TwitterEmbed url="https://twitter.com/CondorPana/status/1713718363904454746?ref_src=twsrc%5Etfw" width={325} />
-      <YouTubeEmbed url="https://www.youtube.com/embed/Djgw-uR2n34?si=ujTjlGp4qQVnmd3D" width={325} height={220} />
-      <LinkedInEmbed 
-    url="https://www.linkedin.com/embed/feed/update/urn:li:share:6898694772484112384"
-    postUrl="https://www.linkedin.com/posts/peterdiamandis_5-discoveries-the-james-webb-telescope-will-activity-6898694773406875648-z-D7"
-    width={325}
-    height={570} 
+      {posts.map((post) => (
+        <div key={post._id} className={fasdatec.commu_post_card}>
+          <h3>{post.encabezado}</h3>
+          <p><strong>Título:</strong> {post.title}</p>
+          <p><strong>Descripción:</strong> {post.description}</p>
+          <p><strong>Marca:</strong> {post.marca}</p>
+          <p><strong>Red social:</strong> {post.socialMedia}</p>
+          <p><strong>Estado:</strong> {post.status}</p>
+          <p><small>{new Date(post.date).toLocaleString()}</small></p>
+          {post.mediaPath && (
+            <img
+    src={post.mediaPath}
+    alt={post.title}
+    style={{ width: '300px', borderRadius: '12px', marginTop: '10px' }}
   />
+)}
+        </div>
+      ))}
     </div>
-    </>
-  )
-}
-export default Post
+  );
+};
+
+export default Post;

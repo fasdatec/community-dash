@@ -40,43 +40,59 @@ const FormPost = ({ socialMedia }) => {  // <-- recibe prop socialMedia
     formData.append('socialMedia', socialMedia);  // <-- usa la prop
 
     try {
-      const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8080/posts', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`
-        },
-        body: formData
-      });
+  const token = localStorage.getItem('token');
 
-      if (!response.ok) {
-        throw new Error('Error al crear el post');
-      }
+  const response = await fetch('http://localhost:8080/posts', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    body: formData
+  });
 
-      MySwal.fire({
-        title: 'Publicación Creada',
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color: '#fff',
-        width: '80%',
-        padding: '3em',
-        background: "rgba(18, 18, 43, 0.92)",
-        backdrop: 'rgba(6, 6, 46, 0.877)',
-        icon: 'success',
-        timer: 2500
-      });
+  if (response.status === 401 || response.status === 403) {
+    // Token inválido o expirado
+    localStorage.removeItem('token');
+    MySwal.fire({
+      title: 'Sesión expirada',
+      text: 'Inicia sesión de nuevo.',
+      icon: 'warning',
+      confirmButtonText: 'Ir al Login'
+    }).then(() => {
+      navigate('/login');
+    });
+    return;
+  }
 
-      setTimeout(() => {
-        navigate('/listpost');
-      }, 2500);
-    } catch (error) {
-      console.error(error);
-      MySwal.fire({
-        title: 'Ocurrió un error al guardar el post',
-        icon: 'error',
-        confirmButtonText: 'Ok',
-      });
-    }
+  if (!response.ok) {
+    throw new Error('Error al crear el post');
+  }
+
+  MySwal.fire({
+    title: 'Publicación Creada',
+    showConfirmButton: false,
+    allowOutsideClick: false,
+    color: '#fff',
+    width: '80%',
+    padding: '3em',
+    background: "rgba(18, 18, 43, 0.92)",
+    backdrop: 'rgba(6, 6, 46, 0.877)',
+    icon: 'success',
+    timer: 2500
+  });
+
+  setTimeout(() => {
+    navigate('/listpost');
+  }, 2500);
+} catch (error) {
+  console.error(error);
+  MySwal.fire({
+    title: 'Ocurrió un error al guardar el post',
+    icon: 'error',
+    confirmButtonText: 'Ok',
+  });
+}
+
   };
 
   return (
