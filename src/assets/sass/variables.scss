@@ -1,9 +1,9 @@
 //variables generales para todo el proyecto
 /*******
 Para poner dos atributos a una clase CSS
-    {`${fasdatec.sidebar__parr} ${fasdatec.sidebar__weight}`}
+    `${fasdatec.sidebar__parr} ${fasdatec.sidebar__weight}`
 Para poner un atributo a una clase CSS
-    {fasdatec.sidebar__parr}
+    fasdatec.sidebar__parr
 Para poder hacer calculos de variables, es decir:
     Obtener 5rem = 
         gap: $sixeLarge + $sizeMediumLarge;
@@ -117,6 +117,8 @@ $sizeTypeViewHeight90:90vh;
 $sizeTypeViewHeight100:100vh;
 //rem
 $sizeTypeRem0:0rem;
+$sizeTypeRem0_2:0.2rem; // <--- ¡Añade esta línea!
+$sizeTypeRem0_5:0.5rem;
 $sizeTypeRem1:1rem;
 $sizeTypeRem2:2rem;
 $sizeTypeRem3:3rem;
@@ -166,6 +168,8 @@ $sizeTypeRem5:4rem;
     sizeTypeViewHeight90: $sizeTypeViewHeight90;
     sizeTypeViewHeight100: $sizeTypeViewHeight100;
     sizeTypeRem0:$sizeTypeRem0;
+    sizeTypeRem0_2:$sizeTypeRem0_2; // Asegúrate de que esté aquí en el export también
+    sizeTypeRem0_5:$sizeTypeRem0_5;
     sizeTypeRem1:$sizeTypeRem1;
     sizeTypeRem2:$sizeTypeRem2;
     sizeTypeRem3:$sizeTypeRem3;

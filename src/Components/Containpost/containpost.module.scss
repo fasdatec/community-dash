@@ -1,20 +1,73 @@
 @import "../../assets/sass/variables.scss";
-.contain__post__card{
-    width: $sizeTypeRem4 + $sizeTypeRem4 + $sizeTypeRem1;
+
+.contain__post__card {
+    width: $sizeTypePercentage100; 
     background: $colorWhiteBackground;
-    .contain__post__img__preview{
-        width: $sizeTypePercentage100;
-        height: $sizeTypeRem4 + $sizeTypeRem1;
-    }
-    .contain__post__text{
-        padding: $sizeTypeRem1;
+    border-radius: $sizeTypeRem0_5; 
+    overflow: hidden; 
+    box-shadow: 0 $sizeTypeRem0_2 $sizeTypeRem0_5 rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+
+    &:hover {
+        transform: translateY(-$sizeTypeRem0_2); 
+        box-shadow: 0 $sizeTypeRem0_5 $sizeTypeRem1 rgba(0, 0, 0, 0.2); 
     }
 }
+
+.contain__post__img__preview {
+    width: $sizeTypePercentage100;
+    height: $sizeTypeRem4; 
+    object-fit: cover; 
+    display: block; 
+}
+
+.post__details {
+    padding: $sizeTypeRem1;
+    color: $colorBlack; 
+    flex-grow: 1; 
+}
+
+.post__title {
+    font-size: $sizeMediumX3; 
+    margin-top: $sizeTypeAll0;
+    margin-bottom: $sizeTypeRem0_5; 
+    color: $colorBlueDark; 
+}
+
+.post__description {
+    font-size: $sizeMedium; 
+    line-height: 1.4;
+    margin-bottom: $sizeTypeRem1; 
+    color: lighten($colorBlack, 20%); 
+}
+
+.post__meta {
+    font-size: $sizeLittle1; 
+    margin-bottom: $sizeTypeRem0_2; 
+    color: $colorBlueDark; 
+    strong {
+        color: darken($colorBlueDark, 10%); 
+    }
+}
+
+.post__meta_value {
+    font-weight: $weightNormal; 
+}
+
+.post__date {
+    font-size: $sizeLittle; 
+    color: lighten($colorBlack, 40%); 
+    margin-top: $sizeTypeRem1; 
+}
+
 @media screen and (max-width:$responsiveMedium){
     .contain__post__card{
-        width: $sizeTypePercentage100;
-        .contain__post__img__preview{
-            height: $sizeTypeRem4 + $sizeTypeRem4;
-        }
+        width: $sizeTypePercentage100; 
+    }
+    .contain__post__img__preview{
+        height: $sizeMediumLarge; 
     }
 }
