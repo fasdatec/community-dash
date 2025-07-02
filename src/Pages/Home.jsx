@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
 import useAuth from '../Components/auth/useAuth';
-import Dashboard from '../Components/Dashboard/Dashboard'
-import MultFormMain from '../Components/MultFormMain/MultFormMain';
+import Dashboard from '../Components/Dashboard/Dashboard';
+// import MultFormMain from '../Components/MultFormMain/MultFormMain'; 
 
 const Home = () => {
-  const {user} = useAuth();
+  const { user } = useAuth(); 
+
   return (
     <>
-    {user.algoritmo === 'EF'
-    ? <MultFormMain />
-    : <Dashboard />}
+      <Dashboard /> 
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
