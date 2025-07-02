@@ -46,34 +46,32 @@ export default function AuthProvider({ children }) {
   };
 
   /* 🔹 Iniciar sesión */
-  const login = async (user, fromLocation) => {
-    try {
-      const response = await instance.post(`/users/login`, user);
+  const login = async (user) => {
+  try {
+    const response = await instance.post(`/users/login`, user);
 
-      if (response.data && response.data.data) {
-        setUser(response.data.data);
-        localStorage.setItem("token", response.data.data.token);
-
-        if (fromLocation) {
-          return navigate(fromLocation.from, { state: { pagina: fromLocation.pagina } });
-        }
-      }
-    } catch (error) {
-      console.error("Error en login:", error);
-
-      // Mostrar alerta con el mensaje del error
-      MySwal.fire({
-        title: error.response?.data?.info?.message || "Error en el inicio de sesión",
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        color: "#fff",
-        background: "#131313",
-        confirmButtonColor: "#000",
-        icon: "warning",
-        timer: 2000,
-      });
+    if (response.data && response.data.data) {
+      setUser(response.data.data);
+      localStorage.setItem("token", response.data.data.token);
+      return true; // 🔁 Deja que el componente haga la redirección
     }
-  };
+  } catch (error) {
+    console.error("Error en login:", error);
+
+    MySwal.fire({
+      title: error.response?.data?.info?.message || "Error en el inicio de sesión",
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      color: "#fff",
+      background: "#131313",
+      confirmButtonColor: "#000",
+      icon: "warning",
+      timer: 2000,
+    });
+    return false; // 🛑 Login fallido
+  }
+};
+
 
   /* 🔹 Cerrar sesión */
   const logout = async () => {
